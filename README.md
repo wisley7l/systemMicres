@@ -17,3 +17,10 @@ sudo apt-get install mysql-server
 sudo apt update && sudo apt upgrade
 
 sudo apt install phpmyadmin
+
+sudo mysql
+
+CREATE USER 'padmin'@'localhost' IDENTIFIED BY 'super-strong-password';
+GRANT ALL PRIVILEGES ON *.* TO 'padmin'@'localhost' WITH GRANT OPTION;
+
+sudo systemctl restart apache2

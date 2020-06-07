@@ -12,9 +12,9 @@
 
 
 	# Substitua abaixo os dados, de acordo com o banco criado
-	$user = "epiz_25916090";
-	$password = "JYCprYQD3l";
-	$database = "epiz_25916090_controlemicres";
+	$user = "padmin";
+	$password = "LEre7CvzQ2t0rt7J";
+	$database = "ControleMicres";
 
 	# O hostname deve ser sempre localhost
 	$hostname = "sql110.epizy.com";
@@ -52,6 +52,6 @@
 	echo $twig->render('listafunc.html', array( "user" => $userAll,
 		));
 	// Chamando a página "hello.html" que está em views
-	
+
 
 ?>
