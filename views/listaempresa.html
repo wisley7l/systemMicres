@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Crud Wordpress</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">CNPJ</th>
+          <th scope="col">Nome</th>
+					<th scope="col">Numero de Veiculos</th>
+          <!-- <th scope="col">Email</th> -->
+
+        </tr>
+      </thead>
+
+      <tbody>
+				{% for use in user %}
+          <tr>
+            <th scope="row">{{use.cnpj}}</th>
+            <td>{{use.nome}}</td>
+						<td>{{use.nveiculos}}</td>
+            <!-- <td><?php echo $valor->user_email;?></td> -->
+            <!-- <td><?php echo date('d/m/Y H:m:s', strtotime($valor->user_registered));?></td> -->
+          </tr>
+				{% endfor %}
+
+
+      </tbody>
+    </table>
+		<button id ='cadastrarmanutencao' onclick="cadastramedicao({{cod}})"> Cadastra Veiculo </button>
+		<button id ='cadastrarmanutencao' onclick="cadastramedicao({{cod}})"> Lista Veiculo </button>
+		<button id ='cadastrarmanutencao' onclick="cadastraempresa()"> Cadastra Empresa </button>
+		<button id ='cadastrarmanutencao' onclick="cadastramedicao({{cod}})"> Cadastra Funcionario </button>
+		<button id ='cadastrarmanutencao' onclick="cadastramedicao({{cod}})"> Listar Empresa </button>
+		<button id ='cadastrarmanutencao' onclick="cadastramedicao({{cod}})"> Menu Principal </button>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="../js/controlador.js"> </script>
+</body>
+</html>
