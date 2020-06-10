@@ -39,15 +39,15 @@
 
 		if($dbh->query($query) == true ){
 			// echo "SUCESS0 Insert";
-			header('Location: /listaempresa.php');
+			header('Location: listaempresa.php');
 		}else {
 			// $result_query2 = $dbh->query($query2);
 			if($dbh->query($query2) == true ){
 				// echo "SUCESS0 Update";
-				header('Location: /listaempresa.php');
+				header('Location: listaempresa.php');
 			}else {
 				// echo "erro Update";
-				header('Location: /erro.php');
+				header('Location: erro.php');
 			}
 		}
 
