@@ -73,7 +73,7 @@ a:focus{
 	width: 300px;
 	display: block;
 	background: #333;
-	height: 20%;
+	height: 100%;
 	top: 0;
 	right: -300px;
 	position: fixed;
