@@ -57,6 +57,25 @@
 					<!-- tempor incididunt ut labore et dolore magna aliqua. -->
 				<!-- </p> -->
 				<!-- <a href="#" class="btn btn-primary">Get in Touche</a> -->
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th scope="col">CPF</th>
+							<th scope="col">Nome</th>
+							<!-- <th scope="col">Email</th> -->
+						</tr>
+					</thead>
+					<tbody>
+						{% for use in user %}
+						<tr>
+							<th scope="row">{{use.cpf}}</th>
+							<td>{{use.nome}}</td>
+							<!-- <td><?php echo $valor->user_email;?></td> -->
+							<!-- <td><?php echo date('d/m/Y H:m:s', strtotime($valor->user_registered));?></td> -->
+						</tr>
+						{% endfor %}
+					</tbody>
+				</table>
 			</div>
 		</div>
 	</div>
@@ -103,25 +122,7 @@
 			<div class="col-md-4">
 				<div class="service-item">
 					<div class="icon"><i class="fa fa-diamond"></i></div>
-						<table class="table table-striped">
-							<thead>
-								<tr>
-									<th scope="col">CPF</th>
-									<th scope="col">Nome</th>
-									<!-- <th scope="col">Email</th> -->
-								</tr>
-							</thead>
-							<tbody>
-								{% for use in user %}
-								<tr>
-									<th scope="row">{{use.cpf}}</th>
-									<td>{{use.nome}}</td>
-									<!-- <td><?php echo $valor->user_email;?></td> -->
-									<!-- <td><?php echo date('d/m/Y H:m:s', strtotime($valor->user_registered));?></td> -->
-								</tr>
-								{% endfor %}
-							</tbody>
-						</table>
+
 				</div>
 			</div>
 		</div>
