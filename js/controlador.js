@@ -19,6 +19,10 @@ function listaempresa(){
 function cadastraempresa(){
   window.location.href = "/cadastraempresa.php";
 }
+function buscaempresa(id) {
+  console.log("teste");
+  window.location.href = "/buscaempresa.php?cnpj=" + cnpj;
+}
 
 
 function clickcadastraempresa(){
@@ -33,9 +37,3 @@ function clickcadastraempresa(){
   // window.location.href = "/cadastraempresa.php";
 }
 //
-
-function buscaempresa(id) {
-
-  window.location.href = "/buscaempresa.php?cnpj=" + cnpj;
-
-}
