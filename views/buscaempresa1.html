@@ -75,11 +75,11 @@
 		<!-- <a href="#" class="btn btn-primary">Get in Touche</a> -->
 		<form class="row">
 			<p> <div class="form-group col-md-6">
-				CNPJ: <input id="cnpj-cad" type="number" placeholder="{{user}}" class="form-control" value="t"  disabled/>{{user.cnpj}}
+				CNPJ: <input id="cnpj-cad" type="number" placeholder="{{user.cpnj}}" class="form-control" value="{{user.cpnj}}"  disabled/>
 			</div> </p>
 
 			<p> <div class="form-group col-md-6">
-				Nome Fantasia: <input id="nomeempresa-cad" type=text placeholder="For Post" class="form-control" />
+				Nome Fantasia: <input id="nomeempresa-cad" type=text placeholder="{{user.nome}}" class="form-control" value="{{user.nome}}"  disabled/>
 			</div> </p>
 </form>
 
