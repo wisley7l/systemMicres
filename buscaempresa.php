@@ -19,7 +19,7 @@
 	# O hostname deve ser sempre localhost
 	$hostname = "localhost";
 	# Conecta com o servidor de banco de dados
-	// $dbh = new PDO('mysql:host='.$hostname .';dbname='. $database, $user, $password);
+	$dbh = new PDO('mysql:host='.$hostname .';dbname='. $database, $user, $password);
 
 	if (isset($_GET['cnpj'])){
 		$id = (int) $_GET['cnpj'];
@@ -36,7 +36,7 @@
 	// 	 'nome' => $row['nome'],
 	// 	 'nveiculos' => $row['nveiculo'],
 	//  );
-	 echo $stmt;
+	 // echo $stmt;
 
 
 
