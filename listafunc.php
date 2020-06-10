@@ -13,11 +13,11 @@
 
 	# Substitua abaixo os dados, de acordo com o banco criado
 	$user = "padmin";
-	$password = "LEre7CvzQ2t0rt7J";
+	$password = "4postmicres";
 	$database = "ControleMicres";
 
 	# O hostname deve ser sempre localhost
-	$hostname = "sql110.epizy.com";
+	$hostname = "192.168.25.25";
 
 	# Conecta com o servidor de banco de dados
 	mysql_connect( $hostname, $user, $password ) or die( ' Erro na conexão ' );
