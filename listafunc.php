@@ -18,35 +18,20 @@
 
 	# O hostname deve ser sempre localhost
 	$hostname = "localhost";
-
-	$dbh = new PDO('mysql:host='.$hostname .';dbname='. $database, $user, $password);
-	// $dbh = new PDO('mysql:host='. $hostname .';dbname=' . $database . ', '. $user . ',' . $password .');
 	# Conecta com o servidor de banco de dados
-/*	mysqli_connect( $hostname, $user, $password )
-
-	if (mysqli_connect_errno()) {
-		  echo 'Connection failed: ';
-		  echo mysqli_connect_error();
-		  echo PHP_EOL;
-		  exit();
-	}
-
-	# Seleciona o banco de dados
-	// mysql_select_db( $database ) or die( 'Erro na seleção do banco' );
+	$dbh = new PDO('mysql:host='.$hostname .';dbname='. $database, $user, $password);
 
 	# Executa a query desejada
-// /*
 	$query = "SELECT cpf,nome FROM funcionario";
-
-
-	$result_query = mysql_query( $query ) or die(' Erro na query:' . $query . ' ' . mysql_error() );
-	$result = mysql_query( $query ) or die(' Erro na query:' . $query . ' ' . mysql_error() );
+	$stmt = $pdo->query($query);
 
 	$userAll = array();
 
-	while ($row = mysql_fetch_array( $result_query )){
-		 $user = array('cpf' => $row[cpf],
-			 'nome' => $row[nome],
+	$stmt = $pdo->query("SELECT * FROM users");
+	
+	while (row = $stmt->fetch()){
+		 $user = array('cpf' => $row['cpf'],
+			 'nome' => $row['nome'],
 		 );
 		 array_push($userAll, $user);
 	}
@@ -58,7 +43,7 @@
 	# Exibe os registros na tela
 	// while ($row = mysql_fetch_array( $result_query )) { print " -- " . $row[medida] . " -- " . $row[km]."\n"; }
 
-	echo $twig->render('index.html', array( "user" => $userAll,
+	echo $twig->render('listafunc1.html', array( "user" => $userAll,
 		));
 	// Chamando a página "hello.html" que está em views
 
