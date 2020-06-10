@@ -31,16 +31,17 @@
 
 
 // /*
-
+	// $row = $stmt->fetch()
+	$user = array('cnpj' => $row['cnpj'],
+		 'nome' => $row['nome'],
+		 'nveiculos' => $row['nveiculo'],
+	 );
 	 // echo $user['cnpj'];
 
 	# Exibe os registros na tela
 	// while ($row = mysql_fetch_array( $result_query )) { print " -- " . $row[medida] . " -- " . $row[km]."\n"; }
 
-	echo $twig->render('buscaempresa1.html', array(
-			'user' => $row['cnpj'],
-		 	'nome' => $row['nome'],
-		 	'nveiculos' => $row['nveiculo'],
+	echo $twig->render('buscaempresa1.html', array( "user" => $user,
 		));
 	// Chamando a página "hello.html" que está em views
 
