@@ -32,11 +32,11 @@
 
 // /*
 	// $row = $stmt->fetch()
-	// $user = array('cnpj' => $row['cnpj'],
-	// 	 'nome' => $row['nome'],
-	// 	 'nveiculos' => $row['nveiculo'],
-	//  );
-	 // echo $stmt;
+	$user = array('cnpj' => $row['cnpj'],
+		 'nome' => $row['nome'],
+		 'nveiculos' => $row['nveiculo'],
+	 );
+	 echo $user;
 
 
 
