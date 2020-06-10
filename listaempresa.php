@@ -13,32 +13,23 @@
 
 	# Substitua abaixo os dados, de acordo com o banco criado
 	$user = "padmin";
-	$password = "LEre7CvzQ2t0rt7J";
-	$database = "ControleMicres";
+	$password = "nJKSQj4xtAD8OyLw";
+	$database = "controleMicres";
 
 	# O hostname deve ser sempre localhost
-	$hostname = "sql110.epizy.com";
-
+	$hostname = "localhost";
 	# Conecta com o servidor de banco de dados
-	mysql_connect( $hostname, $user, $password ) or die( ' Erro na conexão ' );
-
-	# Seleciona o banco de dados
-	mysql_select_db( $database ) or die( 'Erro na seleção do banco' );
+	$dbh = new PDO('mysql:host='.$hostname .';dbname='. $database, $user, $password);
 
 	# Executa a query desejada
-
-	$query = "SELECT cnpj,nome,nveiculo FROM empresa";
-
-
-	$result_query = mysql_query( $query ) or die(' Erro na query:' . $query . ' ' . mysql_error() );
-	$result = mysql_query( $query ) or die(' Erro na query:' . $query . ' ' . mysql_error() );
+	$stmt = $dbh->query("SELECT cpf,nome FROM funcionario");
 
 	$userAll = array();
-
-	while ($row = mysql_fetch_array( $result_query )){
-		 $user = array('cnpj' => $row[cnpj],
-			 'nome' => $row[nome],
-			 'nveiculos' => $row[nveiculo],
+// /*
+	while ($row = $stmt->fetch()){
+		 $user = array('cnpj' => $row['cnpj'],
+			 'nome' => $row['nome'],
+			 'nveiculos' => $row['nveiculo'],
 		 );
 		 array_push($userAll, $user);
 	}
@@ -50,7 +41,7 @@
 	# Exibe os registros na tela
 	// while ($row = mysql_fetch_array( $result_query )) { print " -- " . $row[medida] . " -- " . $row[km]."\n"; }
 
-	echo $twig->render('listaempresa.html', array( "user" => $userAll,
+	echo $twig->render('listaempresa1.html', array( "user" => $userAll,
 		));
 	// Chamando a página "hello.html" que está em views
 
