@@ -18,7 +18,7 @@
 
 	# O hostname deve ser sempre localhost
 	$hostname = "localhost";
-
+/*
 	# Conecta com o servidor de banco de dados
 	mysqli_connect( $hostname, $user, $password )
 
@@ -33,7 +33,7 @@
 	// mysql_select_db( $database ) or die( 'Erro na seleção do banco' );
 
 	# Executa a query desejada
-/*
+// /*
 	$query = "SELECT cpf,nome FROM funcionario";
 
 
