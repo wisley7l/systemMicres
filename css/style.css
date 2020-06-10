@@ -32,7 +32,8 @@ section header{
 }
 
 p{
-	color: #808080;
+	/* color: #808080; */
+	color: #00f;
 }
 
 address{
