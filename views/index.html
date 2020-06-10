@@ -99,46 +99,36 @@
 			<div class="col-md-4">
 				<div class="service-item">
 					<div class="icon"><i class="fa fa-diamond"></i></div>
-					<h3>We Are Creative</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco.
-					</p>
+						<table class="table table-striped">
+							<thead>
+								<tr>
+									<th scope="col">CPF</th>
+									<th scope="col">Nome</th>
+									<!-- <th scope="col">Email</th> -->
+								</tr>
+							</thead>
+							<tbody>
+								{% for use in user %}
+								<tr>
+									<th scope="row">{{use.cpf}}</th>
+									<td>{{use.nome}}</td>
+									<!-- <td><?php echo $valor->user_email;?></td> -->
+									<!-- <td><?php echo date('d/m/Y H:m:s', strtotime($valor->user_registered));?></td> -->
+								</tr>
+								{% endfor %}
+							</tbody>
+						</table>
+						<button id ='cadastrarmanutencao' onclick="listafunc()"> Lista Funcionario
+						<button id ='cadastrarmanutencao' onclick="cadastramedicao({{cod}})"> Cadastra Empresa
+						<button id ='cadastrarmanutencao' onclick="cadastramedicao({{cod}})"> Cadastra Funcionario
+						<button id ='cadastrarmanutencao' onclick="listaempresa({{cod}})"> Listar Empresa
 				</div>
 			</div>
 		</div>
 	</div>
 	</section>
 
-	<div class="container">
-		<table class="table table-striped">
-			<thead>
-				<tr>
-					<th scope="col">CPF</th>
-					<th scope="col">Nome</th>
-					<!-- <th scope="col">Email</th> -->
 
-				</tr>
-			</thead>
-
-			<tbody>
-				{% for use in user %}
-					<tr>
-						<th scope="row">{{use.cpf}}</th>
-						<td>{{use.nome}}</td>
-						<!-- <td><?php echo $valor->user_email;?></td> -->
-						<!-- <td><?php echo date('d/m/Y H:m:s', strtotime($valor->user_registered));?></td> -->
-					</tr>
-				{% endfor %}
-
-
-			</tbody>
-		</table>
-		<button id ='cadastrarmanutencao' onclick="listafunc()"> Lista Funcionario
-		<button id ='cadastrarmanutencao' onclick="cadastramedicao({{cod}})"> Cadastra Empresa
-		<button id ='cadastrarmanutencao' onclick="cadastramedicao({{cod}})"> Cadastra Funcionario
-		<button id ='cadastrarmanutencao' onclick="listaempresa({{cod}})"> Listar Empresa
-	</div>
 	<!-- Portfolio section start -->
 	<section id="portfolio" class="darker">
 		<div class="container">
