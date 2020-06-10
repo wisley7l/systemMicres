@@ -22,8 +22,7 @@
 	$dbh = new PDO('mysql:host='.$hostname .';dbname='. $database, $user, $password);
 
 	# Executa a query desejada
-	$query = "SELECT cpf,nome FROM funcionario";
-	$stmt = $pdo->query($query);
+	$stmt = $pdo->query("SELECT cpf,nome FROM funcionario");
 
 	$userAll = array();
 /*
