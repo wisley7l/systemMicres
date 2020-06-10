@@ -54,13 +54,13 @@
 
 
 
-
+*/
 	# Exibe os registros na tela
 	// while ($row = mysql_fetch_array( $result_query )) { print " -- " . $row[medida] . " -- " . $row[km]."\n"; }
 
-	echo $twig->render('listafunc.html', array( "user" => $userAll,
+	echo $twig->render('index.html', array( "user" => $userAll,
 		));
 	// Chamando a página "hello.html" que está em views
-*/
+
 
 ?>
