@@ -36,7 +36,7 @@
 		 'nome' => $row['nome'],
 		 'nveiculos' => $row['nveiculo'],
 	 );
-	 echo $row['cnpj'];
+	 echo $user['cnpj'];
 
 	# Exibe os registros na tela
 	// while ($row = mysql_fetch_array( $result_query )) { print " -- " . $row[medida] . " -- " . $row[km]."\n"; }
