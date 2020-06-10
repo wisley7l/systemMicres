@@ -75,7 +75,7 @@
 			<thead>
 				<tr>
 					<th scope="col" valign = "center"></th>
-					<th scope="col" valign = "center" width="14px">CNPJ</th>
+					<th scope="col" valign = "center" width="10px">CNPJ</th>
 					<th scope="col" valign = "center">Nome Fantasia </th>
 					<th scope="col" valign = "center">N de Veiculos </th>
 					<!-- <th scope="col">Email</th> -->
@@ -88,8 +88,6 @@
 					<td scope="row" align = "left"><a id ='cnpj-empresa' onclick="buscaempresa({{use.cnpj}})" href="#"> {{use.cnpj}}</a></td>
 					<td scope="row" align = "left">{{use.nome}}</td>
 					<td scope="row" align = "left">{{use.nveiculo}}</td>
-					<!-- <td><?php echo $valor->user_email;?></td> -->
-					<!-- <td><?php echo date('d/m/Y H:m:s', strtotime($valor->user_registered));?></td> -->
 				</tr>
 				{% endfor %}
 			</tbody>
