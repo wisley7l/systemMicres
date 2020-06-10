@@ -27,16 +27,16 @@
 		}
 
 	# Executa a query desejada
-	$stmt = $dbh->query("SELECT cnpj,nome,nveiculo FROM empresa WHERE cnpj = $id");
+	$stmt = $dbh->query("SELECT cnpj,nome,nveiculo FROM empresa WHERE cnpj = $id")->fetch();
 
 
 // /*
-	$row = $stmt->fetch()
-	$user = array('cnpj' => $row['cnpj'],
-		 'nome' => $row['nome'],
-		 'nveiculos' => $row['nveiculo'],
-	 );
-	 echo $user;
+	// $row = $stmt->fetch()
+	// $user = array('cnpj' => $row['cnpj'],
+	// 	 'nome' => $row['nome'],
+	// 	 'nveiculos' => $row['nveiculo'],
+	//  );
+	 echo $stmt;
 
 
 
