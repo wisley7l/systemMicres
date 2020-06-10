@@ -19,7 +19,7 @@ function listaempresa(){
 function cadastraempresa(){
   window.location.href = "/cadastraempresa.php";
 }
-function buscaempresa(id) {
+function buscaempresa(cnpj) {
   console.log("teste");
   window.location.href = "/buscaempresa.php?cnpj=" + cnpj;
 }
