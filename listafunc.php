@@ -19,7 +19,7 @@
 	# O hostname deve ser sempre localhost
 	$hostname = "localhost";
 
-	$dbh = new PDO("'mysql:host=".$hostname .";dbname='". $database, $user, $password);
+	$dbh = new PDO('mysql:host='.$hostname .';dbname='. $database, $user, $password);
 	// $dbh = new PDO('mysql:host='. $hostname .';dbname=' . $database . ', '. $user . ',' . $password .');
 	# Conecta com o servidor de banco de dados
 /*	mysqli_connect( $hostname, $user, $password )
