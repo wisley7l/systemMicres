@@ -73,6 +73,7 @@
 		<table class="table table-striped">
 			<thead>
 				<tr>
+					<th scope="col"></th>
 					<th scope="col">CPF</th>
 					<th scope="col">Nome</th>
 					<!-- <th scope="col">Email</th> -->
@@ -81,7 +82,8 @@
 			<tbody>
 				{% for use in user %}
 				<tr>
-					<th scope="row">{{use.cpf}}</th>
+					<th scope="row"></th>
+					<td>{{use.cpf}}</th>
 					<td>{{use.nome}}</td>
 					<!-- <td><?php echo $valor->user_email;?></td> -->
 					<!-- <td><?php echo date('d/m/Y H:m:s', strtotime($valor->user_registered));?></td> -->
