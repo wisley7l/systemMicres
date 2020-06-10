@@ -27,7 +27,7 @@
 		}
 
 	# Executa a query desejada
-	$stmt = $dbh->query("SELECT cnpj,nome,nveiculo FROM empresa WHERE cnpj = $id")->fetch();
+	$row = $dbh->query("SELECT cnpj,nome,nveiculo FROM empresa WHERE cnpj = $id")->fetch();
 
 
 // /*
@@ -41,7 +41,7 @@
 	# Exibe os registros na tela
 	// while ($row = mysql_fetch_array( $result_query )) { print " -- " . $row[medida] . " -- " . $row[km]."\n"; }
 
-	echo $twig->render('buscaempresa1.html', $user//array( "user" => $user,
+	echo $twig->render('buscaempresa1.html', array( "user" => $user,
 		));
 	// Chamando a página "hello.html" que está em views
 
