@@ -76,16 +76,16 @@
 				<tr>
 					<th scope="col"></th>
 					<th scope="col">CNPJ</th>
-					<td scope="col">Nome Fantasia </td>
-					<td scope="col">Número de Veiculos </td>
+					<th scope="col">Nome Fantasia </th>
+					<th scope="col">Número de Veiculos </th>
 					<!-- <th scope="col">Email</th> -->
 				</tr>
 			</thead>
 			<tbody>
 				{% for use in user %}
 				<tr>
-					<th scope="row"></th>
-					<th scope="row">{{use.cnpj}}</th>
+					<td scope="row"></td>
+					<td scope="row">{{use.cnpj}}</td>
 					<td scope="row">{{use.nome}}</td>
 					<td scope="row">{{use.nveiculo}}</td>
 					<!-- <td><?php echo $valor->user_email;?></td> -->
