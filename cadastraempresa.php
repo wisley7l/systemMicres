@@ -40,7 +40,7 @@
 		if($result_query == true ){
 			echo "SUCESS0 Insert";
 		}else {
-			$result_query2 = $dbh->query($query);
+			$result_query2 = $dbh->query($query2);
 			if($result_query2 == true ){
 				echo "SUCESS0 Update";
 			}else {
