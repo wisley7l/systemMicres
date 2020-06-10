@@ -41,13 +41,13 @@
 			header('Location: listaempresa.php');
 		}else {
 			// $result_query2 = $dbh->query($query2);
-			// if($dbh->query($query2) == true ){
-				 echo $dbh->query($query2);
+			if($dbh->query($query2) == true ){
+				 print_r($dbh);
 				//header('Location: listaempresa.php');
-			// }else {
-				// echo "erro Update";
+			}else {
+				echo "erro Update";
 				// header('Location: erro.php');
-			// }
+			}
 		}
 
 	}
