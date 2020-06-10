@@ -141,7 +141,7 @@ a:focus{
   /* background: #00F; */
 	/* background: url('../img/bg2.png'); */
 	/* background-size: 50px; */
-	width: 30px;
+	width: auto;
 	height: 30px;
 	color: #f00;
 }
