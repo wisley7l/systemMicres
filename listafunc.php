@@ -26,7 +26,7 @@
 
 	$userAll = array();
 // /*
-	while (row = $stmt->fetch()){
+	while ($row = $stmt->fetch()){
 		 $user = array('cpf' => $row['cpf'],
 			 'nome' => $row['nome'],
 		 );
