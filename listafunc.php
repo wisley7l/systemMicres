@@ -14,10 +14,10 @@
 	# Substitua abaixo os dados, de acordo com o banco criado
 	$user = "padmin";
 	$password = "4postmicres";
-	$database = "ControleMicres";
+	$database = "controleMicres";
 
 	# O hostname deve ser sempre localhost
-	$hostname = "192.168.25.25";
+	$hostname = "localhost";
 
 	# Conecta com o servidor de banco de dados
 	mysql_connect( $hostname, $user, $password ) or die( ' Erro na conexão ' );
