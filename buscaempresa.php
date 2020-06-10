@@ -19,7 +19,7 @@
 	# O hostname deve ser sempre localhost
 	$hostname = "localhost";
 	# Conecta com o servidor de banco de dados
-	$dbh = new PDO('mysql:host='.$hostname .';dbname='. $database, $user, $password);
+	// $dbh = new PDO('mysql:host='.$hostname .';dbname='. $database, $user, $password);
 
 	if (isset($_GET['cnpj'])){
 		$id = (int) $_GET['cnpj'];
@@ -31,7 +31,7 @@
 		}
 
 	# Executa a query desejada
-	$stmt = $dbh->query("SELECT cnpj,nome,nveiculo FROM empresa WHERE cnpj = $id");
+	// $stmt = $dbh->query("SELECT cnpj,nome,nveiculo FROM empresa WHERE cnpj = $id");
 
 // 	$userAll = array();
 // // /*
