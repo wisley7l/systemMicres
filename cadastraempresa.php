@@ -38,13 +38,16 @@
 		$result_query = $dbh->query($query);
 
 		if($result_query == true ){
-			echo "SUCESS0 Insert";
+			// echo "SUCESS0 Insert";
+			header('Location: /listaempresa.php');
 		}else {
 			$result_query2 = $dbh->query($query2);
 			if($result_query2 == true ){
-				echo "SUCESS0 Update";
+				// echo "SUCESS0 Update";
+				header('Location: /listaempresa.php');
 			}else {
-				echo "erro Update";
+				// echo "erro Update";
+				header('Location: /erro.php');
 			}
 		}
 
