@@ -38,7 +38,7 @@
 	// while ($row = mysql_fetch_array( $result_query )) { print " -- " . $row[medida] . " -- " . $row[km]."\n"; }
 
 	echo $twig->render('buscaempresa1.html', array(
-			'cnpj' => $row['cnpj'],
+			'user' => $row['cnpj'],
 		 	'nome' => $row['nome'],
 		 	'nveiculos' => $row['nveiculo'],
 		));
