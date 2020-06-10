@@ -12,8 +12,8 @@
 
 // /*
 	# Substitua abaixo os dados, de acordo com o banco criado
-	$user = "wis";
-	$password = "alves9846";
+	$user = "padmin";
+	$password = "nJKSQj4xtAD8OyLw";
 	$database = "controleMicres";
 
 	# O hostname deve ser sempre localhost
