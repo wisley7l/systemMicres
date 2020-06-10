@@ -20,7 +20,14 @@
 	$hostname = "localhost";
 
 	# Conecta com o servidor de banco de dados
-	mysql_connect( $hostname, $user, $password ) or die( ' Erro na conexão ' );
+	mysqli_connect( $hostname, $user, $password )
+
+	if (mysqli_connect_errno()) {
+		  echo 'Connection failed: ';
+		  echo mysqli_connect_error();
+		  echo PHP_EOL;
+		  exit();
+	}
 
 	# Seleciona o banco de dados
 	// mysql_select_db( $database ) or die( 'Erro na seleção do banco' );
