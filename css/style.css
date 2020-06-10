@@ -140,7 +140,7 @@ a:focus{
 	position: relative;
   background: #00F;
 	/* background: url('../img/bg2.png'); */
-	background-size: 100%, 10%;
+	background-size: 10%;
 	color: #fff;
 }
 
