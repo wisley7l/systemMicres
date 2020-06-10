@@ -26,9 +26,7 @@
 	$stmt = $pdo->query($query);
 
 	$userAll = array();
-
-	$stmt = $pdo->query("SELECT * FROM users");
-	
+/*
 	while (row = $stmt->fetch()){
 		 $user = array('cpf' => $row['cpf'],
 			 'nome' => $row['nome'],
@@ -39,7 +37,7 @@
 
 
 
-*/
+// */
 	# Exibe os registros na tela
 	// while ($row = mysql_fetch_array( $result_query )) { print " -- " . $row[medida] . " -- " . $row[km]."\n"; }
 
