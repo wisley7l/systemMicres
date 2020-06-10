@@ -10,7 +10,7 @@
 	// Carregando a pasta views
 	// $link = mysqli_connect("sql110.epizy.com", "epiz_25916090", "JYCprYQD3l", "epiz_25916090_controlemicres");
 
-// /*
+
 	# Substitua abaixo os dados, de acordo com o banco criado
 	$user = "padmin";
 	$password = "nJKSQj4xtAD8OyLw";
