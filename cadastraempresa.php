@@ -42,7 +42,7 @@
 		}else {
 			// $result_query2 = $dbh->query($query2);
 			if($dbh->query($query2) == true ){
-				 print_r($dbh);
+				 print_r($dbh->query($query1) );
 				//header('Location: listaempresa.php');
 			}else {
 				echo "erro Update";
