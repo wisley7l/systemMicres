@@ -77,7 +77,8 @@
 		<form class="row">
 			{% for user in use %}
 			<p> <div class="form-group col-md-6">
-				CNPJ: <input id="cnpj-cad" type="number" placeholder="{{user.cnpj}}" class="form-control" value="t"  disabled/>
+				{{use.cnpj}}
+				CNPJ: <input id="cnpj-cad" type="number" placeholder="{{use.cnpj}}" class="form-control" value="t"  disabled/>
 			</div> </p>
 
 			<p> <div class="form-group col-md-6">
