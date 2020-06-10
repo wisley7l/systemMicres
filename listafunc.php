@@ -19,8 +19,10 @@
 	# O hostname deve ser sempre localhost
 	$hostname = "localhost";
 
+	$dbh = new PDO('mysql:host=localhost;dbname=controleMicres', 'padmin', 'nJKSQj4xtAD8OyLw');
+	// $dbh = new PDO('mysql:host='. $hostname .';dbname=' . $database . ', '. $user . ',' . $password .');
 	# Conecta com o servidor de banco de dados
-	mysqli_connect( $hostname, $user, $password )
+/*	mysqli_connect( $hostname, $user, $password )
 
 	if (mysqli_connect_errno()) {
 		  echo 'Connection failed: ';
