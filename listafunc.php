@@ -23,7 +23,7 @@
 	mysql_connect( $hostname, $user, $password ) or die( ' Erro na conexão ' );
 
 	# Seleciona o banco de dados
-	mysql_select_db( $database ) or die( 'Erro na seleção do banco' );
+	// mysql_select_db( $database ) or die( 'Erro na seleção do banco' );
 
 	# Executa a query desejada
 /*
