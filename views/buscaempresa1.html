@@ -73,9 +73,9 @@
 			<!-- tempor incididunt ut labore et dolore magna aliqua. -->
 		<!-- </p> -->
 		<!-- <a href="#" class="btn btn-primary">Get in Touche</a> -->
-		{{user.cnpj}}
+		<!-- {{user.cnpj}} -->
 		<form class="row">
-			<!-- {% for user in use %} -->
+			{% for user in use %}
 			<p> <div class="form-group col-md-6">
 				CNPJ: <input id="cnpj-cad" type="number" placeholder="{{user.cnpj}}" class="form-control" value="t"  disabled/>
 			</div> </p>
@@ -83,7 +83,7 @@
 			<p> <div class="form-group col-md-6">
 				Nome Fantasia: <input id="nomeempresa-cad" type=text placeholder="For Post" class="form-control" />
 			</div> </p>
-			<!-- {% endfor %} -->
+			{% endfor %}
 </form>
 
 	</div>
