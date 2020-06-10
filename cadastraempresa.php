@@ -42,7 +42,7 @@
 		}else {
 			// $result_query2 = $dbh->query($query2);
 			if($dbh->query($query2) == true ){
-				 print_r($dbh->query($query) );
+				 // print_r($dbh->query($query) );
 				//header('Location: listaempresa.php');
 			}else {
 				echo "erro Update";
@@ -57,8 +57,8 @@
 	# Exibe os registros na tela
 	// while ($row = mysql_fetch_array( $result_query )) { print " -- " . $row[medida] . " -- " . $row[km]."\n"; }
 
-	// echo $twig->render('cadastraempresa1.html', array( "user" => $userAll,
-		// ));
+	echo $twig->render('cadastraempresa1.html', array( "user" => $userAll,
+		));
 	// Chamando a página "hello.html" que está em views
 
 
