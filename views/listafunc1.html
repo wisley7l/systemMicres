@@ -60,27 +60,35 @@
 					<!-- tempor incididunt ut labore et dolore magna aliqua. -->
 				<!-- </p> -->
 				<!-- <a href="#" class="btn btn-primary">Get in Touche</a> -->
-				<table>
-					<thead>
-						<tr>
-							<th scope="col">CPF</th>
-							<th scope="col">Nome</th>
-							<!-- <th scope="col">Email</th> -->
-						</tr>
-					</thead>
-					<tbody>
-						{% for use in user %}
-						<tr>
-							<th scope="row">{{use.cpf}}</th>
-							<td>{{use.nome}}</td>
-							<!-- <td><?php echo $valor->user_email;?></td> -->
-							<!-- <td><?php echo date('d/m/Y H:m:s', strtotime($valor->user_registered));?></td> -->
-						</tr>
-						{% endfor %}
-					</tbody>
-				</table>
 			</div>
 		</div>
+	</div>
+
+	<div class="header-info">
+		<h5>Lista de Funcionários</h5>
+		<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,<br> sed do eiusmod -->
+			<!-- tempor incididunt ut labore et dolore magna aliqua. -->
+		<!-- </p> -->
+		<!-- <a href="#" class="btn btn-primary">Get in Touche</a> -->
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th scope="col">CPF</th>
+					<th scope="col">Nome</th>
+					<!-- <th scope="col">Email</th> -->
+				</tr>
+			</thead>
+			<tbody>
+				{% for use in user %}
+				<tr>
+					<th scope="row">{{use.cpf}}</th>
+					<td>{{use.nome}}</td>
+					<!-- <td><?php echo $valor->user_email;?></td> -->
+					<!-- <td><?php echo date('d/m/Y H:m:s', strtotime($valor->user_registered));?></td> -->
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
 	</div>
 
 	<footer>
