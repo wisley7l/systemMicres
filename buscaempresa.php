@@ -27,7 +27,7 @@
 		}
 
 	# Executa a query desejada
-	$row = $dbh->query("SELECT cnpj,nome,nveiculo FROM empresa WHERE cnpj = $id")->fetch();
+	$row = $dbh->query("SELECT cnpj,nome,nveiculo FROM empresa WHERE cnpj = $id LIMIT 1")->fetch();
 
 
 // /*
@@ -36,7 +36,7 @@
 		 'nome' => $row['nome'],
 		 'nveiculos' => $row['nveiculo'],
 	 );
-	 echo $row;
+	 echo $row['cnpj'];
 
 	# Exibe os registros na tela
 	// while ($row = mysql_fetch_array( $result_query )) { print " -- " . $row[medida] . " -- " . $row[km]."\n"; }
