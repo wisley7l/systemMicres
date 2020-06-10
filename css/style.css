@@ -140,7 +140,7 @@ a:focus{
 	position: relative;
   background: #00F;
 	/* background: url('../img/bg2.png'); */
-	background-size: 10%, 10%;
+	background-size: 10%;
 	color: #fff;
 }
 
@@ -171,8 +171,8 @@ a:focus{
 .header-info{
 	position: relative;
 	top: 50%;
-	-webkit-transform: translateY(-80%);
-	transform: translateY(-30%);
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
 }
 
 /***
