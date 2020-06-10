@@ -32,15 +32,15 @@
 	# Executa a query desejada
 	$stmt = $dbh->query("SELECT cnpj,nome,nveiculo FROM empresa WHERE cnpj = $id");
 
-	$userAll = array();
-// /*
-	while ($row = $stmt->fetch()){
-		 $user = array('cnpj' => $row['cnpj'],
-			 'nome' => $row['nome'],
-			 'nveiculos' => $row['nveiculo'],
-		 );
-		 array_push($userAll, $user);
-	}
+// 	$userAll = array();
+// // /*
+// 	while ($row = $stmt->fetch()){
+// 		 $user = array('cnpj' => $row['cnpj'],
+// 			 'nome' => $row['nome'],
+// 			 'nveiculos' => $row['nveiculo'],
+// 		 );
+// 		 array_push($userAll, $user);
+// 	}
 
 
 
@@ -49,8 +49,8 @@
 	# Exibe os registros na tela
 	// while ($row = mysql_fetch_array( $result_query )) { print " -- " . $row[medida] . " -- " . $row[km]."\n"; }
 
-	echo $twig->render('listaempresa1.html', array( "user" => $userAll,
-		));
+	// echo $twig->render('listaempresa1.html', array( "user" => $userAll,
+		// ));
 	// Chamando a página "hello.html" que está em views
 
 
