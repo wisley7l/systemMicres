@@ -18,7 +18,7 @@ p, input, textarea{
 SECTION
 *****************/
 section{
-	background-color: #f00;
+	background-color: #fff;
 	padding: 80px 0;
 }
 
@@ -141,7 +141,7 @@ a:focus{
   /* background: #00F; */
 	/* background: url('../img/bg2.png'); */
 	/* background-size: 10%; */
-	color: #fff;
+	color: #f00;
 }
 
 .jumbotron .mask{
