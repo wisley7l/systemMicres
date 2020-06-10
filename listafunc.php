@@ -25,7 +25,7 @@
 	$stmt = $dbh->query("SELECT cpf,nome FROM funcionario");
 
 	$userAll = array();
-/*
+// /*
 	while (row = $stmt->fetch()){
 		 $user = array('cpf' => $row['cpf'],
 			 'nome' => $row['nome'],
