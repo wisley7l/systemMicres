@@ -73,11 +73,12 @@
 			<!-- tempor incididunt ut labore et dolore magna aliqua. -->
 		<!-- </p> -->
 		<!-- <a href="#" class="btn btn-primary">Get in Touche</a> -->
-		<!-- {{user.cnpj}} -->
+		{{user}}
 		<form class="row">
+
 			{% for user in use %}
 			<p> <div class="form-group col-md-6">
-				{{use.cnpj}}
+
 				CNPJ: <input id="cnpj-cad" type="number" placeholder="{{use.cnpj}}" class="form-control" value="t"  disabled/>
 			</div> </p>
 
