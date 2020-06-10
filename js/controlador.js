@@ -33,3 +33,9 @@ function clickcadastraempresa(){
   // window.location.href = "/cadastraempresa.php";
 }
 //
+
+function listaveiculo(id) {
+
+  window.location.href = "/buscaempresa.php?cnpj=" + cnpj;
+
+}
