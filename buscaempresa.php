@@ -23,21 +23,21 @@
 
 	if (isset($_GET['cnpj'])){
 		$id = (int) $_GET['cnpj'];
-		echo $id;
+		// echo $id
 		}
 
 	# Executa a query desejada
-	// $stmt = $dbh->query("SELECT cnpj,nome,nveiculo FROM empresa WHERE cnpj = $id");
+	$stmt = $dbh->query("SELECT cnpj,nome,nveiculo FROM empresa WHERE cnpj = $id");
 
-// 	$userAll = array();
-// // /*
-// 	while ($row = $stmt->fetch()){
-// 		 $user = array('cnpj' => $row['cnpj'],
-// 			 'nome' => $row['nome'],
-// 			 'nveiculos' => $row['nveiculo'],
-// 		 );
-// 		 array_push($userAll, $user);
-// 	}
+
+// /*
+	$row = $stmt->fetch()
+	$user = array('cnpj' => $row['cnpj'],
+		 'nome' => $row['nome'],
+		 'nveiculos' => $row['nveiculo'],
+	 );
+	 echo $user;
+
 
 
 
