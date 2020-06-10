@@ -141,7 +141,7 @@ a:focus{
   /* background: #00F; */
 	/* background: url('../img/bg2.png'); */
 	/* background-size: 50px; */
-	color: #f00;
+	color: #00f;
 }
 
 .jumbotron .mask{
@@ -160,7 +160,7 @@ a:focus{
 }
 
 .jumbotron .container{
-	margin-top: 20%;
+	margin-top: 10%;
 }
 
 .jumbotron h1{
