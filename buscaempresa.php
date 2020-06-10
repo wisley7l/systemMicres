@@ -23,6 +23,7 @@
 
 	if (isset($_GET['cnpj'])){
 		$id = (int) $_GET['cnpj'];
+		echo $id;
 		if(isset($_GET['nome'])){
 			$nomeempresa = strval($_GET['nome']);
 		}else {
