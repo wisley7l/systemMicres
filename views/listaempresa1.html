@@ -66,7 +66,7 @@
 	<!-- </div> -->
 
 	<div class="container">
-		<h3>Lista de Funcionários</h3>
+		<h3>Lista de Empresa</h3>
 		<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,<br> sed do eiusmod -->
 			<!-- tempor incididunt ut labore et dolore magna aliqua. -->
 		<!-- </p> -->
@@ -75,7 +75,7 @@
 			<thead>
 				<tr>
 					<th scope="col"></th>
-					<td scope="col">CPF</td>
+					<td scope="col">CNPJ</td>
 					<td scope="col">Nome</td>
 					<!-- <th scope="col">Email</th> -->
 				</tr>
@@ -84,7 +84,7 @@
 				{% for use in user %}
 				<tr>
 					<th scope="row"></th>
-					<td scope="row">{{use.cpf}}</td>
+					<td scope="row">{{use.cnpj}}</td>
 					<td scope="row">{{use.nome}}</td>
 					<!-- <td><?php echo $valor->user_email;?></td> -->
 					<!-- <td><?php echo date('d/m/Y H:m:s', strtotime($valor->user_registered));?></td> -->
