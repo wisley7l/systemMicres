@@ -10,10 +10,10 @@
 	// Carregando a pasta views
 	// $link = mysqli_connect("sql110.epizy.com", "epiz_25916090", "JYCprYQD3l", "epiz_25916090_controlemicres");
 
-
+/*
 	# Substitua abaixo os dados, de acordo com o banco criado
 	$user = "padmin";
-	$password = "4postmicres";
+	$password = "nJKSQj4xtAD8OyLw";
 	$database = "controleMicres";
 
 	# O hostname deve ser sempre localhost
@@ -52,6 +52,6 @@
 	echo $twig->render('listafunc.html', array( "user" => $userAll,
 		));
 	// Chamando a página "hello.html" que está em views
-
+*/
 
 ?>
