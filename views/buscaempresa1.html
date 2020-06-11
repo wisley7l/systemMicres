@@ -73,10 +73,11 @@
 		<tbody>
 			{% for use in veiculos %}
 			<tr>
-				<th scope="row">{{use.placa}}</th>
+				<th scope="row"><a id ='placa-veiculo' onclick="buscaveiculo({{use.placa}})" href="#">{{use.placa}}</a></th>
 				<td scope="row">{{use.marca}}</td>
 				<td scope="row">{{use.modelo}}</td>
 				<td scope="row">{{use.pneuuso}}</td>
+				<td scope="row"><button class="btn btn-lg btn-primary">X</button></td>
 				<!-- <td><?php echo $valor->user_email;?></td> -->
 				<!-- <td><?php echo date('d/m/Y H:m:s', strtotime($valor->user_registered));?></td> -->
 			</tr>
