@@ -36,10 +36,23 @@
 		 'nome' => $row['nome'],
 		 'nveiculos' => $row['nveiculo'],
 	 );
-	 // echo $user['cnpj'];
+	 # Executa a query desejada
+ 	$stmt = $dbh->query("SELECT placa,cnpj_empresa,marca,modelo,pneususo FROM veiculo WHERE cnpj_empresa =  $id");
+
+ 	$userAll = array();
+ // /*
+ 	while ($row = $stmt->fetch()){
+ 		 $veiculo = array('placa' => $row['placa'],
+ 			 'cnpj_empresa' => $row['cnpj_empresa'],
+			 'marca' => $row['marca'],
+			 'modelo' => $row['modelo'],
+			 'pneuuso' => $row['pneususo'],
+ 		 );
+ 		 array_push($userAll, $veiculo);
+ 	}
 
 	# Exibe os registros na tela
-	// while ($row = mysql_fetch_array( $result_query )) { print " -- " . $row[medida] . " -- " . $row[km]."\n"; }
+
 
 	echo $twig->render('buscaempresa1.html', array( "user" => $user,
 		));
