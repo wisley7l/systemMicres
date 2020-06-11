@@ -74,20 +74,19 @@
 		<table class="table table-striped">
 			<thead>
 				<tr>
-
 					<th scope="col" valign = "center" >CNPJ</th>
 					<th scope="col" valign = "center">Nome Fantasia </th>
 					<th scope="col" valign = "center">N de Veiculos </th>
-					<!-- <th scope="col">Email</th> -->
+					<th scope="col"></th>
 				</tr>
 			</thead>
 			<tbody>
 				{% for use in user %}
 				<tr>
-					
 					<td scope="row" align = "left" ><a id ='cnpj-empresa' onclick="buscaempresa({{use.cnpj}})" href="#"> {{use.cnpj}}</a></td>
 					<td scope="row" align = "left">{{use.nome}}</td>
 					<td scope="row" align = "left">{{use.nveiculo}}</td>
+					<td scope="row" align = "left"></td>
 				</tr>
 				{% endfor %}
 			</tbody>
