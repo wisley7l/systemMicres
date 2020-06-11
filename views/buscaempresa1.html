@@ -63,22 +63,22 @@
 	<table class="table table-striped">
 		<thead>
 			<tr>
-				<th scope="col" valign = "center" width = "20%">Placa</th>
-				<th scope="col" valign = "center" width = "20%">Marca</th>
-				<th scope="col" valign = "center" width = "20%">Modelo<th>
-				<th scope="col" valign = "center" width = "20%">Pneu em Uso<th>
-				<th scope="col" valign = "center" width = "20%">Delete<th>
-				<!-- <th scope="col">Email</th> -->
+				<th scope="col" width = "20%">Placa</th>
+				<th scope="col" width = "20%">Marca</th>
+				<th scope="col" width = "20%">Modelo<th>
+				<th scope="col" width = "20%">Pneu em Uso<th>
+				<th scope="col" width = "20%">Delete<th>
+
 			</tr>
 		</thead>
 		<tbody>
 			{% for use in veiculos %}
 			<tr>
-				<td scope="col" align = "left" width = "20%"><a id ='placa-veiculo' onclick="buscaveiculo({{use.placa}})" href="#">{{use.placa}}</a></td>
-				<td scope="col" align = "left" width = "20%">{{use.marca}}</td>
-				<td scope="col" align = "left" width = "20%">{{use.modelo}}</td>
-				<td scope="col" align = "left" width = "20%">{{use.pneuuso}}</td>
-				<td scope="col" align = "left" width = "20%"><button class="btn">X</button></td>
+				<td scope="col"  width = "20%"><a id ='placa-veiculo' onclick="buscaveiculo({{use.placa}})" href="#">{{use.placa}}</a></td>
+				<td scope="col"  width = "20%">{{use.marca}}</td>
+				<td scope="col"  width = "20%">{{use.modelo}}</td>
+				<td scope="col"  width = "20%">{{use.pneuuso}}</td>
+				<td scope="col"  width = "20%"><button class="btn">X</button></td>
 			</tr>
 			{% endfor %}
 		</tbody>
