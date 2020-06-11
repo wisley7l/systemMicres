@@ -63,22 +63,22 @@
 	<table class="table table-striped">
 		<thead>
 			<tr>
-				<th scope="col" width = "20%">Placa</th>
-				<th scope="col" width = "20%">Marca</th>
-				<th scope="col" width = "20%">Modelo<th>
-				<th scope="col" width = "10%">Pneu em Uso<th>
-				<th scope="col" width = "20%">Delete<th>
+				<th>Placa</th>
+				<th>Marca</th>
+				<th>Modelo<th>
+				<th>Pneu em Uso<th>
+				<th>Delete<th>
 
 			</tr>
 		</thead>
 		<tbody>
 			{% for use in veiculos %}
 			<tr>
-				<td scope="col"  width = "20%"><a id ='placa-veiculo' onclick="buscaveiculo({{use.placa}})" href="#">{{use.placa}}</a></td>
-				<td scope="col"  width = "20%">{{use.marca}}</td>
-				<td scope="col"  width = "20%">{{use.modelo}}</td>
-				<td scope="col"  width = "20%">{{use.pneuuso}}</td>
-				<td scope="col"  width = "20%"><button class="btn">X</button></td>
+				<td><a id ='placa-veiculo' onclick="buscaveiculo({{use.placa}})" href="#">{{use.placa}}</a></td>
+				<td>{{use.marca}}</td>
+				<td>{{use.modelo}}</td>
+				<td>{{use.pneuuso}}</td>
+				<td><button class="btn">X</button></td>
 			</tr>
 			{% endfor %}
 		</tbody>
