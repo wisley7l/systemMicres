@@ -42,11 +42,16 @@
  	$userAll = array();
  // /*
  	while ($row = $stmt->fetch()){
+		if ($row['pneususo']=="") {
+			$pneu = 0;
+		}else {
+			$pneu = $row['pneususo'];
+		}
  		 $veiculo = array('placa' => $row['placa'],
  			 'cnpj_empresa' => $row['cnpj_empresa'],
 			 'marca' => $row['marca'],
 			 'modelo' => $row['modelo'],
-			 'pneuuso' => $row['pneususo'],
+			 'pneuuso' => $pneu,
  		 );
  		 array_push($userAll, $veiculo);
  	}
