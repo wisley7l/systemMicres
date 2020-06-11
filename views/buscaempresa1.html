@@ -63,22 +63,22 @@
 	<table class="table table-striped">
 		<thead>
 			<tr>
-				<th scope="col">Placa</th>
-				<th scope="col">Marca</th>
-				<th scope="col">Modelo<th>
-				<th scope="col">Pneu em Uso<th>
-				<th scope="col">Delete<th>
+				<th scope="col" valign = "center">Placa</th>
+				<th scope="col" valign = "center">Marca</th>
+				<th scope="col" valign = "center">Modelo<th>
+				<th scope="col" valign = "center">Pneu em Uso<th>
+				<th scope="col" valign = "center">Delete<th>
 				<!-- <th scope="col">Email</th> -->
 			</tr>
 		</thead>
 		<tbody>
 			{% for use in veiculos %}
 			<tr>
-				<th scope="row"><a id ='placa-veiculo' onclick="buscaveiculo({{use.placa}})" href="#">{{use.placa}}</a></th>
-				<td scope="row">{{use.marca}}</td>
-				<td scope="row">{{use.modelo}}</td>
-				<td scope="row">{{use.pneuuso}}</td>
-				<td scope="row"><button class="btn">X</button></td>
+				<th scope="row" align = "left"><a id ='placa-veiculo' onclick="buscaveiculo({{use.placa}})" href="#">{{use.placa}}</a></th>
+				<td scope="row" align = "left">{{use.marca}}</td>
+				<td scope="row" align = "left">{{use.modelo}}</td>
+				<td scope="row" align = "left">{{use.pneuuso}}</td>
+				<td scope="row" align = "left"><button class="btn">X</button></td>
 				<!-- <td><?php echo $valor->user_email;?></td> -->
 				<!-- <td><?php echo date('d/m/Y H:m:s', strtotime($valor->user_registered));?></td> -->
 			</tr>
