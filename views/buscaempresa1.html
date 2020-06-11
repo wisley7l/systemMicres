@@ -82,18 +82,20 @@
 	<table class="table table-striped">
 		<thead>
 			<tr>
-				<th scope="col"></th>
-				<td scope="col">CPF</td>
-				<td scope="col">Nome</td>
+				<th scope="col">Placa</th>
+				<td scope="col">Marca</td>
+				<td scope="col">Modelo<td>
+				<td scope="col">Pneu em Uso<td>
 				<!-- <th scope="col">Email</th> -->
 			</tr>
 		</thead>
 		<tbody>
-			{% for use in user %}
+			{% for use in veiculos %}
 			<tr>
-				<th scope="row"></th>
-				<td scope="row">{{use.cpf}}</td>
-				<td scope="row">{{use.nome}}</td>
+				<th scope="row">{{use.placa}}</th>
+				<td scope="row">{{use.marca}}</td>
+				<td scope="row">{{use.modelo}}</td>
+				<td scope="row">{{use.pneuuso}}</td>
 				<!-- <td><?php echo $valor->user_email;?></td> -->
 				<!-- <td><?php echo date('d/m/Y H:m:s', strtotime($valor->user_registered));?></td> -->
 			</tr>
