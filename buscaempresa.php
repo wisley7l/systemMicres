@@ -55,6 +55,7 @@
 
 
 	echo $twig->render('buscaempresa1.html', array( "user" => $user,
+	"veiculos"=>$userAll,
 		));
 	// Chamando a página "hello.html" que está em views
 
