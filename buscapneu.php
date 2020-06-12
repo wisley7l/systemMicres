@@ -67,6 +67,46 @@
 
 	# Exibe os registros na tela
 
+	$query = "SELECT m.cod, m.medida, m.km, IFNULL((m.km - (SELECT m3.km FROM manutencao m3 WHERE m.id > m3.id AND m3.cod = m.cod ORDER BY m3.km DESC LIMIT 1 )),0) AS variacaokm,
+	IFNULL((- m.medida + (SELECT m2.medida FROM manutencao m2 WHERE m.id > m2.id AND  m2.cod = m.cod ORDER BY m2.km DESC LIMIT 1 )),0) AS variacao,
+	(m.medida - 3) AS falta
+	FROM manutencao m WHERE m.cod = " . $id . "  ORDER BY m.km DESC";
+	$stmt = $dbh->query($query);
+
+	// $result_query = mysql_query( $query ) or die(' Erro na query:' . $query . ' ' . mysql_error() );
+	// $result = mysql_query( $query ) or die(' Erro na query:' . $query . ' ' . mysql_error() );
+
+	# Exibe os registros na tela
+
+	$userAll = array();
+
+	while ($row = mysql_fetch_array( $result_query )){
+		if ($row[variacaokm]!= 0) {
+			$media = $row[variacao]/$row[variacaokm];
+			$x = ($row[falta] / $media) + $row[km];
+		}
+		else {
+			$media = " - ";
+			$x = " - ";
+		}
+
+		$medicao = array(
+			'cod'=> $row[cod],
+			'medida'=> $row[medida],
+			'km'=> $row[km],
+			'variacaomedida'=> $row[variacao],
+			'variacaokm'=> $row[variacaokm],
+			'media' => $media,
+			'faltakm'=> $row[falta],
+			'kmfinal'=> $x,
+			 );
+			 array_push($userAll, $medicao);
+		}
+		// $kmfinal = $userAll[0]['kmfinal'];
+		// $codfinal = $userAll[0]['cod'];
+		// $mediadesgaste = $userAll[0]['media'];
+
+
 
 	echo $twig->render('buscapneu1.html', array( "user" => $user,
 	"veiculos"=>$userAll,
