@@ -80,7 +80,7 @@
 	# Exibe os registros na tela
 
 	$userAll = array();
-	// while ($row = $stmt->fetch()){
+	while ($row = $stmt->fetch()){
 		// if ($row[variacaokm]!= 0) {
 		// 	$media = $row[variacao]/$row[variacaokm];
 		// 	$x = ($row[falta] / $media) + $row[km];
@@ -101,7 +101,7 @@
 		// 	'kmfinal'=> $x,
 		// 	 );
 		// 	 array_push($userAll, $medicao);
- 	// }
+ 	}
 
 	// while ($row = mysql_fetch_array( $result_query )){
 	//
