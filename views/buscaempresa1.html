@@ -65,30 +65,33 @@
 
 
 
-
-	<table class="table table-striped">
-		<thead>
-			<tr>
-				<th scope="col" align = "left">Placa</th>
-				<th scope="col" align = "left">Marca</th>
-				<th scope="col" align = "left">Modelo</th>
-				<th scope="col" align = "left">Pneu em Uso</th>
-				<th scope="col" align = "right">Delete</th>
-				<!-- <th scope="col">Email</th> -->
-			</tr>
-		</thead>
-		<tbody>
-			{% for use in veiculos %}
-			<tr>
-				<td scope="col" align = "left"><a id ='placa-veiculo' onclick="buscaveiculo({{use.placa}})" href="#">{{use.placa}}</a></td>
-				<td scope="col" align = "left">{{use.marca}}</td>
-				<td scope="col" align = "left">{{use.modelo}}</td>
-				<td scope="col" align = "left">{{use.pneuuso}}</td>
-				<td scope="col" align = "left"><button class="btn">X</button></td>
-			</tr>
-			{% endfor %}
-		</tbody>
-	</table>
+	<div id="table-wrapper">
+	  <div id="table-scroll">
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th scope="col" align = "left">Placa</th>
+						<th scope="col" align = "left">Marca</th>
+						<th scope="col" align = "left">Modelo</th>
+						<th scope="col" align = "left">Pneu em Uso</th>
+						<th scope="col" align = "right">Delete</th>
+						<!-- <th scope="col">Email</th> -->
+					</tr>
+				</thead>
+				<tbody>
+					{% for use in veiculos %}
+					<tr>
+						<td scope="col" align = "left"><a id ='placa-veiculo' onclick="buscaveiculo({{use.placa}})" href="#">{{use.placa}}</a></td>
+						<td scope="col" align = "left">{{use.marca}}</td>
+						<td scope="col" align = "left">{{use.modelo}}</td>
+						<td scope="col" align = "left">{{use.pneuuso}}</td>
+						<td scope="col" align = "left"><button class="btn">X</button></td>
+					</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
+	</div>
 
 
 	<footer>
