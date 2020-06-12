@@ -32,13 +32,13 @@
 
 // /*
 	// $row = $stmt->fetch()
-	$user = array('placa' => $row['placa'],
-		 'cnpj_empresa' => $row['cnpj_empresa'],
-		 'marca' => $row['marca'],
-		 'modelo' => $row['modelo'],
-		 'pneususo' => $row['pneususo'],
-		 'pneus' => $row['pneus'],
-	 );
+	// $user = array('placa' => $row['placa'],
+	// 	 'cnpj_empresa' => $row['cnpj_empresa'],
+	// 	 'marca' => $row['marca'],
+	// 	 'modelo' => $row['modelo'],
+	// 	 'pneususo' => $row['pneususo'],
+	// 	 'pneus' => $row['pneus'],
+	//  );
 	//  # Executa a query desejada
  	// $stmt = $dbh->query("SELECT cod,veiculo,status,pos_veicu FROM pneu WHERE veiculo = $id");
 	//
