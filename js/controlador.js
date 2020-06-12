@@ -26,6 +26,10 @@ function buscaveiculo(placa) {
   console.log("PLACA" + placa);
   window.location.href = "/buscaveiculo.php?placa=" + placa;
 }
+function buscapneu(cod) {
+  console.log("PLACA" + cod);
+  window.location.href = "/buscapneu.php?cod=" + cod;
+}
 
 
 function clickcadastraempresa(){
