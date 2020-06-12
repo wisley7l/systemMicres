@@ -23,7 +23,7 @@
 
 	if (isset($_GET['placa'])){
 		$id = $_GET['placa'];
-		// echo $id;
+		echo $id;
 		}
 //
 // 	# Executa a query desejada
