@@ -223,10 +223,10 @@ a:focus{
   width:100%;
 
 }
-#table-wrapper table * {
+/* #table-wrapper table * {
   background:yellow;
   color:black;
-}
+} */
 #table-wrapper table thead th .text {
   position:absolute;
   top:-20px;
