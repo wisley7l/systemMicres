@@ -44,7 +44,7 @@ $row = $dbh->query("SELECT v.placa,v.cnpj_empresa,v.marca,v.modelo,v.pneususo,v.
 	 # Executa a query desejada
  	$stmt = $dbh->query("SELECT cod,veiculo,status,pos_veicu FROM pneu WHERE veiculo = '$id'");
 	//
- 	$userAll = array();
+ 	// $userAll = array();
 	//
  	while ($row = $stmt->fetch()){
 		// if ($row['status']==1) {
