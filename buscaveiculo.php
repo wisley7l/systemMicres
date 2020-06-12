@@ -51,7 +51,7 @@ $row = $dbh->query("SELECT v.placa,v.cnpj_empresa,v.marca,v.modelo,v.pneususo,v.
 		// 	$pneu = "EM USO";
 		// }else {
 		// 	$pneu = "DESUSO";
-		}
+		// }
  		 $veiculo = array('cod' => $row['cod'],
  			 'veiculo' => $row['veiculo'],
 			 'pos_veicu' => $row['pos_veicu'],
