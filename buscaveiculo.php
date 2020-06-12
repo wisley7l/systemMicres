@@ -21,10 +21,10 @@
 	# Conecta com o servidor de banco de dados
 	$dbh = new PDO('mysql:host='.$hostname .';dbname='. $database, $user, $password);
 
-	if (isset($_GET['placa'])){
-		$id = $_GET['placa'];
-		echo $id
-		}
+	// if (isset($_GET['placa'])){
+	// 	$id = $_GET['placa'];
+	// 	echo $id
+	// 	}
 //
 // 	# Executa a query desejada
 // 	$row = $dbh->query("SELECT placa,cnpj_empresa,marca,modelo,pneususo FROM veiculo WHERE cnpj_empresa =  $id LIMIT 1")->fetch();
