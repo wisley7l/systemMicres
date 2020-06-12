@@ -39,30 +39,30 @@
 		 'pneususo' => $row['pneususo'],
 		 'pneus' => $row['pneus'],
 	 );
-	 # Executa a query desejada
- 	$stmt = $dbh->query("SELECT cod,veiculo,status,pos_veicu FROM pneu WHERE veiculo = $id");
-
- 	$userAll = array();
-
- 	while ($row = $stmt->fetch()){
-		if ($row['status']==1) {
-			$pneu = "EM USO";
-		}else {
-			$pneu = "DESUSO";
-		}
- 		 $veiculo = array('cod' => $row['cod'],
- 			 'veiculo' => $row['veiculo'],
-			 'pos_veicu' => $row['pos_veicu'],
-			 'status' => $pneu,
- 		 );
- 		 array_push($userAll, $veiculo);
- 	}
+	//  # Executa a query desejada
+ 	// $stmt = $dbh->query("SELECT cod,veiculo,status,pos_veicu FROM pneu WHERE veiculo = $id");
+	//
+ 	// $userAll = array();
+	//
+ 	// while ($row = $stmt->fetch()){
+	// 	if ($row['status']==1) {
+	// 		$pneu = "EM USO";
+	// 	}else {
+	// 		$pneu = "DESUSO";
+	// 	}
+ 	// 	 $veiculo = array('cod' => $row['cod'],
+ 	// 		 'veiculo' => $row['veiculo'],
+	// 		 'pos_veicu' => $row['pos_veicu'],
+	// 		 'status' => $pneu,
+ 	// 	 );
+ 	// 	 array_push($userAll, $veiculo);
+ 	// }
 
 	# Exibe os registros na tela
 
 
 	echo $twig->render('buscaveiculo1.html', array( "user" => $user,
-	"veiculos"=>$userAll,
+	// "veiculos"=>$userAll,
 		));
 #	Chamando a página "hello.html" que está em views
 
