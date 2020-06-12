@@ -21,44 +21,46 @@
 	# Conecta com o servidor de banco de dados
 	$dbh = new PDO('mysql:host='.$hostname .';dbname='. $database, $user, $password);
 
-	if (isset($_GET['placa'])){
-		$id = $_GET['placa'];
+	if (isset($_GET['cod'])){
+		$id = $_GET['cod'];
 		// echo $id;
 		}
 
 	# Executa a query desejada
-	$row = $dbh->query("SELECT v.placa,v.cnpj_empresa,v.marca,v.modelo,v.pneususo,v.pneus,e.nome as name
-		FROM veiculo v, empresa e
-		WHERE (v.placa = '$id' AND v.cnpj_empresa = e.cnpj)LIMIT 1")->fetch();
+	$row = $dbh->query("SELECT p.cod,p.veiculo,p.status,p.pos_veic
+		FROM pneu p, veiculo v
+		WHERE p.cod = '$id' LIMIT 1")->fetch();
+
+		// "SELECT cod,veiculo,status,pos_veic FROM pneu WHERE veiculo = '$id' ")
 
 // /*
 	// $row = $stmt->fetch()
-	$user = array('placa' => $row['placa'],
-		 'cnpj_empresa' => $row['cnpj_empresa'],
-		 'marca' => $row['marca'],
-		 'modelo' => $row['modelo'],
-		 'pneususo' => $row['pneususo'],
-		 'pneus' => $row['pneus'],
-		 'nome_empresa' => $row['name'],
-	 );
+	// $user = array('placa' => $row['placa'],
+	// 	 'cnpj_empresa' => $row['cnpj_empresa'],
+	// 	 'marca' => $row['marca'],
+	// 	 'modelo' => $row['modelo'],
+	// 	 'pneususo' => $row['pneususo'],
+	// 	 'pneus' => $row['pneus'],
+	// 	 'nome_empresa' => $row['name'],
+	//  );
 	 # Executa a query desejada
- 	$stmt = $dbh->query("SELECT cod,veiculo,status,pos_veic FROM pneu WHERE veiculo = '$id' ");
-	//
- 	$userAll = array();
-	//
- 	while ($row = $stmt->fetch()){
-		if ($row['status']==1) {
-			$pneu = "EM USO";
-		}else {
-			$pneu = "DESUSO";
-		}
- 		 $veiculo = array('cod' => $row['cod'],
- 			 'veiculo' => $row['veiculo'],
-			 'pos_veic' => $row['pos_veic'],
-			 'status' => $pneu,
- 		 );
- 		 array_push($userAll, $veiculo);
- 	}
+ 	// $stmt = $dbh->query("SELECT cod,veiculo,status,pos_veic FROM pneu WHERE veiculo = '$id' ");
+
+ 	// $userAll = array();
+
+ 	// while ($row = $stmt->fetch()){
+	// 	if ($row['status']==1) {
+	// 		$pneu = "EM USO";
+	// 	}else {
+	// 		$pneu = "DESUSO";
+	// 	}
+ 	// 	 $veiculo = array('cod' => $row['cod'],
+ 	// 		 'veiculo' => $row['veiculo'],
+	// 		 'pos_veic' => $row['pos_veic'],
+	// 		 'status' => $pneu,
+ 	// 	 );
+ 	// 	 array_push($userAll, $veiculo);
+ 	// }
 
 	# Exibe os registros na tela
 
