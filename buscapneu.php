@@ -27,16 +27,16 @@
 		}
 
 	# Executa a query desejada
-	$row = $dbh->query("SELECT p.cod,p.veiculo,p.status,p.pos_veic
+	$row = $dbh->query("SELECT p.cod,p.veiculo,p.status,p.pos_veic, v.placa
 		FROM pneu p, veiculo v
-		WHERE p.cod = '$id' LIMIT 1")->fetch();
+		WHERE (p.cod = '$id'AND v.placa = p.veiculo) LIMIT 1")->fetch();
 
 		// "SELECT cod,veiculo,status,pos_veic FROM pneu WHERE veiculo = '$id' ")
 
 // /*
 	// $row = $stmt->fetch()
 	$user = array('placa' => $row['cod'],
-	// 	 'cnpj_empresa' => $row['cnpj_empresa'],
+		 'cnpj_empresa' => $row['placa'],
 	// 	 'marca' => $row['marca'],
 	// 	 'modelo' => $row['modelo'],
 	// 	 'pneususo' => $row['pneususo'],
