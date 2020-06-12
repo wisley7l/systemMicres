@@ -28,7 +28,7 @@
 
 	# Executa a query desejada
 	// $row = $dbh->query("SELECT cnpj,nome,nveiculo FROM empresa WHERE cnpj = $id LIMIT 1")->fetch();
-	$row = $dbh->query("SELECT placa,cnpj_empresa,marca,modelo,pneususo,pneus FROM veiculo WHERE placa =  $id LIMIT 1")->fetch();
+	$row = $dbh->query("SELECT placa FROM veiculo WHERE placa =  $id LIMIT 1")->fetch();
 
 
 // /*
