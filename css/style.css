@@ -136,13 +136,12 @@ a:focus{
 }
 
 
-.jumbotron{
+/* .jumbotron{
 	text-align: center;
 	position: relative;
-  /* background: #00F; */
-	/* background: url('../img/bg2.png'); */
-	/* background-size: 50px; */
-	color: #00f;
+  background: #00F;
+	background: url('../img/bg2.png');
+	background-size: 50px;
 }
 
 .jumbotron .mask{
@@ -151,7 +150,7 @@ a:focus{
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 20%; /* modifiquei */
+	height: 20%;
 	background: #333;
 	opacity: 0.5;
 }
@@ -167,7 +166,43 @@ a:focus{
 .jumbotron h1{
 	text-transform: uppercase;
 	margin-bottom: 30px;
+} */
+
+/* Wisley */
+
+.jumbotron{
+	text-align: center;
+	position: relative;
+  /* background: #00F; */
+	/* background: url('../img/bg2.png'); */
+	/* background-size: 50px; */
+	color: #00f;
 }
+
+/* .jumbotron .mask{
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 20%;
+	background: #333;
+	opacity: 0.5;
+}
+
+.jumbotron p{
+	color: #fff;
+}
+
+.jumbotron .container{
+	margin-top: 15%;
+}
+
+.jumbotron h1{
+	text-transform: uppercase;
+	margin-bottom: 30px;
+} */
+
 
 .header-info{
 	position: relative;
