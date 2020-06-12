@@ -58,7 +58,7 @@
 				</form>
 				<form class="row">
 				<div class="col-md-8">
-					<button class="btn btn-lg btn-primary">Cadastrar Carro</button>
+					<button class="btn btn-lg btn-primary">Cadastrar Pneu</button>
 				</div>
 				</form>
 			</div>
@@ -73,10 +73,9 @@
 			<table class="table table-striped">
 				<thead>
 					<tr>
-						<th scope="col" align = "left">Placa</th>
-						<th scope="col" align = "left">Marca</th>
-						<th scope="col" align = "left">Modelo</th>
-						<th scope="col" align = "left">Pneu em Uso</th>
+						<th scope="col" align = "left">Cod. Fogo</th>
+						<th scope="col" align = "left">Status</th>
+						<th scope="col" align = "left">Posição</th>
 						<th scope="col" align = "right">Delete</th>
 						<!-- <th scope="col">Email</th> -->
 					</tr>
@@ -84,10 +83,9 @@
 				<tbody>
 					{% for use in veiculos %}
 					<tr>
-						<td scope="col" align = "left"><a id ='placa-veiculo' onclick="buscaveiculo({{use.placa}})" href="#">{{use.placa}}</a></td>
-						<td scope="col" align = "left">{{use.marca}}</td>
-						<td scope="col" align = "left">{{use.modelo}}</td>
-						<td scope="col" align = "left">{{use.pneuuso}}</td>
+						<td scope="col" align = "left"><a id ='placa-veiculo' onclick="buscaveiculo({{use.placa}})" href="#">{{use.cod}}</a></td>
+						<td scope="col" align = "left">{{use.status}}</td>
+						<td scope="col" align = "left">{{use.pos_veicu}}</td>
 						<td scope="col" align = "left"><button class="btn">X</button></td>
 					</tr>
 					{% endfor %}
