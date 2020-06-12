@@ -29,16 +29,17 @@
 	# Executa a query desejada
 	// $row = $dbh->query("SELECT cnpj,nome,nveiculo FROM empresa WHERE cnpj = $id LIMIT 1")->fetch();
 	// $row = $dbh->query("SELECT 'v.placa','v.cnpj_empresa','v.marca',v'.modelo','v.pneususo','v.pneus','e.nome' FROM veiculo v, empresa e WHERE placa = '$id' AND v.cnpj_empresa = e.cnpj LIMIT 1")->fetch();
-$row = $dbh->query("SELECT v.placa,v.cnpj_empresa FROM veiculo v WHERE v.placa = '$id' LIMIT 1")->fetch();
+$row = $dbh->query("SELECT v.placa,v.cnpj_empresa,v.marca,v.modelo,v.pneususo,v.pneus,e.nome FROM veiculo v, empresa e WHERE (v.placa = '$id' AND v.cnpj_empresa = e.cnpj)LIMIT 1")->fetch();
 
 // /*
 	// $row = $stmt->fetch()
-	$user = array('placa' => $row[0],
-		 'cnpj_empresa' => $row['v.cnpj_empresa'],
-		 // 'marca' => $row['v.marca'],
-		 // 'modelo' => $row['v.modelo'],
-		 // 'pneususo' => $row['v.pneususo'],
-		 // 'pneus' => $row['v.pneus'],
+	$user = array('placa' => $row['placa'],
+		 'cnpj_empresa' => $row['cnpj_empresa'],
+		 'marca' => $row['marca'],
+		 'modelo' => $row['modelo'],
+		 'pneususo' => $row['pneususo'],
+		 'pneus' => $row['v.pneus'],
+		 'nomeempresa' => $row['v.pneus'],
 	 );
 	 # Executa a query desejada
  	// $stmt = $dbh->query("SELECT cod,veiculo,status,pos_veicu FROM pneu WHERE veiculo = $id");
