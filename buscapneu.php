@@ -72,7 +72,10 @@
 	// (m.medida - 3) AS falta
 	// FROM manutencao m WHERE m.cod = " . $id . "  ORDER BY m.km DESC";
 
-	$stmt = $dbh->query("SELECT * FROM manutencao m1 WHERE cod_pneu = '$id' ");
+	$stmt = $dbh->query("SELECT m.cod_pneu, m.medida, m.km, IFNULL((m.km - (SELECT m3.km FROM manutencao m3 WHERE m.id > m3.id AND m3.cod_pneu = m.cod_pneu ORDER BY m3.km DESC LIMIT 1 )),0) AS variacaokm,
+	IFNULL((- m.medida + (SELECT m2.medida FROM manutencao m2 WHERE m.id > m2.id AND  m2.cod_pneu = m.cod_pneu ORDER BY m2.km DESC LIMIT 1 )),0) AS variacao,
+	(m.medida - 3) AS falta
+	FROM manutencao m WHERE (m.cod_pneu = '$id' )ORDER BY m.km DESC");
 
 	// $result_query = mysql_query( $query ) or die(' Erro na query:' . $query . ' ' . mysql_error() );
 	// $result = mysql_query( $query ) or die(' Erro na query:' . $query . ' ' . mysql_error() );
