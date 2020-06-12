@@ -81,7 +81,7 @@
 				<tbody>
 					{% for use in veiculos %}
 					<tr>
-						<td scope="col" align = "left"><button id ='placa-veiculo' onclick="buscaveiculo({{use.placa}})" href="#">{{use.placa}}</button></td>
+						<td scope="col" align = "left"><a id ='placa-veiculo' onclick="buscaveiculo()" href="#">{{use.placa}}</a></td>
 						<td scope="col" align = "left">{{use.marca}}</td>
 						<td scope="col" align = "left">{{use.modelo}}</td>
 						<td scope="col" align = "left">{{use.pneuuso}}</td>
