@@ -29,10 +29,10 @@
 	# Executa a query desejada
 	// $row = $dbh->query("SELECT cnpj,nome,nveiculo FROM empresa WHERE cnpj = $id LIMIT 1")->fetch();
 	// $row = $dbh->query("SELECT 'v.placa','v.cnpj_empresa','v.marca',v'.modelo','v.pneususo','v.pneus','e.nome' FROM veiculo v, empresa e WHERE placa = '$id' AND v.cnpj_empresa = e.cnpj LIMIT 1")->fetch();
-$row = $dbh->query("SELECT * FROM veiculo v WHERE placa = '$id' LIMIT 1")->fetch();
+$row = $dbh->query("SELECT * FROM veiculo v WHERE v.placa = '$id' LIMIT 1")->fetch();
 
 // /*
-	$row = $stmt->fetch()
+	// $row = $stmt->fetch()
 	// $user = array('placa' => $row['v.placa'],
 		 // 'cnpj_empresa' => $row['v.cnpj_empresa'],
 		 // 'marca' => $row['v.marca'],
