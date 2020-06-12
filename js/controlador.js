@@ -23,6 +23,7 @@ function buscaempresa(cnpj) {
   window.location.href = "/buscaempresa.php?cnpj=" + cnpj;
 }
 function buscaveiculo(placa) {
+  console.log("PLACA" + placa);
   window.location.href = "/buscaveiculo.php?placa=" + placa;
 }
 
