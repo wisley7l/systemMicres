@@ -33,11 +33,16 @@
 
 		// "SELECT cod,veiculo,status,pos_veic FROM pneu WHERE veiculo = '$id' ")
 
-// /*
 	// $row = $stmt->fetch()
+	if ($row['status']==1) {
+		$pneu = "EM USO";
+	}else {
+		$pneu = "DESUSO";
+	}
+
 	$user = array('cod' => $row['cod'],
 		 'placa' => $row['veiculo'],
-		 'status' => $row['status'],
+		 'status' => $pneu,
 		 'pos_veic' => $row['pos_veic'],
 		 'veiculo' => $row['marca'] . " - " . $row['modelo'],
 	 );
