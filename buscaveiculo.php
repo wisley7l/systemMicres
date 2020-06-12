@@ -27,7 +27,7 @@
 		}
 
 	# Executa a query desejada
-	$row = $dbh->-query("SELECT placa,cnpj_empresa,marca,modelo,pneususo FROM veiculo WHERE cnpj_empresa =  $id LIMIT 1")->fetch();
+	$row = $dbh->query("SELECT placa,cnpj_empresa,marca,modelo,pneususo FROM veiculo WHERE cnpj_empresa =  $id LIMIT 1")->fetch();
 
 
 // /*
@@ -40,10 +40,10 @@
 		 'pneus' => $row['pneus'],
 	 );
 	 # Executa a query desejada
- 	$stmt = $dbh->query(query("SELECT cod,veiculo,status,pos_veicu FROM pneu WHERE veiculo = $id");
+ 	$stmt = $dbh->query("SELECT cod,veiculo,status,pos_veicu FROM pneu WHERE veiculo = $id");
 
  	$userAll = array();
- // /*
+
  	while ($row = $stmt->fetch()){
 		if ($row['status']==1) {
 			$pneu = "EM USO";
