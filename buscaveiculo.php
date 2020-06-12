@@ -42,16 +42,16 @@ $row = $dbh->query("SELECT v.placa,v.cnpj_empresa,v.marca,v.modelo,v.pneususo,v.
 		 'nome_empresa' => $row['name'],
 	 );
 	 # Executa a query desejada
- 	$stmt = $dbh->query("SELECT cod,veiculo,status FROM pneu");
+ 	$stmt = $dbh->query("SELECT cod,veiculo,status FROM pneu WHERE veiculo = '$id' ");
 	//
  	$userAll = array();
 	//
  	while ($row = $stmt->fetch()){
-		// if ($row['status']==1) {
-		// 	$pneu = "EM USO";
-		// }else {
-		// 	$pneu = "DESUSO";
-		// }
+		if ($row['status']==1) {
+			$pneu = "EM USO";
+		}else {
+			$pneu = "DESUSO";
+		}
  		 $veiculo = array('cod' => $row['cod'],
  			 'veiculo' => $row['veiculo'],
 			 // 'pos_veicu' => $row['pos_veicu'],
