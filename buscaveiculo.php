@@ -33,7 +33,7 @@ $row = $dbh->query("SELECT v.placa,v.cnpj_empresa FROM veiculo v WHERE v.placa =
 
 // /*
 	// $row = $stmt->fetch()
-	$user = array('placa' => $row['v.placa'],
+	$user = array('placa' => $row[0],
 		 'cnpj_empresa' => $row['v.cnpj_empresa'],
 		 // 'marca' => $row['v.marca'],
 		 // 'modelo' => $row['v.modelo'],
