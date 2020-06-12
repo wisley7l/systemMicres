@@ -44,21 +44,21 @@ $row = $dbh->query("SELECT v.placa,v.cnpj_empresa,v.marca,v.modelo,v.pneususo,v.
 	 # Executa a query desejada
  	$stmt = $dbh->query("SELECT cod,veiculo,status,pos_veicu FROM pneu WHERE veiculo = '$id'");
 	//
- 	// $userAll = array();
+ 	$userAll = array();
 	//
- 	// while ($row = $stmt->fetch()){
-	// 	if ($row['status']==1) {
-	// 		$pneu = "EM USO";
-	// 	}else {
-	// 		$pneu = "DESUSO";
-	// 	}
- 	// 	 $veiculo = array('cod' => $row['cod'],
- 	// 		 'veiculo' => $row['veiculo'],
-	// 		 'pos_veicu' => $row['pos_veicu'],
-	// 		 'status' => $pneu,
- 	// 	 );
- 	// 	 array_push($userAll, $veiculo);
- 	// }
+ 	while ($row = $stmt->fetch()){
+		// if ($row['status']==1) {
+		// 	$pneu = "EM USO";
+		// }else {
+		// 	$pneu = "DESUSO";
+		}
+ 		 $veiculo = array('cod' => $row['cod'],
+ 			 'veiculo' => $row['veiculo'],
+			 'pos_veicu' => $row['pos_veicu'],
+			 'status' => '$pneu',
+ 		 );
+ 		 array_push($userAll, $veiculo);
+ 	}
 
 	# Exibe os registros na tela
 
