@@ -33,13 +33,13 @@ $row = $dbh->query("SELECT v.placa FROM veiculo v, empresa e WHERE placa = '$id'
 
 // /*
 	$row = $stmt->fetch()
-	$user = array('placa' => $row['v.placa'],
+	// $user = array('placa' => $row['v.placa'],
 		 // 'cnpj_empresa' => $row['v.cnpj_empresa'],
 		 // 'marca' => $row['v.marca'],
 		 // 'modelo' => $row['v.modelo'],
 		 // 'pneususo' => $row['v.pneususo'],
 		 // 'pneus' => $row['v.pneus'],
-	 );
+	 // );
 	 # Executa a query desejada
  	// $stmt = $dbh->query("SELECT cod,veiculo,status,pos_veicu FROM pneu WHERE veiculo = $id");
 	//
