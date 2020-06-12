@@ -23,6 +23,10 @@ function buscaempresa(cnpj) {
   console.log("teste");
   window.location.href = "/buscaempresa.php?cnpj=" + cnpj;
 }
+function buscaveiculo(placa) {
+  console.log("teste");
+  window.location.href = "/buscaveiculo.php?placa=" + placa;
+}
 
 
 function clickcadastraempresa(){
