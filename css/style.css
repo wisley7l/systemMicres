@@ -58,8 +58,8 @@ a:focus{
 
 .logo{
 	position: absolute;
-	left: 1px;
-	top: 1px;
+	/* left: 1px; */
+	/* top: 1px; */
 	width: 1px;
 	height: 1px;
 }
