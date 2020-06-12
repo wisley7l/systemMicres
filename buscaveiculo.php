@@ -27,7 +27,7 @@
 		}
 
 	# Executa a query desejada
-	$row = $dbh->query("SELECT placa,cnpj_empresa,marca,modelo,pneususo,pneus FROM veiculo WHERE cnpj_empresa =  $id LIMIT 1")->fetch();
+	// $row = $dbh->query("SELECT placa,cnpj_empresa,marca,modelo,pneususo,pneus FROM veiculo WHERE cnpj_empresa =  $id LIMIT 1")->fetch();
 
 
 // /*
