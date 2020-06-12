@@ -27,7 +27,7 @@
 		}
 
 	# Executa a query desejada
-	$row = $dbh->query("SELECT p.cod,p.veiculo,p.status,p.pos_veic, v.placa
+	$row = $dbh->query("SELECT p.cod,p.veiculo,p.status,p.pos_veic, v.modelo, v.marca
 		FROM pneu p, veiculo v
 		WHERE (p.cod = '$id'AND v.placa = p.veiculo) LIMIT 1")->fetch();
 
@@ -35,13 +35,13 @@
 
 // /*
 	// $row = $stmt->fetch()
-	$user = array('placa' => $row['cod'],
-		 'cnpj_empresa' => $row['placa'],
-	// 	 'marca' => $row['marca'],
-	// 	 'modelo' => $row['modelo'],
+	$user = array('cod' => $row['cod'],
+		 'placa' => $row['veiculo'],
+	// 	 'status' => $row['status'],
+	// 	 'pos_veic' => $row['modelo'],
 	// 	 'pneususo' => $row['pneususo'],
 	// 	 'pneus' => $row['pneus'],
-	// 	 'nome_empresa' => $row['name'],
+		 'veiculo' => $row['marca'] . " - " . $row['modelo'],
 	 );
 	 # Executa a query desejada
  	// $stmt = $dbh->query("SELECT cod,veiculo,status,pos_veic FROM pneu WHERE veiculo = '$id' ");
@@ -65,7 +65,7 @@
 	# Exibe os registros na tela
 
 
-	echo $twig->render('buscaveiculo1.html', array( "user" => $user,
+	echo $twig->render('buscapneu1.html', array( "user" => $user,
 	"veiculos"=>$userAll,
 		));
 #	Chamando a página "hello.html" que está em views
