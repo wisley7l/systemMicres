@@ -71,7 +71,7 @@
 	IFNULL((- m.medida + (SELECT m2.medida FROM manutencao m2 WHERE m.id > m2.id AND  m2.cod = m.cod ORDER BY m2.km DESC LIMIT 1 )),0) AS variacao,
 	(m.medida - 3) AS falta
 	FROM manutencao m WHERE m.cod = " . $id . "  ORDER BY m.km DESC";
-	
+
 	$stmt = $dbh->query($query);
 
 	// $result_query = mysql_query( $query ) or die(' Erro na query:' . $query . ' ' . mysql_error() );
@@ -80,7 +80,7 @@
 	# Exibe os registros na tela
 
 	$userAll = array();
-	while ($row = $stmt->fetch()){
+	// while ($row = $stmt->fetch()){
 		// if ($row[variacaokm]!= 0) {
 		// 	$media = $row[variacao]/$row[variacaokm];
 		// 	$x = ($row[falta] / $media) + $row[km];
@@ -101,7 +101,7 @@
 		// 	'kmfinal'=> $x,
 		// 	 );
 		// 	 array_push($userAll, $medicao);
- 	}
+ 	// }
 
 	// while ($row = mysql_fetch_array( $result_query )){
 	//
