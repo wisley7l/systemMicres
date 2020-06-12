@@ -58,8 +58,10 @@ a:focus{
 
 .logo{
 	position: absolute;
-	left: 5px;
-	top: 5px;
+	left: 1px;
+	top: 1px;
+	width: 1px;
+	height: 1px;
 }
 
 .menu-toggle{
