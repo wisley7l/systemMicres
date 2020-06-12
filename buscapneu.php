@@ -67,10 +67,11 @@
 
 	# Exibe os registros na tela
 
-	$query = "SELECT m.cod, m.medida, m.km, IFNULL((m.km - (SELECT m3.km FROM manutencao m3 WHERE m.id > m3.id AND m3.cod = m.cod ORDER BY m3.km DESC LIMIT 1 )),0) AS variacaokm,
-	IFNULL((- m.medida + (SELECT m2.medida FROM manutencao m2 WHERE m.id > m2.id AND  m2.cod = m.cod ORDER BY m2.km DESC LIMIT 1 )),0) AS variacao,
-	(m.medida - 3) AS falta
-	FROM manutencao m WHERE m.cod = " . $id . "  ORDER BY m.km DESC";
+	// $query = "SELECT m.cod, m.medida, m.km, IFNULL((m.km - (SELECT m3.km FROM manutencao m3 WHERE m.id > m3.id AND m3.cod = m.cod ORDER BY m3.km DESC LIMIT 1 )),0) AS variacaokm,
+	// IFNULL((- m.medida + (SELECT m2.medida FROM manutencao m2 WHERE m.id > m2.id AND  m2.cod = m.cod ORDER BY m2.km DESC LIMIT 1 )),0) AS variacao,
+	// (m.medida - 3) AS falta
+	// FROM manutencao m WHERE m.cod = " . $id . "  ORDER BY m.km DESC";
+	$query = "SELECT * FROM manutencao m1 WHERE cod = '$id' ";
 
 	$stmt = $dbh->query($query);
 
