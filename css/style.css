@@ -179,7 +179,7 @@ a:focus{
 	color: #00f;
 }
 
-/* .jumbotron .mask{
+.jumbotron .mask{
 	position: absolute;
 	display: block;
 	top: 0;
@@ -201,7 +201,7 @@ a:focus{
 .jumbotron h1{
 	text-transform: uppercase;
 	margin-bottom: 30px;
-} */
+}
 
 
 .header-info{
