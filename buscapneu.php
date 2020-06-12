@@ -37,10 +37,8 @@
 	// $row = $stmt->fetch()
 	$user = array('cod' => $row['cod'],
 		 'placa' => $row['veiculo'],
-	// 	 'status' => $row['status'],
-	// 	 'pos_veic' => $row['modelo'],
-	// 	 'pneususo' => $row['pneususo'],
-	// 	 'pneus' => $row['pneus'],
+		 'status' => $row['status'],
+		 'pos_veic' => $row['pos_veic'],
 		 'veiculo' => $row['marca'] . " - " . $row['modelo'],
 	 );
 	 # Executa a query desejada
