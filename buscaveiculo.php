@@ -22,8 +22,8 @@
 	$dbh = new PDO('mysql:host='.$hostname .';dbname='. $database, $user, $password);
 
 	if (isset($_GET['placa'])){
-		$id = $_GET['placa'];
-		echo $id
+		// $id = $_GET['placa'];
+		// echo $id;
 		}
 //
 // 	# Executa a query desejada
