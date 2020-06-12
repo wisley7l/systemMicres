@@ -35,14 +35,14 @@
 
 // /*
 	// $row = $stmt->fetch()
-	// $user = array('placa' => $row['placa'],
+	$user = array('placa' => $row['cod'],
 	// 	 'cnpj_empresa' => $row['cnpj_empresa'],
 	// 	 'marca' => $row['marca'],
 	// 	 'modelo' => $row['modelo'],
 	// 	 'pneususo' => $row['pneususo'],
 	// 	 'pneus' => $row['pneus'],
 	// 	 'nome_empresa' => $row['name'],
-	//  );
+	 );
 	 # Executa a query desejada
  	// $stmt = $dbh->query("SELECT cod,veiculo,status,pos_veic FROM pneu WHERE veiculo = '$id' ");
 
