@@ -23,40 +23,40 @@
 
 	if (isset($_GET['placa'])){
 		$id = $_GET['placa'];
-		// echo $id
+		echo $id
 		}
-
-	# Executa a query desejada
-	$row = $dbh->query("SELECT placa,cnpj_empresa,marca,modelo,pneususo FROM veiculo WHERE cnpj_empresa =  $id LIMIT 1")->fetch();
-
-
-// /*
-	// $row = $stmt->fetch()
-	$user = array('placa' => $row['placa'],
-		 'cnpj_empresa' => $row['cnpj_empresa'],
-		 'marca' => $row['marca'],
-		 'modelo' => $row['modelo'],
-		 'pneususo' => $row['pneususo'],
-		 'pneus' => $row['pneus'],
-	 );
-	 # Executa a query desejada
- 	$stmt = $dbh->query("SELECT cod,veiculo,status,pos_veicu FROM pneu WHERE veiculo = $id");
-
- 	$userAll = array();
-
- 	while ($row = $stmt->fetch()){
-		if ($row['status']==1) {
-			$pneu = "EM USO";
-		}else {
-			$pneu = "DESUSO";
-		}
- 		 $veiculo = array('cod' => $row['cod'],
- 			 'veiculo' => $row['veiculo'],
-			 'pos_veicu' => $row['pos_veicu'],
-			 'status' => $pneu,
- 		 );
- 		 array_push($userAll, $veiculo);
- 	}
+//
+// 	# Executa a query desejada
+// 	$row = $dbh->query("SELECT placa,cnpj_empresa,marca,modelo,pneususo FROM veiculo WHERE cnpj_empresa =  $id LIMIT 1")->fetch();
+//
+//
+// // /*
+// 	// $row = $stmt->fetch()
+// 	$user = array('placa' => $row['placa'],
+// 		 'cnpj_empresa' => $row['cnpj_empresa'],
+// 		 'marca' => $row['marca'],
+// 		 'modelo' => $row['modelo'],
+// 		 'pneususo' => $row['pneususo'],
+// 		 'pneus' => $row['pneus'],
+// 	 );
+// 	 # Executa a query desejada
+//  	$stmt = $dbh->query("SELECT cod,veiculo,status,pos_veicu FROM pneu WHERE veiculo = $id");
+//
+//  	$userAll = array();
+//
+//  	while ($row = $stmt->fetch()){
+// 		if ($row['status']==1) {
+// 			$pneu = "EM USO";
+// 		}else {
+// 			$pneu = "DESUSO";
+// 		}
+//  		 $veiculo = array('cod' => $row['cod'],
+//  			 'veiculo' => $row['veiculo'],
+// 			 'pos_veicu' => $row['pos_veicu'],
+// 			 'status' => $pneu,
+//  		 );
+//  		 array_push($userAll, $veiculo);
+//  	}
 
 	# Exibe os registros na tela
 
