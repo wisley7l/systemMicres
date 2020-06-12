@@ -72,18 +72,27 @@
 				<thead>
 					<tr>
 						<th scope="col" align = "left">Cod. Fogo</th>
-						<th scope="col" align = "left">Status</th>
 						<th scope="col" align = "left">medida</th>
-						<th scope="col" align = "right">Delete</th>
-						<!-- <th scope="col">Email</th> -->
+						<th scope="col" align = "left">km</th>
+						<th scope="col" align = "left">variacaomedida</th>
+						<th scope="col" align = "left">variacaokm</th>
+						<th scope="col" align = "left">media</th>
+						<th scope="col" align = "left">faltakm</th>
+						<th scope="col" align = "right">kmfinal</th>
+						<th scope="col">DELETE</th>
 					</tr>
 				</thead>
 				<tbody>
 					{% for use in veiculos %}
 					<tr>
 						<td scope="col" align = "left"><a id ='pneu-veiculo' onclick="buscapneu({{use.cod}})" href="#">{{use.cod}}</a></td>
-						<td scope="col" align = "left">{{use.status}}</td>
 						<td scope="col" align = "left">{{use.medida}}</td>
+						<td scope="col" align = "left">{{use.km}}</td>
+						<td scope="col" align = "left">{{use.variacaomedida}}</td>
+						<td scope="col" align = "left">{{use.variacaokm}}</td>
+						<td scope="col" align = "left">{{use.media}}</td>
+						<td scope="col" align = "left">{{use.faltakm}}</td>
+						<td scope="col" align = "left">{{use.kmfinal}}</td>
 						<td scope="col" align = "left"><button class="btn">X</button></td>
 					</tr>
 					{% endfor %}

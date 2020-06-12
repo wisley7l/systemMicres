@@ -84,26 +84,26 @@
 
 	$userAll = array();
 	while ($row = $stmt->fetch()){
-		// if ($row[variacaokm]!= 0) {
-		// 	$media = $row[variacao]/$row[variacaokm];
-		// 	$x = ($row[falta] / $media) + $row[km];
-		// }
-		// else {
-		// 	$media = " - ";
-		// 	$x = " - ";
-		// }
+		if ($row['variacaokm']!= 0) {
+			$media = $row['variacao']/$row['variacaokm'];
+			$x = ($row['falta'] / $media) + $row['km'];
+		}
+		else {
+			$media = " - ";
+			$x = " - ";
+		}
 		//
-		// $medicao = array(
-		// 	'cod'=> $row[cod],
-		// 	'medida'=> $row[medida],
-		// 	'km'=> $row[km],
-		// 	'variacaomedida'=> $row[variacao],
-		// 	'variacaokm'=> $row[variacaokm],
-		// 	'media' => $media,
-		// 	'faltakm'=> $row[falta],
-		// 	'kmfinal'=> $x,
-		// 	 );
-		// 	 array_push($userAll, $medicao);
+		$medicao = array(
+			'cod'=> $row['cod_pneu'],
+			'medida'=> $row['medida'],
+			'km'=> $row['km'],
+			'variacaomedida'=> $row['variacao'],
+			'variacaokm'=> $row['variacaokm'],
+			'media' => $media,
+			'faltakm'=> $row['falta'],
+			'kmfinal'=> $x,
+			 );
+			 array_push($userAll, $medicao);
  	}
 
 	// while ($row = mysql_fetch_array( $result_query )){
