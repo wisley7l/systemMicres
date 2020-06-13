@@ -51,10 +51,17 @@ function clickcadastraempresa(){
 function clickcadastrafunc(){
   var cpf = $("input#cpf-cad")[0].value;
   var nome = $("input#nome-cad")[0].value;
-  var radio1 = $("input#r-adm-cad")[0].value;
-  var radio = $("input#r-func-cad");
-  console.log(radio1);
-  console.log(radio);
+  var radio1 = $("input#r-adm-cad")[0].checked;
+  var radio = $("input#r-func-cad")0].checked;
+  // console.log(radio1);
+  // console.log(radio);
+  if (radio1 == true) {
+    tipo = 0
+  }
+  if (radio == true) {
+    tipo = 1
+  }
+  console.log(tipo);
   // if(cpf.toString().length != 11){
   // alert("Seu CPF não possui 14 Digitos o que imposibilita seu cadastro!");
   // }else {
