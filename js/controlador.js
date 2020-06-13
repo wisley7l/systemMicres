@@ -1,5 +1,5 @@
 console.log('Controlador de Funções em Js');
-var md5 = require('md5');
+
 
 function cadastramedicao(cod) {
   // console.log(cod);
@@ -66,6 +66,8 @@ function clickcadastrafunc(){
   }
   var json = '{"cpf":'+ cpf + ',"nome":'+ nome + ',"tipo":'+ tipo + ' }'
   console.log(json);
+  var v1 = md5(json);
+  console.log(v1);
 
   // if(cpf.toString().length != 11){
   // alert("Seu CPF não possui 14 Digitos o que imposibilita seu cadastro!");
