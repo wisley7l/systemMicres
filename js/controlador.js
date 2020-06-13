@@ -1,35 +1,40 @@
 console.log('Controlador de Funções em Js');
 
 function cadastramedicao(cod) {
-  console.log(cod);
+  // console.log(cod);
   if (isNaN(cod) != true || cod != undefined) {
     console.log("OK"); // cadastra medição
   }else {
     console.log("novo"); // lista peneu
   }
-
 }
-
+//
 function listafunc(){
   window.location.href = "/listafunc.php";
 }
+//
 function listaempresa(){
   window.location.href = "/listaempresa.php";
 }
+//
 function cadastraempresa(){
   window.location.href = "/cadastraempresa.php";
 }
+//
 function buscaempresa(cnpj) {
   window.location.href = "/buscaempresa.php?cnpj=" + cnpj;
 }
+//
 function buscaveiculo(placa) {
-  console.log("PLACA" + placa);
+  // console.log("PLACA" + placa);
   window.location.href = "/buscaveiculo.php?placa=" + placa;
 }
+//
 function buscapneu(cod) {
-  console.log("PLACA" + cod);
+  // console.log("PLACA" + cod);
   window.location.href = "/buscapneu.php?cod=" + cod;
 }
+//
 function buscafunc(cpf) {
   window.location.href = "/cadastrafunc.php?cpf=" + cpf + "&json=u" ;
 }
