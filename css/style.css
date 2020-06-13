@@ -11,7 +11,7 @@ body{
 	font-size: 15px;
 }
 
-p, input, textarea{
+p, input, textarea,h1{
 	font-family: 'impact';
 	src: url('../fonts/impact.ttf');
 }
