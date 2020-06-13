@@ -31,7 +31,7 @@
 		}
 	}
 
-		$query = "SELECT cpf,nome, FROM funcionario WHERE cpf = $id"
+		$query = "SELECT cpf,nome,tipo FROM funcionario WHERE cpf = $id LIMIT 1"
 	// 	// insert na coluna
 	// 	$query = "INSERT INTO empresa (cnpj,nome)
 	// 						VALUES ($id, '$nomeempresa')";
@@ -42,12 +42,12 @@
 	//
 
 
-		// # Executa a query desejada
-		// $row = $dbh->query($query)->fetch();
-		// $user = array('cpf' => $row['cpf'],
-		// 	 'nome' => $row['nome'],
-		// 	 'tipo' => $row['tipo'],
-		//  );
+		# Executa a query desejada
+		$row = $dbh->query($query)->fetch();
+		$user = array('cpf' => $row['cpf'],
+			 'nome' => $row['nome'],
+			 'tipo' => $row['tipo'],
+		 );
 
 
 
