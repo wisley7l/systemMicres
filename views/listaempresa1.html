@@ -23,7 +23,8 @@
 </head>
 <body>
 	{% import 'macros.html' as macro_main %}
-	{{macro_main.topo()}}
+	{% import 'macrosmenu.html' as macro_menu %}
+	{{macro_menu.topolistaempresa()}}
 
 	<div class="container">
 		<h3>Lista de Empresas</h3>
