@@ -31,7 +31,7 @@ function buscapneu(cod) {
   window.location.href = "/buscapneu.php?cod=" + cod;
 }
 function buscafunc(cpf) {
-  window.location.href = "/cadastrafunc.php?cpf=" + cpf + "&json=c" ;
+  window.location.href = "/cadastrafunc.php?cpf=" + cpf + "&json=u" ;
 }
 
 

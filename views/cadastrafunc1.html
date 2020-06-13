@@ -81,13 +81,12 @@
 			<p> <div class="form-group col-md-6">
 				Nome <input id="nomeempresa-cad" type=text placeholder="{{user.nome}}" class="form-control" value="{{user.nome}}"/>
 			</div> </p>
-			<select name="sometext" size="5">
-			  <option>text1</option>
-			  <option>text2</option>
-			  <option>text3</option>
-			  <option>text4</option>
-			  <option>text5</option>
-			</select>
+			<input type="radio" id="r-fun" name="gender" value="1" {{user.checked1}}>
+			<label for="male">Funcionário</label><br>
+			<input type="radio" id="r-adm" name="gender" value="0" {{user.checked2}}>
+			<label for="female">ADM</label><br>
+
+
 		</form>
 		<p> <button id ='cadastrar' onclick="clickcadastrafunc()" class="btn-primary"> Cadastrar </button> </p>
 	</div>

@@ -22,12 +22,14 @@
 	// /*
 	if (isset($_GET['cpf'])){
 		$id = (int) $_GET['cpf'];
-		echo $id;
+		// echo $id;
 	}
 
 	if (isset($_GET['json'])){
 		if ($_GET['json'] == "c") {
 			echo "cadastro";
+		}elseif ($_GET['json'] == "u") {
+			echo "updadte";
 		}
 	}
 
@@ -44,9 +46,19 @@
 		# Executa a query desejada
 		$row = $dbh->query("SELECT cpf,nome,tipo FROM funcionario WHERE cpf =$id LIMIT 1")->fetch();
 
+		if ($row['tipo'] == 0) {
+		 $checked1 = "";
+		 $checked2 = "checked",
+		}else {
+		 $checked1 = "checked";
+		 $checked2 = "";
+		}
+
 		$user = array('cpf' => $row['cpf'],
 			 'nome' => $row['nome'],
 			 'tipo' => $row['tipo'],
+			 'checked1' => $checked1,
+			 'checked2' => $checked2,
 		 );
 
 
@@ -74,7 +86,7 @@
 	# Exibe os registros na tela
 	// while ($row = mysql_fetch_array( $result_query )) { print " -- " . $row[medida] . " -- " . $row[km]."\n"; }
 
-	echo $twig->render('cadastrafunc1.html', array( "user" => $userAll,
+	echo $twig->render('cadastrafunc1.html', array( "user" => $user,
 		));
 	// Chamando a página "hello.html" que está em views
 
