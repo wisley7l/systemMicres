@@ -63,35 +63,37 @@
 				<!-- <a href="#" class="btn btn-primary">Get in Touche</a> -->
 			<!-- </div> -->
 		<!-- </div> -->
-	<!-- </div> -->
-
-	<div class="container">
-		<h3>Lista de Funcionários</h3>
-		<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,<br> sed do eiusmod -->
-			<!-- tempor incididunt ut labore et dolore magna aliqua. -->
-		<!-- </p> -->
-		<!-- <a href="#" class="btn btn-primary">Get in Touche</a> -->
-		<table class="table table-striped">
-			<thead>
-				<tr>
-					<th scope="col"></th>
-					<td scope="col">CPF</td>
-					<td scope="col">Nome</td>
-					<!-- <th scope="col">Email</th> -->
-				</tr>
-			</thead>
-			<tbody>
-				{% for use in user %}
-				<tr>
-					<th scope="row"></th>
-					<td scope="row">{{use.cpf}}</td>
-					<td scope="row">{{use.nome}}</td>
-					<!-- <td><?php echo $valor->user_email;?></td> -->
-					<!-- <td><?php echo date('d/m/Y H:m:s', strtotime($valor->user_registered));?></td> -->
-				</tr>
-				{% endfor %}
-			</tbody>
-		</table>
+	</div>
+	<div id="table-wrapper">
+	<div id="table-scroll">
+		<div class="container">
+			<h3>Lista de Funcionários</h3>
+			<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,<br> sed do eiusmod -->
+				<!-- tempor incididunt ut labore et dolore magna aliqua. -->
+			<!-- </p> -->
+			<!-- <a href="#" class="btn btn-primary">Get in Touche</a> -->
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th scope="col"></th>
+						<td scope="col">CPF</td>
+						<td scope="col">Nome</td>
+						<!-- <th scope="col">Email</th> -->
+					</tr>
+				</thead>
+				<tbody>
+					{% for use in user %}
+					<tr>
+						<th scope="row"></th>
+						<td scope="row">{{use.cpf}}</td>
+						<td scope="row">{{use.nome}}</td>
+						<!-- <td><?php echo $valor->user_email;?></td> -->
+						<!-- <td><?php echo date('d/m/Y H:m:s', strtotime($valor->user_registered));?></td> -->
+					</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
 	</div>
 	</div>
 
