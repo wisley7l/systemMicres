@@ -48,6 +48,7 @@ function clickcadastraempresa(){
 }
 
 function clickcadastrafunc(){
+  console.log("OK");
   var cpf = $("input#cpf-cad")[0].value;
   var nome = $("input#nome-cad")[0].value;
   var radio1 = $("input#r-adm-cad")[0].checked;
