@@ -22,11 +22,12 @@
 	// /*
 	if (isset($_GET['cpf'])){
 		$id = (int) $_GET['cpf'];
+		echo $id;
 	}
 
 	if (isset($_GET['json'])){
 		if ($_GET['json'] == "c") {
-			echo "cadastro"
+			echo "cadastro";
 		}
 	}
 
@@ -41,12 +42,12 @@
 	//
 
 
-		# Executa a query desejada
-		$row = $dbh->query($query)->fetch();
-		$user = array('cpf' => $row['cpf'],
-			 'nome' => $row['nome'],
-			 'tipo' => $row['tipo'],
-		 );
+		// # Executa a query desejada
+		// $row = $dbh->query($query)->fetch();
+		// $user = array('cpf' => $row['cpf'],
+		// 	 'nome' => $row['nome'],
+		// 	 'tipo' => $row['tipo'],
+		//  );
 
 
 
@@ -73,8 +74,8 @@
 	# Exibe os registros na tela
 	// while ($row = mysql_fetch_array( $result_query )) { print " -- " . $row[medida] . " -- " . $row[km]."\n"; }
 
-	echo $twig->render('cadastrafunc1.html', array( "user" => $userAll,
-		));
+	// echo $twig->render('cadastrafunc1.html', array( "user" => $userAll,
+	// 	));
 	// Chamando a página "hello.html" que está em views
 
 
