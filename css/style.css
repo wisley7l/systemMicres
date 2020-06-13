@@ -7,11 +7,13 @@
 
 body{
 	font-family: 'HelveticaCdMed';
+	src: url('../fonts/HelveticaCdMed.ttf');
 	font-size: 15px;
 }
 
 p, input, textarea{
 	font-family: 'impact';
+	src: url('../fonts/impact.ttf');
 }
 
 /****************
