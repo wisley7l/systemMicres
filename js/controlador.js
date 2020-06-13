@@ -46,4 +46,20 @@ function clickcadastraempresa(){
   console.log();
   // window.location.href = "/cadastraempresa.php";
 }
+
+
+function clickcadastrafunc(){
+  var cpf = $("input#cpf-cad")[0].value;
+  var nome = $("input#nome-cad")[0].value;
+  var radio1 = $("input#r-adm-cad")[0].value;
+  var radio = $("input#r-func-cad");
+  console.log(radio1);
+  console.log(radio);
+  // if(cpf.toString().length != 11){
+  // alert("Seu CPF não possui 14 Digitos o que imposibilita seu cadastro!");
+  // }else {
+  //   window.location.href = "/cadastraempresa.php?cnpj=" + cnpj + "&nome=" + nome ;
+  // }
+
+}
 //
