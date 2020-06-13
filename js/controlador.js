@@ -54,15 +54,15 @@ function clickcadastrafunc(){
   var cpf = $("input#cpf-cad")[0].value;
   var nome = $("input#nome-cad")[0].value;
   var radio1 = $("input#r-adm-cad")[0].checked;
-  var radio = $("input#r-func-cad")0].checked;
+  // var radio = $("input#r-func-cad")0].checked;
   // console.log(radio1);
   // console.log(radio);
-  if (radio1 == true) {
-  var tipo = 0
-  }
-  if (radio == true) {
-  var tipo = 1
-  }
+  // if (radio1 == true) {
+  // var tipo = 0
+  // }
+  // if (radio == true) {
+  // var tipo = 1
+  // }
   console.log(tipo);
   // if(cpf.toString().length != 11){
   // alert("Seu CPF não possui 14 Digitos o que imposibilita seu cadastro!");
