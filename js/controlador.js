@@ -70,7 +70,7 @@ function clickcadastrafunc(){
   }
   var json = '{"cpf":'+ cpf + ',"nome":'+ nome + ',"tipo":'+ tipo + ' }'
   console.log(json);
-  var v1 = md5(json);
+  var v1 = MD5(json);
   console.log(v1);
 
   // if(cpf.toString().length != 11){
