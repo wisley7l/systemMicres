@@ -47,7 +47,7 @@
 					{% for use in user %}
 					<tr>
 						<th scope="row"></th>
-						<td scope="row">{{use.cpf}}</td>
+						<td scope="row" align = "left" ><a id ='cnpj-empresa' onclick="buscaempresa({{use.cpf}})" href="#"> {{use.cpf}}</a></td>
 						<td scope="row">{{use.nome}}</td>
 						<!-- <td><?php echo $valor->user_email;?></td> -->
 						<!-- <td><?php echo date('d/m/Y H:m:s', strtotime($valor->user_registered));?></td> -->
