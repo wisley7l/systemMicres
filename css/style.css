@@ -6,12 +6,12 @@
  */
 
 body{
-	font-family: 'HelveticaCdMed', sans-serif;
+	font-family: 'HelveticaCdMed';
 	font-size: 15px;
 }
 
 p, input, textarea{
-	font-family: 'Lora', serif;
+	font-family: 'impact';
 }
 
 /****************
