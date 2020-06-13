@@ -1,5 +1,4 @@
 <?php
-
 	require 'vendor/autoload.php';
 	// Pegando o arquivo autoload da pasta vendor, para que possa utilizar o Twig
 
@@ -8,48 +7,73 @@
 
 	$twig = new Twig_Environment($loader);
 	// Carregando a pasta views
-	// $link = mysqli_connect("sql110.epizy.com", "epiz_25916090", "JYCprYQD3l", "epiz_25916090_controlemicres");
-
 
 	# Substitua abaixo os dados, de acordo com o banco criado
-	$user = "epiz_25916090";
-	$password = "JYCprYQD3l";
-	$database = "epiz_25916090_controlemicres";
+	# Substitua abaixo os dados, de acordo com o banco criado
+	$user = "padmin";
+	$password = "nJKSQj4xtAD8OyLw";
+	$database = "controleMicres";
 
 	# O hostname deve ser sempre localhost
-	$hostname = "sql110.epizy.com";
-
+	$hostname = "localhost";
 	# Conecta com o servidor de banco de dados
-	mysql_connect( $hostname, $user, $password ) or die( ' Erro na conexão ' );
+	$dbh = new PDO('mysql:host='.$hostname .';dbname='. $database, $user, $password);
 
-	# Seleciona o banco de dados
-	mysql_select_db( $database ) or die( 'Erro na seleção do banco' );
-
-	# Executa a query desejada
-
-	$query = "SELECT cpf,nome FROM funcionario";
-
-
-	$result_query = mysql_query( $query ) or die(' Erro na query:' . $query . ' ' . mysql_error() );
-	$result = mysql_query( $query ) or die(' Erro na query:' . $query . ' ' . mysql_error() );
-
-	$userAll = array();
-
-	while ($row = mysql_fetch_array( $result_query )){
-		 $user = array('cpf' => $row[cpf],
-			 'nome' => $row[nome],
-		 );
-		 array_push($userAll, $user);
+	// /*
+	if (isset($_GET['cpf'])){
+		$id = (int) $_GET['cpf'];
 	}
 
+	if (isset($_GET['json'])){
+		if ($_GET['json'] == "c") {
+			echo "cadastro"
+		}
+	}
+
+		$query = "SELECT cpf,nome, FROM funcionario WHERE cpf = $id"
+	// 	// insert na coluna
+	// 	$query = "INSERT INTO empresa (cnpj,nome)
+	// 						VALUES ($id, '$nomeempresa')";
+	//
+	// 	$query2 = "UPDATE empresa
+	// 	SET nome = '$nomeempresa'
+	// 	WHERE cnpj = $id";
+	//
+
+
+		# Executa a query desejada
+		$row = $dbh->query($query)->fetch();
+		$user = array('cpf' => $row['cpf'],
+			 'nome' => $row['nome'],
+			 'tipo' => $row['tipo'],
+		 );
 
 
 
+
+
+	//
+	// 	if($dbh->query($query) == true ){
+	// 		header('Location: listaempresa.php');
+	// 	}else {
+	// 		// $result_query2 = $dbh->query($query2);
+	// 		if($dbh->query($query2) == true ){
+	// 			 // print_r($dbh->query($query) );
+	// 			header('Location: listaempresa.php');
+	// 		}else {
+	// 			echo "erro Update";
+	// 			header('Location: erro.php');
+	// 		}
+	// 	}
+	//
+	// }
+
+	// */
 
 	# Exibe os registros na tela
 	// while ($row = mysql_fetch_array( $result_query )) { print " -- " . $row[medida] . " -- " . $row[km]."\n"; }
 
-	echo $twig->render('cadastraunc.html', array( "user" => $userAll,
+	echo $twig->render('cadastrafunc1.html', array( "user" => $userAll,
 		));
 	// Chamando a página "hello.html" que está em views
 
