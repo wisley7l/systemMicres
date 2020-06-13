@@ -34,7 +34,6 @@ function buscafunc(cpf) {
   window.location.href = "/cadastrafunc.php?cpf=" + cpf + "&json=u" ;
 }
 
-
 function clickcadastraempresa(){
   var cnpj = $("input#cnpj-cad")[0].value;
   var nome = $("input#nomeempresa-cad")[0].value;
@@ -43,8 +42,6 @@ function clickcadastraempresa(){
   }else {
     window.location.href = "/cadastraempresa.php?cnpj=" + cnpj + "&nome=" + nome ;
   }
-  console.log();
-  // window.location.href = "/cadastraempresa.php";
 }
 
 function clickcadastrafunc(){
