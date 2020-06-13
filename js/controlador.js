@@ -47,7 +47,6 @@ function clickcadastraempresa(){
   // window.location.href = "/cadastraempresa.php";
 }
 
-
 function clickcadastrafunc(){
   var cpf = $("input#cpf-cad")[0].value;
   var nome = $("input#nome-cad")[0].value;
@@ -56,10 +55,10 @@ function clickcadastrafunc(){
   // console.log(radio1);
   // console.log(radio);
   if (radio1 == true) {
-    tipo = 0
+  var tipo = 0
   }
   if (radio == true) {
-    tipo = 1
+  var tipo = 1
   }
   console.log(tipo);
   // if(cpf.toString().length != 11){
@@ -67,6 +66,4 @@ function clickcadastrafunc(){
   // }else {
   //   window.location.href = "/cadastraempresa.php?cnpj=" + cnpj + "&nome=" + nome ;
   // }
-
 }
-//
