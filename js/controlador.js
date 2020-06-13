@@ -1,3 +1,7 @@
+var imported = document.createElement('script');
+imported.src = 'md5.js';
+document.head.appendChild(imported);
+
 console.log('Controlador de Funções em Js');
 
 
