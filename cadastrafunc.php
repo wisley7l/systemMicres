@@ -48,7 +48,7 @@
 
 		if ($row['tipo'] == 0) {
 		 $checked1 = "";
-		 $checked2 = "checked",
+		 $checked2 = "checked";
 		}else {
 		 $checked1 = "checked";
 		 $checked2 = "";
