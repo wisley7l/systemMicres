@@ -5,15 +5,23 @@
  * License: http://graphberry.com/pages/license
  */
 
+ @font-face {
+      font-family: HelveticaCdMed;
+      src: url('../fonts/HelveticaCdMed.ttf');
+ }
+
+ @font-face {
+ 		 font-family: impact;
+ 		 src: url('../fonts/impact.ttf');
+ }
+
 body{
 	font-family: 'HelveticaCdMed';
-	src: url('../fonts/HelveticaCdMed.ttf');
 	font-size: 15px;
 }
 
 p, input, textarea,h1{
 	font-family: 'impact';
-	src: url('../fonts/impact.ttf');
 }
 
 /****************
