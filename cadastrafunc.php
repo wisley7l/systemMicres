@@ -31,7 +31,6 @@
 		}
 	}
 
-		$query = "SELECT cpf,nome,tipo FROM funcionario WHERE cpf = '$id' LIMIT 1"
 	// 	// insert na coluna
 	// 	$query = "INSERT INTO empresa (cnpj,nome)
 	// 						VALUES ($id, '$nomeempresa')";
@@ -43,7 +42,7 @@
 
 
 		# Executa a query desejada
-		$row = $dbh->query($query)->fetch();
+		$row = $dbh->query("SELECT cpf,nome,tipo FROM funcionario WHERE cpf =$id LIMIT 1")->fetch();
 
 		$user = array('cpf' => $row['cpf'],
 			 'nome' => $row['nome'],
