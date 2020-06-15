@@ -1,6 +1,6 @@
 <?php
 	require 'vendor/autoload.php';
-	
+	include('js/decpde.php');
 	// Pegando o arquivo autoload da pasta vendor, para que possa utilizar o Twig
 
 	$loader = new Twig_Loader_Filesystem('views');
