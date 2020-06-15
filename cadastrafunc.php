@@ -52,6 +52,9 @@
 
 			if ($_GET['info'] == "c") {
 				echo "cadastro";
+				$row = $dbh->query("INSERT INTO funcionario (cnpj,nome,tipo) VALUES ($cpf, '$nome',$tipo)")->fetch();
+				echo $row[0];
+				
 			}elseif ($_GET['info'] == "u") {
 				echo "updadte";
 				$row = $dbh->query("UPDATE funcionario SET nome = '$nome' , tipo = $tipo WHERE cpf =$cpf")->fetch();
