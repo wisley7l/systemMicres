@@ -1,7 +1,6 @@
 <?php
 	require 'vendor/autoload.php';
-	require 'js/decode.php';
-	// use Base32\Base32;
+	
 	// Pegando o arquivo autoload da pasta vendor, para que possa utilizar o Twig
 
 	$loader = new Twig_Loader_Filesystem('views');
