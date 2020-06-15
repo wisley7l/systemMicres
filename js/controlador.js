@@ -48,14 +48,14 @@ function deletefuncionario(cpf,nome,tipo) {
   // window.location.href = "/cadastrafunc.php?cpf=" + cpf + "&info=u&json=" ;
   var x;
   //recebemos o valor do botão pressionado ok ou cancelar em uma variavel
-  var r=confirm("Escolha um valor!");
+  var r=confirm("TEM CERTEZA QUE DESEJA DELETAR FUNCIONÁRIO DE CPF: "+cpf+" NOME: " + nome +" ?"));
   if (r==true)
     {
-    x="você pressionou OK!";
+    x="Você DELETOU FUNCIONARIO " + nome  ;
     }
   else
     {
-    x="Você pressionou Cancelar!";
+    // x="Você pressionou Cancelar!";
     }
   alert(x)
 
