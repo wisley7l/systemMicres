@@ -40,6 +40,7 @@
 
 			$fstr = str_replace('1','L',$bstr);
 			$fstr = str_replace('0','o',$fstr);
+			$fstr = str_replace('=','',$fstr);
 
 			$outstr = $b->toString($fstr);
 
