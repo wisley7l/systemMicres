@@ -34,7 +34,7 @@
 	// $row = $stmt->fetch()
 	$user = array('cnpj' => $row['cnpj'],
 		 'nome' => $row['nome'],
-		 'nveiculos' => $row['nveiculo'],
+		 'nveiculo' => $row['nveiculo'],
 	 );
 	 # Executa a query desejada
  	$stmt = $dbh->query("SELECT placa,cnpj_empresa,marca,modelo,pneususo FROM veiculo WHERE cnpj_empresa =  $id");
