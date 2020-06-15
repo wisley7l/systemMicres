@@ -70,7 +70,7 @@
 			# Executa a query desejada
 			$row = $dbh->query("SELECT cnpj,nome,nveiculo FROM empresa WHERE cnpj =$id LIMIT 1")->fetch();
 			$row2 = $dbh->query("SELECT COUNT(placa) as p FROM veiculo WHERE cnpj_empresa =$id")->fetch();
-			$row3 = $dbh->query("UPDATE empresa	SET nveiculo = $row2['p'] WHERE cnpj = $cnpj")->fetch();
+			// $row3 = $dbh->query("UPDATE empresa	SET nveiculo = $row2['p'] WHERE cnpj = $cnpj")->fetch();
 
 			$user = array('cnpj' => $row['cnpj'],
 				 'nome' => $row['nome'],
