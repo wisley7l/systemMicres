@@ -28,7 +28,24 @@
 
 	if (isset($_GET['json'])){
 		if ($_GET['json'] == "") {
-			// echo "faz nada \n";
+			echo "faz nada \n";
+			# Executa a query desejada
+			$row = $dbh->query("SELECT cpf,nome,tipo FROM funcionario WHERE cpf =$id LIMIT 1")->fetch();
+
+			if ($row['tipo'] == 0) {
+			 $checked1 = "";
+			 $checked2 = "checked";
+			}else {
+			 $checked1 = "checked";
+			 $checked2 = "";
+			}
+
+			$user = array('cpf' => $row['cpf'],
+				 'nome' => $row['nome'],
+				 'tipo' => $row['tipo'],
+				 'checked1' => $checked1,
+				 'checked2' => $checked2,
+			 );
 		} else {
 			$v1 = $_GET['json'];
 
@@ -75,24 +92,6 @@
 
 		}elseif ($_GET['info'] == "u") {
 			echo "updadte";
-
-			# Executa a query desejada
-			$row = $dbh->query("SELECT cpf,nome,tipo FROM funcionario WHERE cpf =$id LIMIT 1")->fetch();
-
-			if ($row['tipo'] == 0) {
-			 $checked1 = "";
-			 $checked2 = "checked";
-			}else {
-			 $checked1 = "checked";
-			 $checked2 = "";
-			}
-
-			$user = array('cpf' => $row['cpf'],
-				 'nome' => $row['nome'],
-				 'tipo' => $row['tipo'],
-				 'checked1' => $checked1,
-				 'checked2' => $checked2,
-			 );
 
 			$row1 = $dbh->query("UPDATE funcionario SET nome = '$nome' , tipo = $tipo WHERE cpf =$cpf")->fetch();
  			echo $row1[0];
