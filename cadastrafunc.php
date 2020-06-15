@@ -33,6 +33,15 @@
 		}
 	}
 
+	if (isset($_GET['info'])){
+		if ($_GET['info'] == "") {
+			echo "faz nada";
+		}elseif {
+			echo "fazr MD5";
+			echo $_GET['info']);
+		}
+	}
+
 	// 	// insert na coluna
 	// 	$query = "INSERT INTO empresa (cnpj,nome)
 	// 						VALUES ($id, '$nomeempresa')";
