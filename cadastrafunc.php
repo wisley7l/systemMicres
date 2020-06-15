@@ -62,7 +62,7 @@
 			}
 			elseif ($_GET['info'] == "d") {
 				echo "delete";
-				$row = $dbh->query("DELETE FROM funcionarioWHERE cpf =$cpf")->fetch();
+				$row = $dbh->query("DELETE FROM funcionario WHERE cpf =$cpf")->fetch();
 				header('Location: listafunc.php');
 			}
 		}
