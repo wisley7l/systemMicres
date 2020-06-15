@@ -1,5 +1,5 @@
 
-{% macro topolistaempresa() %}
+{% macro topo() %}
 	<div class="jumbotron home " id="home">
 		<h1>MICRES</h1>
 		<div class="jumbotron mask"></div>
@@ -7,7 +7,7 @@
 			<img width="50" height="50"  src="img/logo.png" alt="Moderno - Theme by GraphBerry.com">
 		</a>
 
-		<a href="#" class="menu-toggle" id="nav-expander"><i class="fa fa-bars"></i></a>
+		<a href="" class="menu-toggle" id="nav-expander"><i class="fa fa-bars"></i></a>
 		<!-- Offsite navigation -->
 		<nav class="menu">
 			<a href="#" class="close"><i class="fa fa-close"></i></a>
@@ -66,4 +66,23 @@
 	</div>
 </footer>
 <!-- Footer end  -->
+{% endmacro %}
+
+
+{% macro scripts() %}
+
+			<!-- Load jQuery -->
+			<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+
+			<!-- Load Booststrap -->
+			<script type="text/javascript" src="../js/bootstrap.js"></script>
+
+			<script type="text/javascript" src="../js/smooth-scroll.js"></script>
+
+			<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+			<!-- Load custom js for theme -->
+			<script type="text/javascript" src="../js/app.js"></script>
+			<script type="text/javascript" src="../js/controlador.js"> </script>
+
 {% endmacro %}
