@@ -22,7 +22,11 @@
 
 	// /*
 	if (isset($_GET['cpf'])){
-		$id = (int) $_GET['cpf'];
+		if ($_GET['cpf'] == "") {
+			// code...
+		}else {
+			$id = (int) $_GET['cpf'];
+		}
 		// echo $id;
 	}
 

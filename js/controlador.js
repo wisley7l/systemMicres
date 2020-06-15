@@ -79,6 +79,6 @@ function clickcadastrafunc(){
     console.log(cpf);
     console.log(nome);
     console.log(json);
-    // window.location.href = "/cadastrafunc.php?cpf=" + cpf + "&info=" + s + "&json=" + v1 ;
+    window.location.href = "/cadastrafunc.php?cpf=" + cpf + "&info=" + s + "&json=" + v1 ;
   }
 }
