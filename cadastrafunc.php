@@ -29,23 +29,6 @@
 	if (isset($_GET['json'])){
 		if ($_GET['json'] == "") {
 			echo "faz nada \n";
-			# Executa a query desejada
-			$row = $dbh->query("SELECT cpf,nome,tipo FROM funcionario WHERE cpf =$id LIMIT 1")->fetch();
-
-			if ($row['tipo'] == 0) {
-			 $checked1 = "";
-			 $checked2 = "checked";
-			}else {
-			 $checked1 = "checked";
-			 $checked2 = "";
-			}
-
-			$user = array('cpf' => $row['cpf'],
-				 'nome' => $row['nome'],
-				 'tipo' => $row['tipo'],
-				 'checked1' => $checked1,
-				 'checked2' => $checked2,
-			 );
 		} else {
 			$v1 = $_GET['json'];
 
@@ -75,30 +58,62 @@
 			$row = $dbh->query("INSERT INTO funcionario (cpf,nome,tipo)	VALUES ($cpf, '$nome',$tipo)")->fetch();
 			echo $row[0];
 
-			if ($tipo == 0) {
-			 $checked1 = "";
-			 $checked2 = "checked";
-			}else {
-			 $checked1 = "checked";
-			 $checked2 = "";
-			}
-
-			$user = array('cpf' => $cpf,
-				 'nome' => $nome,
-				 'tipo' => $tipo,
-				 'checked1' => "",
-				 'checked2' => "checked",
-			 );
-
 		}elseif ($_GET['info'] == "u") {
 			echo "updadte";
-
-			$row1 = $dbh->query("UPDATE funcionario SET nome = '$nome' , tipo = $tipo WHERE cpf =$cpf")->fetch();
- 			echo $row1[0];
+			$row = $dbh->query("UPDATE funcionario SET nome = '$nome' , tipo = $tipo WHERE cpf =$cpf")->fetch();
+			echo $row[0];
 		}
 	}
 
+	// 	// insert na coluna
+	// 	$query = "INSERT INTO empresa (cnpj,nome)
+	// 						VALUES ($id, '$nomeempresa')";
+	//
+	// 	$query2 = "UPDATE empresa
+	// 	SET nome = '$nomeempresa'
+	// 	WHERE cnpj = $id";
+	//
 
+
+		# Executa a query desejada
+		$row = $dbh->query("SELECT cpf,nome,tipo FROM funcionario WHERE cpf =$id LIMIT 1")->fetch();
+
+		if ($row['tipo'] == 0) {
+		 $checked1 = "";
+		 $checked2 = "checked";
+		}else {
+		 $checked1 = "checked";
+		 $checked2 = "";
+		}
+
+		$user = array('cpf' => $row['cpf'],
+			 'nome' => $row['nome'],
+			 'tipo' => $row['tipo'],
+			 'checked1' => $checked1,
+			 'checked2' => $checked2,
+		 );
+
+
+
+
+
+	//
+	// 	if($dbh->query($query) == true ){
+	// 		header('Location: listaempresa.php');
+	// 	}else {
+	// 		// $result_query2 = $dbh->query($query2);
+	// 		if($dbh->query($query2) == true ){
+	// 			 // print_r($dbh->query($query) );
+	// 			header('Location: listaempresa.php');
+	// 		}else {
+	// 			echo "erro Update";
+	// 			header('Location: erro.php');
+	// 		}
+	// 	}
+	//
+	// }
+
+	// */
 
 	# Exibe os registros na tela
 	// while ($row = mysql_fetch_array( $result_query )) { print " -- " . $row[medida] . " -- " . $row[km]."\n"; }
