@@ -22,11 +22,7 @@
 
 	// /*
 	if (isset($_GET['cpf'])){
-		if ($_GET['cpf'] == "") {
-			// code...
-		}else {
-			$id = (int) $_GET['cpf'];
-		}
+		$id = (int) $_GET['cpf'];
 		// echo $id;
 	}
 
@@ -36,36 +32,30 @@
 
 	if (isset($_GET['json'])){
 		if ($_GET['json'] == "") {
-
+			// echo "faz nada \n";
 		} else {
 			$v1 = $_GET['json'];
-			//
+
 			$b = new Base32;
-			//
+
 			$b->setCharset(Base32::csSafe);
 			$bstr = $v1;
+
 
 			$fstr = str_replace('1','L',$bstr);
 			$fstr = str_replace('0','o',$fstr);
 
 			$outstr = $b->toString($fstr);
 
-			// $pieces = explode(",", $outstr);
-			// //
-			// $cpf = (int) $pieces[1];
-			// $nome = $pieces[2];
-			// $tipo = (int)$pieces[3];
+			$pieces = explode(",", $outstr);
 
-			if ($_GET['info'] == "c") {
-				// echo "cadastro";
-				// $row = $dbh->query("INSERT INTO funcionario (cpf,nome,tipo) VALUES($cpf,'$nome' , $tipo)")->fetch();
+			$cpf = (int) $pieces[1];
+			$nome = $pieces[2];
+			$tipo = (int)$pieces[3];
 
-			}elseif ($_GET['info'] == "u") {
-				// echo "updadte";
-				$row = $dbh->query("UPDATE funcionario SET nome = '$nome' , tipo = $tipo WHERE cpf =$cpf")->fetch();
-				echo $row[0];
-			}
-
+			
+			$row = $dbh->query("UPDATE funcionario SET nome = '$nome' , tipo = $tipo WHERE cpf =$cpf")->fetch();
+			echo $row[0];
 		}
 	}
 
@@ -80,15 +70,14 @@
 
 
 		# Executa a query desejada
-
 		$row = $dbh->query("SELECT cpf,nome,tipo FROM funcionario WHERE cpf =$id LIMIT 1")->fetch();
 
-		if ($row['tipo'] == 1) {
-		 $checked1 = "checked";
-		 $checked2 = "";
-		}else {
+		if ($row['tipo'] == 0) {
 		 $checked1 = "";
 		 $checked2 = "checked";
+		}else {
+		 $checked1 = "checked";
+		 $checked2 = "";
 		}
 
 		$user = array('cpf' => $row['cpf'],
@@ -97,9 +86,6 @@
 			 'checked1' => $checked1,
 			 'checked2' => $checked2,
 		 );
-
-
-
 
 
 
