@@ -53,6 +53,7 @@
 			if ($_GET['info'] == "c") {
 				echo "cadastro";
 				$row = $dbh->query("INSERT INTO funcionario (cpf,nome,tipo) VALUES ($cpf, '$nome',$tipo)")->fetch();
+				$dbh->closeCursor();
 				// $row =
 				if ($row === FALSE ) {
 					echo "erro";
