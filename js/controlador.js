@@ -44,8 +44,21 @@ function buscafunc(cpf) {
 }
 //
 function deletefuncionario(cpf,nome,tipo) {
-  alert("TEM CERTEZA QUE DESEJA DELETAR FUNCIONÁRIO DE CPF: "+cpf+" NOME: " + nome +" ?");
+  // alert("TEM CERTEZA QUE DESEJA DELETAR FUNCIONÁRIO DE CPF: "+cpf+" NOME: " + nome +" ?");
   // window.location.href = "/cadastrafunc.php?cpf=" + cpf + "&info=u&json=" ;
+  var x;
+  //recebemos o valor do botão pressionado ok ou cancelar em uma variavel
+  var r=confirm("Escolha um valor!");
+  if (r==true)
+    {
+    x="você pressionou OK!";
+    }
+  else
+    {
+    x="Você pressionou Cancelar!";
+    }
+  alert(x)
+
 }
 
 
