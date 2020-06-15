@@ -4,7 +4,7 @@ console.log("MD5 wisley");
 base32 = new Nibbler({
     dataBits: 8,
     codeBits: 5,
-    keyString: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ234567',
+    keyString: '0123456789ABCDEFGHJKMNPQRSTVWXYZ',
     pad: '='
 });
 
