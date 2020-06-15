@@ -1,9 +1,6 @@
-var imported = document.createElement('script');
-imported.src = 'md5.js';
-document.head.appendChild(imported);
-
+import * m from 'md5.js'
 console.log('Controlador de Funções em Js');
-
+console.log(m);
 
 function cadastramedicao(cod) {
   // console.log(cod);
