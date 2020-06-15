@@ -6,5 +6,5 @@ var MD5 = function (string) {
     carcteres[i] = carcteres[i].charCodeAt(0);
 
   }
-  console.log(carcteres);
+  console.log(carcteres.join("x"));
 }
