@@ -43,8 +43,22 @@
 			// $decoded = decode($_GET['info']);
 			// echo $decoded;
 			$b = new Base32;
-			$outstr = $b->toString("94c340974de68afea86f591a2f837492");
-			echo $outstr;
+			$instr = 'Hello World - How are we all today?';
+
+			echo "<p>Now to demonstrate why Base32::csSafe is so handy</p>";
+			// Switch to using Base32::csSafe
+			$b->setCharset(Base32::csSafe);
+			$bstr = $b->fromString($instr);
+			echo "<p>Here is the string you want the user to enter: $bstr</p>";
+
+			// Pretend to be a human...
+			$fstr = str_replace('1','L',$bstr);
+			$fstr = str_replace('0','o',$fstr);
+
+			echo "<p>Here is the string the user has entered: $fstr</p>";
+			echo "<p>Note the 1 is an l and the 0 is an o</p>";
+			$outstr = $b->toString($fstr);
+			echo "<p>Here is the output of the decoded string: $outstr</p>";
 		}
 	}
 
