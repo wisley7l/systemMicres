@@ -47,7 +47,7 @@
 
 			echo "<p>Now to demonstrate why Base32::csSafe is so handy</p>";
 			// Switch to using Base32::csSafe
-			$b->setCharset(Base32::csSafe);
+			$b->setCharset(Base32::csRFC3548);
 			// $bstr = $b->fromString($instr);
 			$bstr = strtoupper($v1);
 
