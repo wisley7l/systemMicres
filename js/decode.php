@@ -125,13 +125,47 @@ class Base32
      */
     public static function decode($base32String)
     {
-      $decoded = "";
-      for( $i = 0; $i < strlen($base32String); $i++ ) {
-        $b = ord($base32String[$i]);
-        $a = $b ^ 123;  // <-- must be same number used to encode the character
-        $decoded .= chr($a)
-      }
+        // Only work in upper cases
+        $base32String = strtoupper($base32String);
 
-        return $decoded;
+        // Remove anything that is not base32 alphabet
+        $pattern = '/[^A-Z2-7]/';
+
+        $base32String = preg_replace($pattern, '', $base32String);
+
+        if (strlen($base32String) == 0) {
+            // Gives an empty string
+            return '';
+        }
+
+        $base32Array = str_split($base32String);
+
+        $string = '';
+
+        foreach ($base32Array as $str) {
+            $char = strpos(self::$alphabet, $str);
+
+            // Ignore the padding character
+            if ($char !== 32) {
+                $string .= sprintf('%05b', $char);
+            }
+        }
+
+        while (strlen($string) %8 !== 0) {
+            $string = substr($string, 0, strlen($string)-1);
+        }
+
+        $binaryArray = self::chunk($string, 8);
+
+        $realString = '';
+
+        foreach ($binaryArray as $bin) {
+            // Pad each value to 8 bits
+            $bin = str_pad($bin, 8, 0, STR_PAD_RIGHT);
+            // Convert binary strings to ASCII
+            $realString .= chr(bindec($bin));
+        }
+
+        return $realString;
     }
 }
