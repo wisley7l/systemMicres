@@ -34,12 +34,12 @@
 	}
 
 	if (isset($_GET['info'])){
-	// 	if ($_GET['info'] == "") {
-	// 		echo "faz nada";
+		if ($_GET['info'] == "") {
+			echo "faz nada";
 	// 	}else {
 	// 		echo "fazr MD5";
 	// 		echo $_GET['info']);
-	// 	}
+		}
 	}
 
 	// 	// insert na coluna
