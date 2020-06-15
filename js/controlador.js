@@ -50,11 +50,10 @@ function deletefuncionario(cpf,nome,tipo) {
   //recebemos o valor do botão pressionado ok ou cancelar em uma variavel
   var r=confirm("TEM CERTEZA QUE DESEJA DELETAR FUNCIONÁRIO DE CPF: "+cpf+" NOME: " + nome +" ?");
   if (r==true){
-    x="Você DELETOU FUNCIONARIO " + nome  ;
-    alert(x)
-  }  else{
-    // x="Você pressionou Cancelar!";
-    }
+    var json = 'cpf,'+ cpf + ','+ nome + ','+ tipo
+    var v1 = MD5(json);
+    window.location.href = "/cadastrafunc.php?cpf=" + cpf + "&info=d&json=" + v1;
+  }
 
 
 }
