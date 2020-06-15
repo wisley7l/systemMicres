@@ -50,9 +50,11 @@ function deletefuncionario(cpf,nome,tipo) {
   //recebemos o valor do botão pressionado ok ou cancelar em uma variavel
   var r=confirm("TEM CERTEZA QUE DESEJA DELETAR FUNCIONÁRIO DE CPF: "+cpf+" NOME: " + nome +" ?");
   if (r==true){
-    var json = 'cpf,'+ cpf + ','+ nome + ','+ tipo
+    var json = 'cpf,'+ cpf + ','+ nome + ','+ tipo;
+    console.log(json);
     var v1 = MD5(json);
-    window.location.href = "/cadastrafunc.php?cpf=" + cpf + "&info=d&json=" + v1;
+    console.log(v1);
+    // window.location.href = "/cadastrafunc.php?cpf=" + cpf + "&info=d&json=" + v1;
   }
 
 
@@ -84,7 +86,7 @@ function clickcadastrafunc(){
   var tipo = 1
   }
   // var json = '{"cpf":'+ cpf + ',"nome":'+ nome + ',"tipo":'+ tipo + ' }'
-  var json = 'cpf,'+ cpf + ','+ nome + ','+ tipo
+  var json = 'cpf,'+ cpf + ','+ nome + ','+ tipo;
   var v1 = MD5(json);
   var url = window.location.search;
   var s = url.split("&")[1].split("=")[1];
