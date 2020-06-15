@@ -51,7 +51,7 @@
 
 				if ($_GET['info'] == "c") {
 					echo "cadastro";
-					$row = $dbh->query("INSERT INTO empresa (cnpj,nome)	VALUES ($cnpj, '$nomeempresa')")->fetch();
+					$row = $dbh->query("INSERT INTO empresa (cnpj,nome,nveiculo)	VALUES ($cnpj, '$nomeempresa',$nveiculo)")->fetch();
 					header('Location: listaempresa.php');
 
 				}elseif ($_GET['info'] == "u") {
