@@ -75,9 +75,6 @@
 
 		}elseif ($_GET['info'] == "u") {
 			echo "updadte";
-			$row = $dbh->query("UPDATE funcionario SET nome = '$nome' , tipo = $tipo WHERE cpf =$cpf")->fetch();
-			echo $row[0];
-
 
 			# Executa a query desejada
 			$row = $dbh->query("SELECT cpf,nome,tipo FROM funcionario WHERE cpf =$id LIMIT 1")->fetch();
@@ -97,42 +94,12 @@
 				 'checked2' => $checked2,
 			 );
 
+			$row1 = $dbh->query("UPDATE funcionario SET nome = '$nome' , tipo = $tipo WHERE cpf =$cpf")->fetch();
+ 			echo $row1[0];
 		}
 	}
 
-	// 	// insert na coluna
-	// 	$query = "INSERT INTO empresa (cnpj,nome)
-	// 						VALUES ($id, '$nomeempresa')";
-	//
-	// 	$query2 = "UPDATE empresa
-	// 	SET nome = '$nomeempresa'
-	// 	WHERE cnpj = $id";
-	//
 
-
-
-
-
-
-
-
-	//
-	// 	if($dbh->query($query) == true ){
-	// 		header('Location: listaempresa.php');
-	// 	}else {
-	// 		// $result_query2 = $dbh->query($query2);
-	// 		if($dbh->query($query2) == true ){
-	// 			 // print_r($dbh->query($query) );
-	// 			header('Location: listaempresa.php');
-	// 		}else {
-	// 			echo "erro Update";
-	// 			header('Location: erro.php');
-	// 		}
-	// 	}
-	//
-	// }
-
-	// */
 
 	# Exibe os registros na tela
 	// while ($row = mysql_fetch_array( $result_query )) { print " -- " . $row[medida] . " -- " . $row[km]."\n"; }
