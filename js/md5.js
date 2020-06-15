@@ -1,3 +1,4 @@
+console.log("MD5 wisley");
 var MD5 = function (string) {
 
    function RotateLeft(lValue, iShiftBits) {
