@@ -43,7 +43,7 @@
 			// $decoded = decode($_GET['info']);
 			// echo $decoded;
 			$b = new Base32;
-			$outstr = $b->toString("$v1");
+			$outstr = $b->toString("94c340974de68afea86f591a2f837492");
 			echo $outstr;
 		}
 	}
