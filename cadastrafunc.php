@@ -48,8 +48,8 @@
 			// echo "<p>Now to demonstrate why Base32::csSafe is so handy</p>";
 			// Switch to using Base32::csSafe
 			$b->setCharset(Base32::csSafe);
-			// $bstr = $b->fromString($instr);
-			$bstr = $v1;
+			$bstr = $b->fromString($instr);
+			// $bstr = $v1;
 
 			// echo "<p>Here is the string you want the user to enter: $v1</p>";
 
