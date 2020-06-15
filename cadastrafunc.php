@@ -42,10 +42,9 @@
 			//
 			$b = new Base32;
 			//
-			// $b->setCharset(Base32::csSafe);
-			// $bstr = $v1;
-			//
-			//
+			$b->setCharset(Base32::csSafe);
+			$bstr = $v1;
+			
 			// $fstr = str_replace('1','L',$bstr);
 			// $fstr = str_replace('0','o',$fstr);
 			//
