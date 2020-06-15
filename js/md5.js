@@ -16,7 +16,8 @@ base32 = new Nibbler({
     keyString: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ234567',
     pad: '='
 });
-console.log(base32.encode("Hello, World"); );
-console.log(base32.decode("IFWG62DB"); );
+
+console.log(base32.encode("Hello, World") );
+console.log(base32.decode("IFWG62DB") );
 // base32.encode("Hello, World");  // "JBSWY3DPFQQFO33SNRSCC====="
 // base32.decode("IFWG62DB");      // "Aloha"
