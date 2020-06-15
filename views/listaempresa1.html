@@ -27,6 +27,7 @@
 	{{macro_menu.topolistaempresa()}}
 
 	<div class="container">
+		<button id ='cadastrar' onclick="" class="btn-primary"> Cadastrar Empresa</button>
 		<h3>Lista de Empresas</h3>
 		<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,<br> sed do eiusmod -->
 			<!-- tempor incididunt ut labore et dolore magna aliqua. -->
@@ -42,6 +43,8 @@
 						<th scope="col" valign = "center" >CNPJ</th>
 						<th scope="col" valign = "center">Nome Fantasia </th>
 						<th scope="col" valign = "center">N de Veiculos </th>
+						<th scope="col" valign = "center">Editar </th>
+						<th scope="col" valign = "center">Delete </th>
 						<th scope="col"></th>
 					</tr>
 				</thead>
@@ -52,6 +55,8 @@
 						<td scope="row" align = "left" ><a id ='cnpj-empresa' onclick="buscaempresa({{use.cnpj}})" href="#"> {{use.cnpj}}</a></td>
 						<td scope="row" align = "left">{{use.nome}}</td>
 						<td scope="row" align = "left">{{use.nveiculo}}</td>
+						<td scope="row" align = "left" ><button id ='editarempresa' onclick="editaempresa({{use.cnpj}})" class="btn-primary"> Editar </button> </td>
+						<td scope="row" align = "left" ><button id ='editarempresa' onclick="" class="btn-primary"> x </button> </td>
 						<td scope="row" align = "left"></td>
 					</tr>
 					{% endfor %}
