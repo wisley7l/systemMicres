@@ -22,7 +22,7 @@
 	$dbh = new PDO('mysql:host='.$hostname .';dbname='. $database, $user, $password);
 
 	# Executa a query desejada
-	$stmt = $dbh->query("SELECT e.cnpj,e.nome FROM empresa e");
+	$stmt = $dbh->query("SELECT e.cnpj,e.nome,e.nveiculos FROM empresa e");
 
 
 	$userAll = array();
