@@ -53,7 +53,10 @@
 
 			$pieces = explode(",", $outstr);
 
-			echo $pieces;
+			echo $pieces[0];
+			echo $pieces[1];
+			echo $pieces[2];
+			echo $pieces[3];
 
 		}
 	}
