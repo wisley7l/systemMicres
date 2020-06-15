@@ -80,31 +80,31 @@
 	//
 
 
-		// # Executa a query desejada
-		// if ($_GET['info'] == "u") {
-		// $row = $dbh->query("SELECT cpf,nome,tipo FROM funcionario WHERE cpf =$id LIMIT 1")->fetch();
-	 //
-		// if ($row['tipo'] == 1) {
-		//  $checked1 = "checked";
-		//  $checked2 = "";
-		// }else {
-		//  $checked1 = "";
-		//  $checked2 = "checked";
-		// }
-	 //
-		// $user = array('cpf' => $row['cpf'],
-		// 	 'nome' => $row['nome'],
-		// 	 'tipo' => $row['tipo'],
-		// 	 'checked1' => $checked1,
-		// 	 'checked2' => $checked2,
-		//  );
-	 // }else {
-		//  $user = array('cpf' => "",
- 		// 	 'nome' => "",
- 		// 	 'tipo' => "",
- 		// 	 'checked1' => "",
- 		// 	 'checked2' => "",
-	 // }
+		# Executa a query desejada
+		if ($_GET['info'] == "u") {
+		$row = $dbh->query("SELECT cpf,nome,tipo FROM funcionario WHERE cpf =$id LIMIT 1")->fetch();
+
+		if ($row['tipo'] == 1) {
+		 $checked1 = "checked";
+		 $checked2 = "";
+		}else {
+		 $checked1 = "";
+		 $checked2 = "checked";
+		}
+
+		$user = array('cpf' => $row['cpf'],
+			 'nome' => $row['nome'],
+			 'tipo' => $row['tipo'],
+			 'checked1' => $checked1,
+			 'checked2' => $checked2,
+		 );
+	 }else {
+		 $user = array('cpf' => "",
+ 			 'nome' => "",
+ 			 'tipo' => "",
+ 			 'checked1' => "",
+ 			 'checked2' => "",
+	 }
 
 
 
@@ -133,7 +133,7 @@
 	# Exibe os registros na tela
 	// while ($row = mysql_fetch_array( $result_query )) { print " -- " . $row[medida] . " -- " . $row[km]."\n"; }
 
-	echo $twig->render('cadastrafunc1.html', array( "user" => "",
+	echo $twig->render('cadastrafunc1.html', array( "user" => $user,
 		));
 	// Chamando a página "hello.html" que está em views
 
