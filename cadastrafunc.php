@@ -53,17 +53,17 @@
 			if ($_GET['info'] == "c") {
 				echo "cadastro";
 				$row = $dbh->query("INSERT INTO funcionario (cpf,nome,tipo) VALUES ($cpf, '$nome',$tipo)")->fetch();
-					header('Location: listafunc.php');
+				header('Location: listafunc.php');
 
 			}elseif ($_GET['info'] == "u") {
 				echo "updadte";
 				$row = $dbh->query("UPDATE funcionario SET nome = '$nome' , tipo = $tipo WHERE cpf =$cpf")->fetch();
-				echo $row[0];
+				header('Location: listafunc.php');
 			}
 			elseif ($_GET['info'] == "d") {
 				echo "delete";
 				$row = $dbh->query("DELETE FROM funcionarioWHERE cpf =$cpf")->fetch();
-				echo $row[0];
+				header('Location: listafunc.php');
 			}
 		}
 	}
