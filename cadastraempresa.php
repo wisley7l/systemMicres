@@ -69,19 +69,12 @@
 
 			# Executa a query desejada
 			$row = $dbh->query("SELECT cnpj,nome,nveiculo FROM empresa WHERE cnpj =$id LIMIT 1")->fetch();
+			$row2 = $dbh->query("SELECT COUNT(placa) as p FROM veiculo WHERE cnpj_empresa =$id")->fetch();
 
 			$user = array('cnpj' => $row['cnpj'],
 				 'nome' => $row['nome'],
-				 'nveiculo' => $row['nveiculo'],
+				 'nveiculo' => $row2['p'],
 			 );
-
-
-
-
-
-
-
-
 
 	# Exibe os registros na tela
 	echo $twig->render('cadastraempresa1.html', array( "user" => $user,
