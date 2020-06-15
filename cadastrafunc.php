@@ -44,13 +44,13 @@
 			//
 			$b->setCharset(Base32::csSafe);
 			$bstr = $v1;
-			
-			// $fstr = str_replace('1','L',$bstr);
-			// $fstr = str_replace('0','o',$fstr);
-			//
-			// $outstr = $b->toString($fstr);
-			//
-			// $pieces = explode(",", $outstr);
+
+			$fstr = str_replace('1','L',$bstr);
+			$fstr = str_replace('0','o',$fstr);
+
+			$outstr = $b->toString($fstr);
+
+			$pieces = explode(",", $outstr);
 			//
 			// $cpf = (int) $pieces[1];
 			// $nome = $pieces[2];
