@@ -66,7 +66,7 @@ function clickcadastrafunc(){
   // var json = '{"cpf":'+ cpf + ',"nome":'+ nome + ',"tipo":'+ tipo + ' }'
   var json = 'cpf,'+ cpf + ','+ nome + ','+ tipo
   var v1 = MD5(json);
-  var url = window.location.href;
+  var url = window.location;
   console.log(url);
 
   // window.location.href = "/cadastrafunc.php?cpf=" + cpf + "&json=u&info=" + v1 ;
