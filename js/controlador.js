@@ -42,6 +42,12 @@ function buscapneu(cod) {
 function buscafunc(cpf) {
   window.location.href = "/cadastrafunc.php?cpf=" + cpf + "&info=u&json=" ;
 }
+//
+function deletefuncionario(cpf,nome,tipo) {
+  alert("TEM CERTEZA QUE DESEJA DELETAR FUNCIONÁRIO DE CPF: "+cpf+" NOME: " + nome +" ?");
+  // window.location.href = "/cadastrafunc.php?cpf=" + cpf + "&info=u&json=" ;
+}
+
 
 function clickcadastraempresa(){
   var cnpj = $("input#cnpj-cad")[0].value;
