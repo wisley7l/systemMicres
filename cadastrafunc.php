@@ -52,13 +52,14 @@
 
 			if ($_GET['info'] == "c") {
 				echo "cadastro";
-				$row = $dbh->query("INSERT INTO funcionario (cpf,nome,tipo) VALUES ($cpf, '$nome',$tipo)")->fetch(PDO::FETCH_ASSOC);
+				$row = $dbh->query("INSERT INTO funcionario (cpf,nome,tipo) VALUES ($cpf, '$nome',$tipo)")->execute();
+				echo $row;
 				// $row =
-				if ($row === FALSE ) {
-					echo "erro";
-				}else {
-					header('Location: listafunc.php');
-				}
+				// if ($row === FALSE ) {
+				// 	echo "erro";
+				// }else {
+				// 	header('Location: listafunc.php');
+				// }
 
 
 			}elseif ($_GET['info'] == "u") {
