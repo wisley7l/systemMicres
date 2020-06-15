@@ -28,10 +28,10 @@
 	$userAll = array();
 // /*
 	while ($row = $stmt->fetch()){
-		$row2 = $dbh->query("SELECT COUNT(placa) as p FROM veiculo WHERE cnpj_empresa =$row['cnpj']")->fetch();
+		// $row2 = $dbh->query("SELECT COUNT(placa) as p FROM veiculo WHERE cnpj_empresa =$row['cnpj']")->fetch();
 		 $user = array('cnpj' => $row['cnpj'],
 			 'nome' => $row['nome'],
-			 'nveiculos' => $row2['p'],
+			 'nveiculos' => $row['nveiculo'],
 		 );
 		 array_push($userAll, $user);
 	}
