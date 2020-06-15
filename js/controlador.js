@@ -73,11 +73,10 @@ function clickcadastrafunc(){
   var url = window.location.search;
   var s = url.split("&")[1].split("=")[1];
   // console.log(s);
-  window.location.href = "/cadastrafunc.php?cpf=" + cpf + "&info=" + s + "&json=" + v1 ;
-
-  // if(cpf.toString().length != 11){
-  // alert("Seu CPF não possui 14 Digitos o que imposibilita seu cadastro!");
-  // }else {
-  //   window.location.href = "/cadastraempresa.php?cnpj=" + cnpj + "&nome=" + nome ;
-  // }
+  if(cpf.toString().length != 11){
+  alert("Seu CPF não possui 11 Digitos o que imposibilita seu cadastro!");
+  }else {
+    console.log(cpf);
+    // window.location.href = "/cadastrafunc.php?cpf=" + cpf + "&info=" + s + "&json=" + v1 ;
+  }
 }
