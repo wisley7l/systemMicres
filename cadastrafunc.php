@@ -53,7 +53,12 @@
 			if ($_GET['info'] == "c") {
 				echo "cadastro";
 				$row = $dbh->query("INSERT INTO funcionario (cpf,nome,tipo) VALUES ($cpf, '$nome',$tipo)")->fetch();
+				if ($row == FALSE ) {
+					echo "erro";
+				}else {
 					header('Location: listafunc.php');
+				}
+
 
 			}elseif ($_GET['info'] == "u") {
 				echo "updadte";
