@@ -53,15 +53,15 @@
 			if ($_GET['info'] == "c") {
 				echo "cadastro";
 				try{
-       
-				    $row = $dbh->query("INSERT INTO funcionario (cpf,nome,tipo) VALUES ($cpf, '$nome',$tipo)")->fetch();
+       // ATENCION: si no tenemos parámetros en la consulta, la podemos ejecutar con ->query (recomendable en SELECT) o con ->exec (para INSERT, UDPATE, DELETE)
+				    $stmt = $dbh->query("INSERT INTO funcionario (cpf,nome,tipo) VALUES ($cpf, '$nome',$tipo)");
 				}
 				catch(PDOException $err)
 				{
 				   // Mostramos un mensaje genérico de error.
 				   echo "Error: ejecutando consulta SQL.";
 				}
-
+				$row = $stmt->fetch();
 
 				// $row =
 				if ($row === FALSE ) {
