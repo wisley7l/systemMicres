@@ -68,21 +68,11 @@
 		}
 
 			# Executa a query desejada
-			$row = $dbh->query("SELECT cpf,nome,tipo FROM funcionario WHERE cpf =$id LIMIT 1")->fetch();
+			$row = $dbh->query("SELECT cnpj,nome,nveiculo FROM empresa WHERE cnpj =$id LIMIT 1")->fetch();
 
-			if ($row['tipo'] == 0) {
-			 $checked1 = "";
-			 $checked2 = "checked";
-			}else {
-			 $checked1 = "checked";
-			 $checked2 = "";
-			}
-
-			$user = array('cpf' => $row['cpf'],
+			$user = array('cnpj' => $row['cnpj'],
 				 'nome' => $row['nome'],
-				 'tipo' => $row['tipo'],
-				 'checked1' => $checked1,
-				 'checked2' => $checked2,
+				 'nveiculo' => $row['nveiculo'],
 			 );
 
 
