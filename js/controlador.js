@@ -36,7 +36,7 @@ function buscapneu(cod) {
 }
 //
 function buscafunc(cpf) {
-  window.location.href = "/cadastrafunc.php?cpf=" + cpf + "&json=u&info=" ;
+  window.location.href = "/cadastrafunc.php?cpf=" + cpf + "&info=u&json=" ;
 }
 
 function clickcadastraempresa(){
