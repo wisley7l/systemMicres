@@ -28,7 +28,7 @@
 
 	if (isset($_GET['json'])){
 		if ($_GET['json'] == "") {
-			echo "faz nada \n";
+			// echo "faz nada \n";
 		} else {
 			$v1 = $_GET['json'];
 
@@ -49,19 +49,18 @@
 			$cpf = (int) $pieces[1];
 			$nome = $pieces[2];
 			$tipo = (int)$pieces[3];
+
+
+			$row = $dbh->query("UPDATE funcionario SET nome = '$nome' , tipo = $tipo WHERE cpf =$cpf")->fetch();
+			echo $row[0];
 		}
 	}
 
 	if (isset($_GET['info'])){
 		if ($_GET['info'] == "c") {
 			echo "cadastro";
-			$row = $dbh->query("INSERT INTO funcionario (cpf,nome,tipo)	VALUES ($cpf, '$nome',$tipo)")->fetch();
-			echo $row[0];
-
 		}elseif ($_GET['info'] == "u") {
 			echo "updadte";
-			$row = $dbh->query("UPDATE funcionario SET nome = '$nome' , tipo = $tipo WHERE cpf =$cpf")->fetch();
-			echo $row[0];
 		}
 	}
 
