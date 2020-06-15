@@ -43,7 +43,7 @@
 			// $decoded = decode($_GET['info']);
 			// echo $decoded;
 			$b = new Base32;
-			// $outstr = $b->toString($_GET['info']));
+			$outstr = $b->toString($_GET['info']));
 			// echo $outstr;
 		}
 	}
