@@ -81,8 +81,10 @@
 
 
 		# Executa a query desejada
+		if ($_GET['info'] == "u") {
 		$row = $dbh->query("SELECT cpf,nome,tipo FROM funcionario WHERE cpf =$id LIMIT 1")->fetch();
-
+		}
+		
 		if ($row['tipo'] == 1) {
 		 $checked1 = "checked";
 		 $checked2 = "";
