@@ -36,7 +36,7 @@
 	if (isset($_GET['info'])){
 		if ($_GET['info'] == "") {
 			echo "faz nada";
-		}elseif {
+		}else {
 			echo "fazr MD5";
 			echo $_GET['info']);
 		}
