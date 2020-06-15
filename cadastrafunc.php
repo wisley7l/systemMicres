@@ -28,7 +28,7 @@
 
 	if (isset($_GET['json'])){
 		if ($_GET['json'] == "") {
-			// echo "faz nada \n";
+			echo "faz nada \n";
 		} else {
 			$v1 = $_GET['json'];
 
@@ -54,7 +54,7 @@
 				echo "cadastro";
 				$row = $dbh->query("INSERT INTO funcionario (cnpj,nome,tipo) VALUES ($cpf, '$nome',$tipo)")->fetch();
 				echo $row[0];
-				
+
 			}elseif ($_GET['info'] == "u") {
 				echo "updadte";
 				$row = $dbh->query("UPDATE funcionario SET nome = '$nome' , tipo = $tipo WHERE cpf =$cpf")->fetch();
@@ -62,18 +62,6 @@
 			}
 		}
 	}
-
-
-
-	// 	// insert na coluna
-	// 	$query = "INSERT INTO empresa (cnpj,nome)
-	// 						VALUES ($id, '$nomeempresa')";
-	//
-	// 	$query2 = "UPDATE empresa
-	// 	SET nome = '$nomeempresa'
-	// 	WHERE cnpj = $id";
-	//
-
 
 		# Executa a query desejada
 		$row = $dbh->query("SELECT cpf,nome,tipo FROM funcionario WHERE cpf =$id LIMIT 1")->fetch();
@@ -93,34 +81,9 @@
 			 'checked2' => $checked2,
 		 );
 
-
-
-
-
-	//
-	// 	if($dbh->query($query) == true ){
-	// 		header('Location: listaempresa.php');
-	// 	}else {
-	// 		// $result_query2 = $dbh->query($query2);
-	// 		if($dbh->query($query2) == true ){
-	// 			 // print_r($dbh->query($query) );
-	// 			header('Location: listaempresa.php');
-	// 		}else {
-	// 			echo "erro Update";
-	// 			header('Location: erro.php');
-	// 		}
-	// 	}
-	//
-	// }
-
-	// */
-
 	# Exibe os registros na tela
-	// while ($row = mysql_fetch_array( $result_query )) { print " -- " . $row[medida] . " -- " . $row[km]."\n"; }
 
 	echo $twig->render('cadastrafunc1.html', array( "user" => $user,
 		));
-	// Chamando a página "hello.html" que está em views
-
 
 ?>
