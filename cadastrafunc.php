@@ -50,19 +50,17 @@
 			$nome = $pieces[2];
 			$tipo = (int)$pieces[3];
 
-
-			$row = $dbh->query("UPDATE funcionario SET nome = '$nome' , tipo = $tipo WHERE cpf =$cpf")->fetch();
-			echo $row[0];
+			if ($_GET['info'] == "c") {
+				echo "cadastro";
+			}elseif ($_GET['info'] == "u") {
+				echo "updadte";
+				$row = $dbh->query("UPDATE funcionario SET nome = '$nome' , tipo = $tipo WHERE cpf =$cpf")->fetch();
+				echo $row[0];
+			}
 		}
 	}
 
-	if (isset($_GET['info'])){
-		if ($_GET['info'] == "c") {
-			echo "cadastro";
-		}elseif ($_GET['info'] == "u") {
-			echo "updadte";
-		}
-	}
+
 
 	// 	// insert na coluna
 	// 	$query = "INSERT INTO empresa (cnpj,nome)
