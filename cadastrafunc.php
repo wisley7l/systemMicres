@@ -39,12 +39,12 @@
 			echo "faz nada \n";
 		} else {
 	// 		echo "fazr MD5";
-			// echo $_GET['info'];
+			echo $_GET['info'];
 			// $decoded = decode($_GET['info']);
 			// echo $decoded;
 			$b = new Base32;
 			$outstr = $b->toString("wisley");
-			// echo $outstr;
+			echo $outstr;
 		}
 	}
 
