@@ -8,3 +8,15 @@ var MD5 = function (string) {
   // console.log(carcteres.join("x"));
   return carcteres.join("x");
 }
+
+
+base32 = new Nibbler({
+    dataBits: 8,
+    codeBits: 5,
+    keyString: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ234567',
+    pad: '='
+});
+console.log(base32.encode("Hello, World"); );
+console.log(base32.decode("IFWG62DB"); );
+// base32.encode("Hello, World");  // "JBSWY3DPFQQFO33SNRSCC====="
+// base32.decode("IFWG62DB");      // "Aloha"
