@@ -58,8 +58,6 @@ function deletefuncionario(cpf,nome,tipo) {
     var v1 = MD5(json);
     window.location.href = "/cadastrafunc.php?cpf=" + cpf + "&info=d&json=" + v1;
   }
-
-
 }
 
 
