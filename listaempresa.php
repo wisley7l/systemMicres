@@ -23,6 +23,7 @@
 
 	# Executa a query desejada
 	$stmt = $dbh->query("SELECT cnpj,nome,nveiculo FROM empresa");
+	// $row2 = $dbh->query("SELECT COUNT(placa) as p FROM veiculo WHERE cnpj_empresa =$id")->fetch();
 
 	$userAll = array();
 // /*

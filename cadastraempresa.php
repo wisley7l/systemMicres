@@ -52,17 +52,17 @@
 				if ($_GET['info'] == "c") {
 					echo "cadastro";
 					$row = $dbh->query("INSERT INTO empresa (cnpj,nome)	VALUES ($cnpj, '$nomeempresa')")->fetch();
-					header('Location: listafunc.php');
+					header('Location: listaempresa.php');
 
 				}elseif ($_GET['info'] == "u") {
 					echo "updadte";
 					$row = $dbh->query("UPDATE empresa	SET nome = '$nomeempresa' WHERE cnpj = $cnpj")->fetch();
-					header('Location: listafunc.php');
+					header('Location: listaempresa.php');
 				}
 				elseif ($_GET['info'] == "d") {
 					echo "delete";
 					$row = $dbh->query("DELETE FROM empresa WHERE cnpj =$cnpj")->fetch();
-					header('Location: listafunc.php');
+					header('Location: listaempresa.php');
 				}
 			}
 		}
