@@ -52,28 +52,17 @@
 
 			if ($_GET['info'] == "c") {
 				echo "cadastro";
-				try{
-       // ATENCION: si no tenemos parámetros en la consulta, la podemos ejecutar con ->query (recomendable en SELECT) o con ->exec (para INSERT, UDPATE, DELETE)
-				    $stmt = $dbh->query("INSERT INTO funcionario (cpf,nome,tipo) VALUES ($cpf, '$nome',$tipo)");
-				}
-				catch(PDOException $err)
-				{
-				   // Mostramos un mensaje genérico de error.
-				   echo "Error: ejecutando consulta SQL.";
-				}
-				$row = $stmt->fetch();
-
-				// $row =
-				if ($row === FALSE ) {
-					echo "erro";
-				}else {
+				$row = $dbh->query("INSERT INTO funcionario (cpf,nome,tipo) VALUES ($cpf, '$nome',$tipo)")->fetch();
 					header('Location: listafunc.php');
-				}
-
 
 			}elseif ($_GET['info'] == "u") {
 				echo "updadte";
 				$row = $dbh->query("UPDATE funcionario SET nome = '$nome' , tipo = $tipo WHERE cpf =$cpf")->fetch();
+				echo $row[0];
+			}
+			elseif ($_GET['info'] == "d") {
+				echo "delete";
+				$row = $dbh->query("DELETE FROM funcionarioWHERE cpf =$cpf")->fetch();
 				echo $row[0];
 			}
 		}
