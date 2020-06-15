@@ -1,4 +1,4 @@
-var MD5 = export function (string) {
+export function MD5(string) {
 
    function RotateLeft(lValue, iShiftBits) {
            return (lValue<<iShiftBits) | (lValue>>>(32-iShiftBits));
