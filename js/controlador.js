@@ -63,7 +63,8 @@ function clickcadastrafunc(){
   if (radio == true) {
   var tipo = 1
   }
-  var json = '{"cpf":'+ cpf + ',"nome":'+ nome + ',"tipo":'+ tipo + ' }'
+  // var json = '{"cpf":'+ cpf + ',"nome":'+ nome + ',"tipo":'+ tipo + ' }'
+  var json = 'cpf='+ cpf + ',nome='+ nome + ',tipo='+ tipo
   console.log(json);
   var v1 = MD5(json);
   console.log(v1);
