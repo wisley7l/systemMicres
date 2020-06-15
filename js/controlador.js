@@ -61,6 +61,20 @@ function deletefuncionario(cpf,nome,tipo) {
 }
 
 
+function deleteempresa(cnpj,nome,nveiculo) {
+  // alert("TEM CERTEZA QUE DESEJA DELETAR FUNCIONÁRIO DE CPF: "+cpf+" NOME: " + nome +" ?");
+  // window.location.href = "/cadastrafunc.php?cpf=" + cpf + "&info=u&json=" ;
+  var x;
+  //recebemos o valor do botão pressionado ok ou cancelar em uma variavel
+  var r=confirm("TEM CERTEZA QUE DESEJA DELETAR EMPRESA DE CNPJ: "+cnpj+" NOME: " + nome +" ?");
+  if (r==true){
+    var json = 'cnpj,'+ cnpj + ','+ nome + ','+ nveiculo;
+    var v1 = MD5(json);
+    window.location.href = "/cadastraempresa.php?cnpj=" + cnpj + "&info=d&json=" + v1;
+  }
+}
+
+
 function clickcadastraempresa(){
   var cnpj = $("input#cnpj-cad")[0].value;
   var nome = $("input#nomeempresa-cad")[0].value;
