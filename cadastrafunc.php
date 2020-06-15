@@ -49,7 +49,7 @@
 			// Switch to using Base32::csSafe
 			$b->setCharset(Base32::csSafe);
 			$bstr = $b->fromString($instr);
-			echo "<p>Here is the string you want the user to enter: $bstr</p>";
+			echo "<p>Here is the string you want the user to enter: $v1</p>";
 
 			// Pretend to be a human...
 			$fstr = str_replace('1','L',$bstr);
