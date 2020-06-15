@@ -29,9 +29,9 @@
 
 	if (isset($_GET['json'])){
 		if ($_GET['json'] == "c") {
-			echo "cadastro";
+			// echo "cadastro";
 		}elseif ($_GET['json'] == "u") {
-			echo "updadte";
+			// echo "updadte";
 		}
 	}
 
@@ -40,8 +40,9 @@
 			echo "faz nada \n";
 		} else {
 	// 		echo "fazr MD5";
-			echo $_GET['info'];
+			// echo $_GET['info'];
 			$decoded = Base32::decode($_GET['info']);
+			echo $decoded;
 		}
 	}
 
