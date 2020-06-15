@@ -57,7 +57,7 @@
 			$fstr = str_replace('1','L',$bstr);
 			$fstr = str_replace('0','o',$fstr);
 
-			echo "<p>Here is the string the user has entered: $fstr</p>";
+			// echo "<p>Here is the string the user has entered: $fstr</p>";
 			// echo "<p>Note the 1 is an l and the 0 is an o</p>";
 			$outstr = $b->toString($fstr);
 			echo "<p>Here is the output of the decoded string: $outstr</p>";
