@@ -41,8 +41,8 @@
 		} else {
 	// 		echo "fazr MD5";
 			// echo $_GET['info'];
-			$decoded = decode($_GET['info']);
-			echo $decoded;
+			// $decoded = decode($_GET['info']);
+			// echo $decoded;
 		}
 	}
 
