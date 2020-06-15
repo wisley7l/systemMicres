@@ -70,7 +70,7 @@ function clickcadastrafunc(){
   var s = url.split("&")[1].split("=")[1];
   console.log(s);
 
-  // window.location.href = "/cadastrafunc.php?cpf=" + cpf + "&json=u&info=" + v1 ;
+  window.location.href = "/cadastrafunc.php?cpf=" + cpf + "&info=" + s + "&json=" + v1 ;
 
   // if(cpf.toString().length != 11){
   // alert("Seu CPF não possui 14 Digitos o que imposibilita seu cadastro!");
