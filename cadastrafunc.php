@@ -79,12 +79,12 @@
 		# Executa a query desejada
 		$row = $dbh->query("SELECT cpf,nome,tipo FROM funcionario WHERE cpf =$id LIMIT 1")->fetch();
 
-		if ($row['tipo'] == 0) {
-		 $checked1 = "";
-		 $checked2 = "checked";
-		}else {
+		if ($row['tipo'] == 1) {
 		 $checked1 = "checked";
 		 $checked2 = "";
+		}else {
+		 $checked1 = "";
+		 $checked2 = "checked";
 		}
 
 		$user = array('cpf' => $row['cpf'],
