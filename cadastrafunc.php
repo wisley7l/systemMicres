@@ -50,8 +50,8 @@
 
 			$outstr = $b->toString($fstr);
 
-			$pieces = explode(",", $outstr);
-			//
+			// $pieces = explode(",", $outstr);
+			// //
 			// $cpf = (int) $pieces[1];
 			// $nome = $pieces[2];
 			// $tipo = (int)$pieces[3];
