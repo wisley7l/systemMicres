@@ -21,6 +21,10 @@ function cadastraempresa(){
   window.location.href = "/cadastraempresa.php";
 }
 //
+function cadastrafuncionario(){
+  window.location.href = "/cadastrafunc.php?cpf=" + "&info=c&json=";
+}
+//
 function buscaempresa(cnpj) {
   window.location.href = "/buscaempresa.php?cnpj=" + cnpj;
 }
