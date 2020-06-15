@@ -8,7 +8,7 @@
 
 	$twig = new Twig_Environment($loader);
 	// Carregando a pasta views
-	
+
 	# Substitua abaixo os dados, de acordo com o banco criado
 	$user = "padmin";
 	$password = "nJKSQj4xtAD8OyLw";
@@ -20,13 +20,14 @@
 	$dbh = new PDO('mysql:host='.$hostname .';dbname='. $database, $user, $password);
 
 	# Executa a query desejada
-	$stmt = $dbh->query("SELECT cpf,nome FROM funcionario");
+	$stmt = $dbh->query("SELECT cpf,nome,tipo FROM funcionario");
 
 	$userAll = array();
 // /*
 	while ($row = $stmt->fetch()){
 		 $user = array('cpf' => $row['cpf'],
 			 'nome' => $row['nome'],
+			 'tipo' => $row['tipo'],
 		 );
 		 array_push($userAll, $user);
 	}
