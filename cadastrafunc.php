@@ -75,15 +75,19 @@
 
 
 		# Executa a query desejada
-		$row = $dbh->query("SELECT cpf,nome,tipo FROM funcionario WHERE cpf =$id LIMIT 1")->fetch();
+		if ($_GET['info'] == "u") {
+			// echo "cadastro";
+			$row = $dbh->query("SELECT cpf,nome,tipo FROM funcionario WHERE cpf =$id LIMIT 1")->fetch();
 
-		if ($row['tipo'] == 0) {
-		 $checked1 = "";
-		 $checked2 = "checked";
-		}else {
-		 $checked1 = "checked";
-		 $checked2 = "";
+			if ($row['tipo'] == 0) {
+			 $checked1 = "";
+			 $checked2 = "checked";
+			}else {
+			 $checked1 = "checked";
+			 $checked2 = "";
+			}
 		}
+
 
 		$user = array('cpf' => $row['cpf'],
 			 'nome' => $row['nome'],
