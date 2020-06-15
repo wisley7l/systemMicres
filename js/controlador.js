@@ -60,7 +60,8 @@ function deletefuncionario(cpf,nome,tipo) {
   }
 }
 
-function deleteempresa(cnpj,nome,nveiculo) {
+function deleteempresa(cnpj,nome) {
+  var nveiculo = 0;
   // alert("TEM CERTEZA QUE DESEJA DELETAR FUNCIONÁRIO DE CPF: "+cpf+" NOME: " + nome +" ?");
   // window.location.href = "/cadastrafunc.php?cpf=" + cpf + "&info=u&json=" ;
   var x;
