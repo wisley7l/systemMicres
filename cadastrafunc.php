@@ -28,7 +28,7 @@
 
 	if (isset($_GET['json'])){
 		if ($_GET['json'] == "") {
-			echo "faz nada \n";
+			// echo "faz nada \n";
 		} else {
 			$v1 = $_GET['json'];
 
