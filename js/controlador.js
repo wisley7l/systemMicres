@@ -51,10 +51,8 @@ function deletefuncionario(cpf,nome,tipo) {
   var r=confirm("TEM CERTEZA QUE DESEJA DELETAR FUNCIONÁRIO DE CPF: "+cpf+" NOME: " + nome +" ?");
   if (r==true){
     var json = 'cpf,'+ cpf + ','+ nome + ','+ tipo;
-    console.log(json);
     var v1 = MD5(json);
-    console.log(v1);
-    // window.location.href = "/cadastrafunc.php?cpf=" + cpf + "&info=d&json=" + v1;
+    window.location.href = "/cadastrafunc.php?cpf=" + cpf + "&info=d&json=" + v1;
   }
 
 
