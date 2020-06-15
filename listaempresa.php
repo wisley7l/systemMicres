@@ -22,7 +22,7 @@
 	$dbh = new PDO('mysql:host='.$hostname .';dbname='. $database, $user, $password);
 
 	# Executa a query desejada
-	$stmt = $dbh->query("SELECT cnpj,nome,nveiculo FROM empresa");
+	$stmt = $dbh->query("SELECT e.cnpj,e.nome,count(v.placa) as nveiculos FROM empresa e  JOIN veiculo v ON e.cnpj = v.cnpj_empresa");
 	// $row2 = $dbh->query("SELECT COUNT(placa) as p FROM veiculo WHERE cnpj_empresa =$id")->fetch();
 
 	$userAll = array();
