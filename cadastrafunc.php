@@ -35,10 +35,10 @@
 
 	if (isset($_GET['info'])){
 		if ($_GET['info'] == "") {
-			echo "faz nada";
-	// 	}else {
+			echo "faz nada \n";
+		} else {
 	// 		echo "fazr MD5";
-	// 		echo $_GET['info']);
+			echo $_GET['info'];
 		}
 	}
 
