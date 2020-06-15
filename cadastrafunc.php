@@ -26,10 +26,6 @@
 		// echo $id;
 	}
 
-	if (isset($_GET['info'])){
-
-	}
-
 	if (isset($_GET['json'])){
 		if ($_GET['json'] == "") {
 			// echo "faz nada \n";
@@ -53,14 +49,17 @@
 			$nome = $pieces[2];
 			$tipo = (int)$pieces[3];
 
-			if ($_GET['info'] == "c") {
-				// echo "cadastro";
-			}elseif ($_GET['info'] == "u") {
-				// echo "updadte";
-				$row = $dbh->query("UPDATE funcionario SET nome = '$nome' , tipo = $tipo WHERE cpf =$cpf")->fetch();
-				echo $row[0];
-			}
 
+			$row = $dbh->query("UPDATE funcionario SET nome = '$nome' , tipo = $tipo WHERE cpf =$cpf")->fetch();
+			echo $row[0];
+		}
+	}
+
+	if (isset($_GET['info'])){
+		if ($_GET['info'] == "c") {
+			// echo "cadastro";
+		}elseif ($_GET['info'] == "u") {
+			// echo "updadte";
 		}
 	}
 
@@ -75,19 +74,15 @@
 
 
 		# Executa a query desejada
-		if ($_GET['info'] == "u") {
-			// echo "cadastro";
-			$row = $dbh->query("SELECT cpf,nome,tipo FROM funcionario WHERE cpf =$id LIMIT 1")->fetch();
+		$row = $dbh->query("SELECT cpf,nome,tipo FROM funcionario WHERE cpf =$id LIMIT 1")->fetch();
 
-			if ($row['tipo'] == 0) {
-			 $checked1 = "";
-			 $checked2 = "checked";
-			}else {
-			 $checked1 = "checked";
-			 $checked2 = "";
-			}
+		if ($row['tipo'] == 0) {
+		 $checked1 = "";
+		 $checked2 = "checked";
+		}else {
+		 $checked1 = "checked";
+		 $checked2 = "";
 		}
-
 
 		$user = array('cpf' => $row['cpf'],
 			 'nome' => $row['nome'],
