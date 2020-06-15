@@ -44,11 +44,11 @@
 
 			$outstr = $b->toString($fstr);
 
-			// $pieces = explode(",", $outstr);
+			$pieces = explode(",", $outstr);
 
-			// $cpf = (int) $pieces[1];
-			// $nome = $pieces[2];
-			// $tipo = (int)$pieces[3];
+			$cpf = (int) $pieces[1];
+			$nome = $pieces[2];
+			$tipo = (int)$pieces[3];
 
 
 			// $row = $dbh->query("UPDATE funcionario SET nome = '$nome' , tipo = $tipo WHERE cpf =$cpf")->fetch();
@@ -58,9 +58,9 @@
 
 	if (isset($_GET['info'])){
 		if ($_GET['info'] == "c") {
-			// echo "cadastro";
+			echo "cadastro";
 		}elseif ($_GET['info'] == "u") {
-			// echo "updadte";
+			echo "updadte";
 		}
 	}
 
