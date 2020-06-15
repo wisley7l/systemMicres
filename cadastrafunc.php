@@ -40,7 +40,7 @@
 		} else {
 			$v1 = $_GET['json'];
 			//
-			// $b = new Base32;
+			$b = new Base32;
 			//
 			// $b->setCharset(Base32::csSafe);
 			// $bstr = $v1;
@@ -98,7 +98,7 @@
 			 'checked1' => $checked1,
 			 'checked2' => $checked2,
 		 );
-	 
+
 
 
 
