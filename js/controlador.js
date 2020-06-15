@@ -65,7 +65,7 @@ function clickcadastraempresa(){
   var cnpj = $("input#cnpj-cad")[0].value;
   var nome = $("input#nomeempresa-cad")[0].value;
 
-  var json = 'cpf,'+ cnpj + ','+ nome;
+  var json = 'cnpj,'+ cnpj + ','+ nome;
   var v1 = MD5(json);
   var url = window.location.search;
   var s = url.split("&")[1].split("=")[1];
@@ -73,9 +73,9 @@ function clickcadastraempresa(){
   alert("Seu CNPJ não possui 14 Digitos o que imposibilita seu cadastro!");
   }else {
     // window.location.href = "/cadastraempresa.php?cnpj=" + cnpj + "&nome=" + nome ;
-    // console.log(cpf);
-    // console.log(nome);
-    // console.log(json);
+    console.log(cnpj);
+    console.log(nome);
+    console.log(json);
     // window.location.href = "/cadastrafunc.php?cpf=" + cnpj + "&info=" + s + "&json=" + v1;
   }
 }
