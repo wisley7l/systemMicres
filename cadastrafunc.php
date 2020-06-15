@@ -58,10 +58,17 @@
 			$row = $dbh->query("INSERT INTO funcionario (cpf,nome,tipo)	VALUES ($cpf, '$nome',$tipo)")->fetch();
 			echo $row[0];
 
+			if ($tipo == 0) {
+			 $checked1 = "";
+			 $checked2 = "checked";
+			}else {
+			 $checked1 = "checked";
+			 $checked2 = "";
+			}
 
-			$user = array('cpf' => "",
-				 'nome' => "",
-				 'tipo' => "",
+			$user = array('cpf' => $cpf,
+				 'nome' => $nome,
+				 'tipo' => $tipo,
 				 'checked1' => "",
 				 'checked2' => "checked",
 			 );
