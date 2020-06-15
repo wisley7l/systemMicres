@@ -58,6 +58,14 @@
 			$row = $dbh->query("INSERT INTO funcionario (cpf,nome,tipo)	VALUES ($cpf, '$nome',$tipo)")->fetch();
 			echo $row[0];
 
+
+			$user = array('cpf' => "",
+				 'nome' => "",
+				 'tipo' => "",
+				 'checked1' => "",
+				 'checked2' => "checked",
+			 );
+
 		}elseif ($_GET['info'] == "u") {
 			echo "updadte";
 			$row = $dbh->query("UPDATE funcionario SET nome = '$nome' , tipo = $tipo WHERE cpf =$cpf")->fetch();
