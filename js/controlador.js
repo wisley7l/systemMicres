@@ -77,6 +77,8 @@ function clickcadastrafunc(){
   alert("Seu CPF não possui 11 Digitos o que imposibilita seu cadastro!");
   }else {
     console.log(cpf);
+    console.log(nome);
+    console.log(json);
     // window.location.href = "/cadastrafunc.php?cpf=" + cpf + "&info=" + s + "&json=" + v1 ;
   }
 }
