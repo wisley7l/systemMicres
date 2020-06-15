@@ -49,8 +49,7 @@ function deletefuncionario(cpf,nome,tipo) {
   //recebemos o valor do botão pressionado ok ou cancelar em uma variavel
   var r=confirm("TEM CERTEZA QUE DESEJA DELETAR FUNCIONÁRIO DE CPF: "+cpf+" NOME: " + nome +" ?"));
   if (r==true){
-    x="Você DELETOU FUNCIONARIO " + nome  ;
-    alert(x)
+    alert("Você DELETOU FUNCIONARIO " + nome)
   }
 
 
