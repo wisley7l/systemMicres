@@ -84,7 +84,7 @@
 
 
 	# Exibe os registros na tela
-	echo $twig->render('cadastraempresa1.html', array( "user" => $userAll,
+	echo $twig->render('cadastraempresa1.html', array( "user" => $user,
 		));
 	// Chamando a página "hello.html" que está em views
 
