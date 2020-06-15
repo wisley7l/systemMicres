@@ -55,7 +55,7 @@
    					<td scope="row">{{use.nome}}</td>
 	 					{% endif %}
 
-						<td scope="row"><p> <button id ='deletefuc' onclick="deletefuncionario({{use.cpf}},{{use.nome}},{{use.tipo}})" class="btn-primary"> X </button> </p></td>
+						<td scope="row"><p> <button id ='deletefuc' onclick="deletefuncionario({{use.cpf}},'{{use.nome}}',{{use.tipo}})" class="btn-primary"> X </button> </p></td>
 						<!-- <td><?php echo $valor->user_email;?></td> -->
 						<!-- <td><?php echo date('d/m/Y H:m:s', strtotime($valor->user_registered));?></td> -->
 					</tr>
