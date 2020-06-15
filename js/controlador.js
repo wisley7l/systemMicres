@@ -64,8 +64,9 @@ function deletefuncionario(cpf,nome,tipo) {
 function clickcadastraempresa(){
   var cnpj = $("input#cnpj-cad")[0].value;
   var nome = $("input#nomeempresa-cad")[0].value;
+  var nv = $("input#nveiculo-cad")[0].value;
 
-  var json = 'cnpj,'+ cnpj + ','+ nome;
+  var json = 'cnpj,'+ cnpj + ','+ nome + parseInt(nv);
   var v1 = MD5(json);
   var url = window.location.search;
   var s = url.split("&")[1].split("=")[1];

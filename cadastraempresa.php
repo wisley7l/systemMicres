@@ -47,7 +47,7 @@
 
 				$cnpj = (int) $pieces[1];
 				$nomeempresa = $pieces[2];
-				// $tipo = (int)$pieces[3];
+				$nveiculo = (int)$pieces[3];
 
 				if ($_GET['info'] == "c") {
 					echo "cadastro";
@@ -56,7 +56,7 @@
 
 				}elseif ($_GET['info'] == "u") {
 					echo "updadte";
-					$row = $dbh->query("UPDATE empresa	SET nome = '$nomeempresa' WHERE cnpj = $cnpj")->fetch();
+					$row = $dbh->query("UPDATE empresa	SET nome = '$nomeempresa',nveiculo = $nveiculo WHERE cnpj = $cnpj")->fetch();
 					header('Location: listaempresa.php');
 				}
 				elseif ($_GET['info'] == "d") {
