@@ -71,7 +71,7 @@ function clickcadastrafunc(){
   var json = '{"cpf":'+ cpf + ',"nome":'+ nome + ',"tipo":'+ tipo + ' }'
   console.log(json);
   // var v1 = MD5(json);
-  console.log(imported);
+  console.log(MD5);
 
   // if(cpf.toString().length != 11){
   // alert("Seu CPF não possui 14 Digitos o que imposibilita seu cadastro!");
