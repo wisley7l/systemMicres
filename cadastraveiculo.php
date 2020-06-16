@@ -92,6 +92,7 @@
 				 'modelo' => $row1['modelo'],
 				 'pneususo' => $row3['pneususo'],
 				 'pneus' => $row2['pneus'],
+				 'disabled' => "disabled",
 			);
 		}elseif ($_GET['info'] == "c") {
 			$row1 = $dbh->query("SELECT placa,cnpj_empresa,marca,modelo,pneususo,pneus FROM veiculo WHERE placa = '$id' LIMIT 1")->fetch();
@@ -110,6 +111,7 @@
 				 'modelo' => $modelo,
 				 'pneususo' => 0,
 				 'pneus' => 0,
+				 'disabled' => "",
 			 );
 		}
 	# Exibe os registros na tela
