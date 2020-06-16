@@ -40,7 +40,7 @@ function editaempresa(cnpj) {
 }
 //
 function editaveiculo(placa) {
-  window.location.href = "/cadastraempresa.php?placa=" + placa + "&info=u&json=" ;
+  window.location.href = "/cadastraveiculo.php?placa=" + placa + "&info=u&json=" ;
 }
 //
 function buscaveiculo(placa) {
