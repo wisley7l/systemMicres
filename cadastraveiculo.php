@@ -72,23 +72,17 @@
 
 		# Executa a query desejada
 
-
-		// $row1 = $dbh->query("SELECT placa,cnpj_empresa,marca,modelo FROM veiculo WHERE placa = '$id' LIMIT 1")->fetch();
-		// $row2 = $dbh->query("SELECT COUNT(cod) as pneus FROM pneu WHERE veiculo ='$id'")->fetch();
-		// $row3 = $dbh->query("SELECT COUNT(cod) as pneususo FROM pneu WHERE veiculo ='$id' AND status = 1")->fetch();
-
 		if ($_GET['info'] == "u") {
 			$row1 = $dbh->query("SELECT placa,cnpj_empresa,marca,modelo,pneususo,pneus FROM veiculo WHERE placa = '$id' LIMIT 1")->fetch();
 			$row2 = $dbh->query("SELECT COUNT(cod) as pneus FROM pneu WHERE veiculo ='$id'")->fetch();
 			$row3 = $dbh->query("SELECT COUNT(cod) as pneususo FROM pneu WHERE veiculo ='$id' AND status = 1")->fetch();
-				echo $id;
-				$user = array('placa' => $row1['placa'],
-					 'cnpj_empresa' => $row1['cnpj_empresa'],
-					 'marca' => $row1['marca'],
-					 'modelo' => $row1['modelo'],
-					 'pneususo' => $row3['pneususo'],
-					 'pneus' => $row2['pneus'],
-				 );
+			$user = array('placa' => $row1['placa'],
+				 'cnpj_empresa' => $row1['cnpj_empresa'],
+				 'marca' => $row1['marca'],
+				 'modelo' => $row1['modelo'],
+				 'pneususo' => $row3['pneususo'],
+				 'pneus' => $row2['pneus'],
+			);
 		}else {
 			$row = $dbh->query("SELECT placa,cnpj_empresa,marca,modelo FROM veiculo WHERE cnpj_empresa = $cnpj_empresa LIMIT 1")->fetch();
 			$user = array('placa' => $placa,
