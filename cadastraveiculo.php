@@ -86,7 +86,7 @@
 				 );
 		}else {
 			$user = array('placa' => $placa,
-				 'cnpj_empresa' => $row['cnpj_empresa'],
+				 // 'cnpj_empresa' => $row['cnpj_empresa'],
 				 'marca' => $marca,
 				 'modelo' => $modelo,
 				 'pneususo' => 0,
