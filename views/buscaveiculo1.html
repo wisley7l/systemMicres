@@ -28,25 +28,24 @@
 
 
 	<div class="container">
-		<h2>{{user.placa}}</h2>
 		<div class="row">
 			<div class="col-md-8">
 				<form class="row">
 				<div class="form-group col-md-6">
-					<p><label> CNPJ: {{user.cnpj_empresa}} - {{user.nome_empresa}}</label></p>
-					<label> 	{{user.marca}} {{user.modelo}}</label>
+					<p><label> EMPRESA: ({{user.cnpj_empresa}}): {{user.nome_empresa}}</label></p>
+					<label> 	Marca: {{user.marca}} Modelo: {{user.modelo}}</label>
 					<label> Qnt. Pneus em Uso: {{user.pneususo}} </label>
 					<label> Qnt. Pneus Cadastrados : {{user.pneus}} </label>
 				</div>
 				</form>
 				<form class="row">
 				<div class="col-md-8">
-					<button class="btn btn-lg btn-primary">Cadastrar Pneu</button>
+					<button class="btn-primary">Cadastrar Pneu</button>
 				</div>
 				</form>
 			</div>
 		</div>
-	<!-- </div> -->
+	<h2>Placa: {{user.placa}}</h2>
 
 	<div id="table-wrapper">
 	  <div id="table-scroll">
