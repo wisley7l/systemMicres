@@ -50,9 +50,9 @@
 	//
  	while ($row = $stmt->fetch()){
 		if ($row['status']==1) {
-			$pneu = "EM USO";
+			$pneu = "checked";
 		}else {
-			$pneu = "DESUSO";
+			$pneu = "";
 		}
  		 $veiculo = array('cod' => $row['cod'],
  			 'veiculo' => $row['veiculo'],
