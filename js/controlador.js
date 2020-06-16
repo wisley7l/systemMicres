@@ -165,18 +165,24 @@ function clickcadastrafunc(){
   if(cpf.toString().length != 11){
   alert("Seu CPF não possui 11 Digitos o que imposibilita seu cadastro!");
   }else {
-    console.log(cpf);
-    console.log(nome);
-    console.log(json);
+    // console.log(cpf);
+    // console.log(nome);
+    // console.log(json);
     window.location.href = "/cadastrafunc.php?cpf=" + cpf + "&info=" + s + "&json=" + v1;
   }
 }
 
 //
 function alteraclickstatus(cod,status){
+
   if (status=="checked") {
-    console.log(cod);
+    status = 1;
   }else {
-    console.log("Inverte");
+    status = 0;
   }
+
+  var json = 'cod,'+ cod + ','+ status ;
+  var v1 = MD5(json);
+  window.location.href = "/updatestatuspneu.php?cod=" + cod + "&info=u" + s + "&json=" + v1;
+
 }
