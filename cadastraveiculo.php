@@ -62,7 +62,7 @@
 				// echo "<p>$pneus</p>";
 				$row = $dbh->query("INSERT INTO veiculo (placa,cnpj_empresa,marca,modelo,pneususo,pneus) VALUES ('$placa',$cnpj_empresa,'$marca','$modelo',0,0)")->fetch();
 				$row5 = $dbh->query("SELECT count(placa) as nveiculo FROM veiculo WHERE cnpj_empresa = $cnpj_empresa")->fetch();
-				echo $row5[1];
+				echo $row5[0];
 				// $row6 = $dbh->query("UPDATE empresa	SET nveiculo = $row5['nveiculo'] WHERE cnpj = $cnpj_empresa")->fetch();
 				header('Location: buscaempresa.php?cnpj=' . $cnpj_empresa);
 
