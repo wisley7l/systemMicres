@@ -23,7 +23,6 @@
 	// /*
 	if (isset($_GET['placa'])){
 		$id = $_GET['placa'];
-
 	}
 
 	if (isset($_GET['json'])){
@@ -79,14 +78,14 @@
 		// $row3 = $dbh->query("SELECT COUNT(cod) as pneususo FROM pneu WHERE veiculo ='$id' AND status = 1")->fetch();
 
 		if ($_GET['info'] == "u") {
-				echo $id;
-				// $user = array('placa' => $row1['placa'],
+				// echo $id;
+				$user = array('placa' => $'row1',
 					 // 'cnpj_empresa' => $row1['cnpj_empresa'],
 					 // 'marca' => $row1['marca'],
 					 // 'modelo' => $row1['modelo'],
 					 // 'pneususo' => $row3['pneususo'],
 					 // 'pneus' => $row2['pneus'],
-				 // );
+				 );
 		}else {
 			$row = $dbh->query("SELECT placa,cnpj_empresa,marca,modelo FROM veiculo WHERE cnpj_empresa = $cnpj_empresa LIMIT 1")->fetch();
 			$user = array('placa' => $placa,
