@@ -101,7 +101,7 @@
 		}else{
 			$row = $dbh->query("SELECT placa,cnpj_empresa,marca,modelo FROM veiculo WHERE cnpj_empresa = $cnpj_empresa LIMIT 1")->fetch();
 			$user = array('placa' => $placa,
-				 'cnpj_empresa' => $row['cnpj_empresa'],
+				 'cnpj_empresa' => $cnpj_empresa,
 				 'marca' => $marca,
 				 'modelo' => $modelo,
 				 'pneususo' => 0,
