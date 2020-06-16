@@ -119,9 +119,9 @@ function clickcadastraveiculo(){
   alert("A Placa não possui 7 Digitos o que imposibilita seu cadastro!");
   }else {
     // console.log(json);
-    console.log(v1);
-    console.log(s);
-    // window.location.href = "/cadastraempresa.php?cnpj=" + cnpj + "&info=" + s + "&json=" + v1;
+    // console.log(v1);
+    // console.log(s);
+    window.location.href = "/cadastraveiculo.php?placa=" + placa + "&info=" + s + "&json=" + v1;
   }
 }
 
