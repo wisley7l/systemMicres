@@ -28,7 +28,7 @@ function cadastrafuncionario(){
 function cadastraveiculo(cnpj){
   var json = 'placa,XXX0X00 ,'+ cnpj + ',MARCA,MODELO';
   var v1 = MD5(json);
-  window.location.href = "/cadastraveiculo.php?placa=" + "&info=c&json="+v1;
+  window.location.href = "/cadastraveiculo.php?placa=" + "&info=&json="+v1;
 }
 //
 function buscaempresa(cnpj) {
