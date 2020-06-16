@@ -97,6 +97,10 @@ function deleteveiculo(placa,cnpj,nome) {
     window.location.href = "/cadastraveiculo.php?placa=" + placa + "&info=d&json=" + v1;
   }
 }
+//
+function deletepneu() {
+  
+}
 
 
 function clickcadastraempresa(){
