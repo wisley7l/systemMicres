@@ -54,6 +54,12 @@
 
 			if ($_GET['info'] == "c") {
 				echo "cadastro";
+				echo "<p>$placa</p>";
+				echo "<p>$cnpj_empresa</p>";
+				echo "<p>$marca</p>";
+				echo "<p>$modelo</p>";
+				echo "<p>$pneususo</p>";
+				echo "<p>$pneus</p>";
 				$row = $dbh->query("INSERT INTO veiculo (placa,cnpj_empresa,marca,modelo,pneuuso,pneus) VALUES ('$placa',$cnpj_empresa,'$marca','$modelo',0,0)")->fetch();
 				header('Location: buscaempresa.php?cnpj=' . $cnpj_empresa);
 
