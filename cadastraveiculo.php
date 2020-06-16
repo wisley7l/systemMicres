@@ -78,12 +78,12 @@
 		$row3 = $dbh->query("SELECT COUNT(cod) as pneususo FROM pneu WHERE veiculo ='$id' AND status = 1")->fetch();
 
 		if ($_GET['info'] == "u") {
-				$user = array('placa' => $row['placa'],
-					 'cnpj_empresa' => $row['cnpj_empresa'],
-					 'marca' => $row['marca'],
-					 'modelo' => $row['modelo'],
+				$user = array('placa' => $row1['placa'],
+					 'cnpj_empresa' => $row1['cnpj_empresa'],
+					 'marca' => $row1['marca'],
+					 'modelo' => $row1['modelo'],
 					 'pneususo' => $row3['pneususo'],
-					 'pneus' => $row2['pneus'],
+					 // 'pneus' => $row2['pneus'],
 				 );
 		}else {
 			$user = array('placa' => $placa,
