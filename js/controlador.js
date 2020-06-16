@@ -124,7 +124,7 @@ function clickcadastraveiculo(){
     // console.log(json);
     // console.log(v1);
     console.log(s);
-    // window.location.href = "/cadastraveiculo.php?placa=" + placa + "&info=" + s + "&json=" + v1;
+    window.location.href = "/cadastraveiculo.php?placa=" + placa + "&info=" + s + "&json=" + v1;
   }
 }
 
