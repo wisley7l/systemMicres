@@ -70,9 +70,9 @@
 			}elseif ($_GET['info'] == "u") {
 				echo "updadte";
 				$row = $dbh->query("UPDATE veiculo SET cnpj_empresa = $cnpj_empresa , marca = '$marca' ,modelo = '$modelo',pneususo= $pneususo,pneus=$pneus  WHERE placa ='$placa'")->fetch();
-				$row5 = $dbh->query("SELECT count(placa) FROM veiculo WHERE cnpj_empresa = $cnpj_empresa")->fetch();
-				$dbh->closeCursor();
-				$row6 = $dbh->query("UPDATE empresa	SET nveiculo = $row5[0] WHERE cnpj = $cnpj_empresa")->fetch();
+				// $row5 = $dbh->query("SELECT count(placa) FROM veiculo WHERE cnpj_empresa = $cnpj_empresa")->fetch();
+				// $dbh->closeCursor();
+				// $row6 = $dbh->query("UPDATE empresa	SET nveiculo = $row5[0] WHERE cnpj = $cnpj_empresa")->fetch();
 				header('Location: buscaempresa.php?cnpj=' . $cnpj_empresa);
 			}
 			elseif ($_GET['info'] == "d") {
