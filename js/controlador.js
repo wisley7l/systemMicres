@@ -31,6 +31,12 @@ function cadastraveiculo(cnpj){
   window.location.href = "/cadastraveiculo.php?placa=" + "&info=&json="+v1;
 }
 //
+function cadastrapneu(placa){
+  var json = 'cod,0000000000,'+ placa +',MARCA,MODELO';
+  var v1 = MD5(json);
+  window.location.href = "/cadastrapneu.php?cod=" + "&info=&json="+v1;
+}
+//
 function buscaempresa(cnpj) {
   window.location.href = "/buscaempresa.php?cnpj=" + cnpj;
 }
@@ -99,7 +105,7 @@ function deleteveiculo(placa,cnpj,nome) {
 }
 //
 function deletepneu() {
-  
+
 }
 
 

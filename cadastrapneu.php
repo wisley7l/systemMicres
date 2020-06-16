@@ -111,7 +111,7 @@
 		}
 	# Exibe os registros na tela
 
-	echo $twig->render('cadastraveiculo1.html', array( "user" => $user,
+	echo $twig->render('cadastrapneu1.html', array( "user" => $user,
 		));
 
 ?>
