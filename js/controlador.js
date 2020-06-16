@@ -83,6 +83,20 @@ function deleteempresa(cnpj,nome) {
     window.location.href = "/cadastraempresa.php?cnpj=" + cnpj + "&info=d&json=" + v1;
   }
 }
+//
+function deleteveiculo(placa,cnpj,nome) {
+  var nveiculo = 0
+  // alert("TEM CERTEZA QUE DESEJA DELETAR FUNCIONÁRIO DE CPF: "+cpf+" NOME: " + nome +" ?");
+  // window.location.href = "/cadastrafunc.php?cpf=" + cpf + "&info=u&json=" ;
+  var x;
+  //recebemos o valor do botão pressionado ok ou cancelar em uma variavel
+  var r=confirm("TEM CERTEZA QUE DESEJA DELETAR VEICULO DE PLACA: "+placa+" DA EMPRESA: " + cnpj +"-"+ nome +" ?");
+  if (r==true){
+    var json = 'placa,'+ placa + ','+ cnpj + ', , , , ';
+    var v1 = MD5(json);
+    // window.location.href = "/cadastraveiculo.php?placa=" + placa + "&info=d&json=" + v1;
+  }
+}
 
 
 function clickcadastraempresa(){

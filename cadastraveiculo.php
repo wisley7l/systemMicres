@@ -54,34 +54,23 @@
 
 			if ($_GET['info'] == "c") {
 				echo "cadastro";
-				// echo "<p>$placa</p>";
-				// echo "<p>$cnpj_empresa</p>";
-				// echo "<p>$marca</p>";
-				// echo "<p>$modelo</p>";
-				// echo "<p>$pneususo</p>";
-				// echo "<p>$pneus</p>";
 				$row = $dbh->query("INSERT INTO veiculo (placa,cnpj_empresa,marca,modelo,pneususo,pneus) VALUES ('$placa',$cnpj_empresa,'$marca','$modelo',0,0)")->fetch();
 				$row5 = $dbh->query("SELECT count(placa) FROM veiculo WHERE cnpj_empresa = $cnpj_empresa")->fetch();
-				// $dbh->closeCursor();
-				// echo "<p>$row5[0]</p>";
 				$row6 = $dbh->query("UPDATE empresa	SET nveiculo = $row5[0] WHERE cnpj = $cnpj_empresa")->fetch();
 				header('Location: buscaempresa.php?cnpj=' . $cnpj_empresa);
 
 			}elseif ($_GET['info'] == "u") {
 				echo "updadte";
 				$row = $dbh->query("UPDATE veiculo SET cnpj_empresa = $cnpj_empresa , marca = '$marca' ,modelo = '$modelo',pneususo= $pneususo,pneus=$pneus  WHERE placa ='$placa'")->fetch();
-				// $row5 = $dbh->query("SELECT count(placa) FROM veiculo WHERE cnpj_empresa = $cnpj_empresa")->fetch();
-				// $dbh->closeCursor();
-				// $row6 = $dbh->query("UPDATE empresa	SET nveiculo = $row5[0] WHERE cnpj = $cnpj_empresa")->fetch();
 				header('Location: buscaempresa.php?cnpj=' . $cnpj_empresa);
 			}
 			elseif ($_GET['info'] == "d") {
 				echo "delete";
-				// $row = $dbh->query("DELETE FROM veiculo WHERE placa =$cpf")->fetch();
-				// $row5 = $dbh->query("SELECT count(placa) FROM veiculo WHERE cnpj_empresa = $cnpj_empresa")->fetch();
+				$row = $dbh->query("DELETE FROM veiculo WHERE placa ='$placa'")->fetch();
+				$row5 = $dbh->query("SELECT count(placa) FROM veiculo WHERE cnpj_empresa = $cnpj_empresa")->fetch();
 				// $dbh->closeCursor();
-				// $row6 = $dbh->query("UPDATE empresa	SET nveiculo = $row5[0] WHERE cnpj = $cnpj_empresa")->fetch();
-				// header('Location: buscaempresa.php?cnpj=' . $cnpj_empresa);
+				$row6 = $dbh->query("UPDATE empresa	SET nveiculo = $row5[0] WHERE cnpj = $cnpj_empresa")->fetch();
+				header('Location: buscaempresa.php?cnpj=' . $cnpj_empresa);
 			}
 		}
 	}

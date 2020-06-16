@@ -61,7 +61,7 @@
 						<td scope="col" align = "left">{{use.modelo}}</td>
 						<td scope="col" align = "left">{{use.pneuuso}}</td>
 						<td scope="col" align = "left"><button class="btn-primary" onclick="editaveiculo('{{use.placa}}')">Editar</button></td>
-						<td scope="col" align = "left"><button class="btn-primary" onclick="">X</button></td>
+						<td scope="col" align = "left"><button class="btn-primary" onclick="deleteveiculo({{use.placa}},{{user.cnpj}})">X</button></td>
 					</tr>
 					{% endfor %}
 				</tbody>
