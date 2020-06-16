@@ -184,7 +184,7 @@ a:focus{
 	text-align: center;
 	position: relative;
   /* background: #00F; */
-	/* background: url('../img/bg2.png'); */
+	background: url('../img/bg2.png');
 	/* background-size: 50px; */
 	color: #00f;
 }
