@@ -171,3 +171,14 @@ function clickcadastrafunc(){
     window.location.href = "/cadastrafunc.php?cpf=" + cpf + "&info=" + s + "&json=" + v1;
   }
 }
+
+//
+alteraclickstatus(cod,status){
+  if (status=="checked") {
+    console.log(cod);
+  }else {
+    console.log("Inverte");
+  }
+
+  
+}
