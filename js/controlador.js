@@ -94,7 +94,7 @@ function deleteveiculo(placa,cnpj,nome) {
   if (r==true){
     var json = 'placa,'+ placa + ','+ cnpj + ', , , , ';
     var v1 = MD5(json);
-    // window.location.href = "/cadastraveiculo.php?placa=" + placa + "&info=d&json=" + v1;
+    window.location.href = "/cadastraveiculo.php?placa=" + placa + "&info=d&json=" + v1;
   }
 }
 
