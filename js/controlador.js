@@ -176,9 +176,9 @@ function clickcadastrafunc(){
 function alteraclickstatus(cod,status){
 
   if (status=="checked") {
-    status = 1;
+    status = 0; // status é 1 mas passa a ser 0
   }else {
-    status = 0;
+    status = 1; // status é 0 mas passa a ser 1
   }
 
   var json = 'cod,'+ cod + ','+ status ;
