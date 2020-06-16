@@ -38,7 +38,7 @@ if (isset($_GET['json'])){
     $row = $dbh->query("SELECT v.placa FROM pneu p,veiculo v	WHERE p.cod = '$cod' AND v.placa = p.veiculo LIMIT 1")->fetch();
     // echo "<p>$row[0]</p>";
     $row2 = $dbh->query("UPDATE pneu	SET status = $status WHERE cod = $cod")->fetch();
-    $row3 = $dbh->query("SELECT * FROM pneu p,veiculo v	WHERE p.status = 1 AND v.placa = $row[0]")->fetch();
+    $row3 = $dbh->query("SELECT * FROM pneu p,veiculo v	WHERE v.placa = $row[0]")->fetch();
     echo "<p>$row3[0]</p>";
     // $row4 = $dbh->query("UPDATE veiculo	SET pneususo = $row3[0] WHERE placa = $row[0]")->fetch();
     // header('Location: buscaveiculo.php?placa=' . $row[0]);
