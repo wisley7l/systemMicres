@@ -72,7 +72,7 @@
 	}
 
 		# Executa a query desejada
-		$row = $dbh->query("SELECT placa,cnpj_empresa,marca,modelo FROM veiculo WHERE cnpj_empresa = $cnpj_empresa LIMIT 1")->fetch();
+
 		echo $id
 		// $row1 = $dbh->query("SELECT placa,cnpj_empresa,marca,modelo FROM veiculo WHERE placa = '$id' LIMIT 1")->fetch();
 		// $row2 = $dbh->query("SELECT COUNT(cod) as pneus FROM pneu WHERE veiculo ='$id'")->fetch();
@@ -87,6 +87,7 @@
 					 // 'pneus' => $row2['pneus'],
 				 );
 		}else {
+			$row = $dbh->query("SELECT placa,cnpj_empresa,marca,modelo FROM veiculo WHERE cnpj_empresa = $cnpj_empresa LIMIT 1")->fetch();
 			$user = array('placa' => $placa,
 				 'cnpj_empresa' => $row['cnpj_empresa'],
 				 'marca' => $marca,
