@@ -39,7 +39,7 @@ if (isset($_GET['json'])){
     // echo "<p>$row[0]</p>";
     $row2 = $dbh->query("UPDATE pneu	SET status = $status WHERE cod = $cod")->fetch();
     $row3 = $dbh->query("SELECT count(p.cod) FROM pneu p,veiculo v	WHERE p.status = 1 AND v.placa = '$row[0]'")->fetch();
-    $row4 = $dbh->query("UPDATE veiculo	SET pneususo = $row3[0] WHERE placa = $row[0]")->fetch();
+    $row4 = $dbh->query("UPDATE veiculo	SET pneususo = $row3[0] WHERE placa = '$row[0]'")->fetch();
     echo "<p>$row4[0]</p>";
     // header('Location: buscaveiculo.php?placa=' . $row[0]);
     //
