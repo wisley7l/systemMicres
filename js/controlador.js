@@ -115,13 +115,16 @@ function clickcadastraveiculo(){
   var v1 = MD5(json);
   var url = window.location.search;
   var s = url.split("&")[1].split("=")[1];
+  if (s === "") {
+    s="c";
+  }
   if(placa.toString().length != 7){
   alert("A Placa não possui 7 Digitos o que imposibilita seu cadastro!");
   }else {
     // console.log(json);
     // console.log(v1);
-    // console.log(s);
-    window.location.href = "/cadastraveiculo.php?placa=" + placa + "&info=" + s + "&json=" + v1;
+    console.log(s);
+    // window.location.href = "/cadastraveiculo.php?placa=" + placa + "&info=" + s + "&json=" + v1;
   }
 }
 
