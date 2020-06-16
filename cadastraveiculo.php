@@ -74,15 +74,21 @@
 	}
 
 		# Executa a query desejada
-		$row = $dbh->query("SELECT placa,cnpj_empresa,marca,modelo FROM veiculo WHERE placa =$placa LIMIT 1")->fetch();
+		$row = $dbh->query("SELECT placa,cnpj_empresa,marca,modelo FROM veiculo WHERE cnpj_empresa =$cnpj_empresa LIMIT 1")->fetch();
 
-
-		$user = array('placa' => $row['placa'],
-			 'cnpj_empresa' => $row['cnpj_empresa'],
-			 'marca' => $row['marca'],
-			 'modelo' => $row['modelo'],
-		 );
-
+		if ($_GET['info'] == "u") {
+				$user = array('placa' => $row['placa'],
+					 'cnpj_empresa' => $row['cnpj_empresa'],
+					 'marca' => $row['marca'],
+					 'modelo' => $row['modelo'],
+				 );
+		}else {
+			$user = array('placa' => $placa,
+				 'cnpj_empresa' => $row['cnpj_empresa'],
+				 'marca' => $marca,
+				 'modelo' => $modelo,
+			 );
+		}
 	# Exibe os registros na tela
 
 	echo $twig->render('cadastraveiculo1.html', array( "user" => $user,
