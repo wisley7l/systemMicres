@@ -25,12 +25,22 @@ function cadastrafuncionario(){
   window.location.href = "/cadastrafunc.php?cpf=" + "&info=c&json=";
 }
 //
+function cadastraveiculo(cnpj){
+  var json = 'placa,XXX0X00 ,'+ cnpj + ',MARCA,MODELO';
+  var v1 = MD5(json);
+  window.location.href = "/cadastraveiculo.php?placa=" + "&info=c&json="+v1;
+}
+//
 function buscaempresa(cnpj) {
   window.location.href = "/buscaempresa.php?cnpj=" + cnpj;
 }
 //
 function editaempresa(cnpj) {
   window.location.href = "/cadastraempresa.php?cnpj=" + cnpj + "&info=u&json=" ;
+}
+//
+function editaveiculo(placa) {
+  window.location.href = "/cadastraempresa.php?placa=" + placa + "&info=u&json=" ;
 }
 //
 function buscaveiculo(placa) {

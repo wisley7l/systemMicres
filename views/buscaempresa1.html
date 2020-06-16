@@ -38,7 +38,7 @@
 				</form>
 			</div>
 		</div>
-	<button class="btn-primary">Cadastrar Carro</button>
+	<button class="btn-primary" onclick="cadastraveiculo({{user.cnpj}} )">Cadastrar Carro</button>
 	<div id="table-wrapper">
 	  <div id="table-scroll">
 			<table class="table table-striped">
@@ -60,8 +60,8 @@
 						<td scope="col" align = "left">{{use.marca}}</td>
 						<td scope="col" align = "left">{{use.modelo}}</td>
 						<td scope="col" align = "left">{{use.pneuuso}}</td>
-						<td scope="col" align = "left"><button class="btn-primary">Editar</button></td>
-						<td scope="col" align = "left"><button class="btn-primary">X</button></td>
+						<td scope="col" align = "left"><button class="btn-primary" onclick="">Editar</button></td>
+						<td scope="col" align = "left"><button class="btn-primary" onclick="">X</button></td>
 					</tr>
 					{% endfor %}
 				</tbody>
