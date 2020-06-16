@@ -111,13 +111,9 @@ function clickcadastraveiculo(){
   var modelo = $("input#modelo-cad")[0].value;
   var pneususo = $("input#pneususo-cad")[0].value;
   var pneus = $("input#pneus-cad")[0].value;
-  console.log(placa);
-  console.log(cnpj);
-  console.log(marca);
-  console.log(modelo);
-  console.log(pneususo);
-  console.log(pneus);
-  // var json = 'cnpj,'+ cnpj + ','+ nome + ',' + parseInt(nv);
+
+  var json = 'placa,'+ placa + ','+ cnpj + ',' + marca + ',' + modelo + ','+ parseInt(pneususo) + ',' + parseInt(pneus);
+  console.log(json);
   // var v1 = MD5(json);
   // var url = window.location.search;
   // var s = url.split("&")[1].split("=")[1];
