@@ -115,7 +115,7 @@ function clickcadastraveiculo(){
   var v1 = MD5(json);
   var url = window.location.search;
   var s = url.split("&")[1].split("=")[1];
-  if(cnpj.toString().length != 7){
+  if(placa.toString().length != 7){
   alert("A Placa não possui 7 Digitos o que imposibilita seu cadastro!");
   }else {
     // console.log(json);
