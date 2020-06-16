@@ -55,7 +55,7 @@
 			if ($_GET['info'] == "c") {
 				echo "cadastro";
 				// echo "<p>$placa</p>";
-				echo "<p>$cnpj_empresa</p>";
+				// echo "<p>$cnpj_empresa</p>";
 				// echo "<p>$marca</p>";
 				// echo "<p>$modelo</p>";
 				// echo "<p>$pneususo</p>";
@@ -63,9 +63,9 @@
 				$row = $dbh->query("INSERT INTO veiculo (placa,cnpj_empresa,marca,modelo,pneususo,pneus) VALUES ('$placa',$cnpj_empresa,'$marca','$modelo',0,0)")->fetch();
 				$row5 = $dbh->query("SELECT count(placa) FROM veiculo WHERE cnpj_empresa = $cnpj_empresa")->fetch();
 				// $dbh->closeCursor();
-				echo "<p>$row5[0]</p>";
+				// echo "<p>$row5[0]</p>";
 				$row6 = $dbh->query("UPDATE empresa	SET nveiculo = $row5[0] WHERE cnpj = $cnpj_empresa")->fetch();
-				// header('Location: buscaempresa.php?cnpj=' . $cnpj_empresa);
+				header('Location: buscaempresa.php?cnpj=' . $cnpj_empresa);
 
 			}elseif ($_GET['info'] == "u") {
 				echo "updadte";
@@ -95,8 +95,6 @@
 			);
 		}elseif ($_GET['info'] == "c") {
 			$row1 = $dbh->query("SELECT placa,cnpj_empresa,marca,modelo,pneususo,pneus FROM veiculo WHERE placa = '$id' LIMIT 1")->fetch();
-			// $row2 = $dbh->query("SELECT COUNT(cod) as pneus FROM pneu WHERE veiculo ='$id'")->fetch();
-			// $row3 = $dbh->query("SELECT COUNT(cod) as pneususo FROM pneu WHERE veiculo ='$id' AND status = 1")->fetch();
 			$user = array('placa' => $row1['placa'],
 				 'cnpj_empresa' => $row1['cnpj_empresa'],
 				 'marca' => $row1['marca'],
