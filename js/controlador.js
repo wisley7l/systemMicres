@@ -122,7 +122,7 @@ function clickcadastraveiculo(){
     console.log(v1);
     console.log(s);
     // window.location.href = "/cadastraempresa.php?cnpj=" + cnpj + "&info=" + s + "&json=" + v1;
-  // }
+  }
 }
 
 function clickcadastrafunc(){
