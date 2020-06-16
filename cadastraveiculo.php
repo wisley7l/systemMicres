@@ -53,6 +53,10 @@
 
 			if ($_GET['info'] == "c") {
 				echo "cadastro";
+				echo "<p>$placa</p>";
+				echo "<p>$cnpj_empresa</p>";
+				echo "<p>$marca</p>";
+				echo "<p>$modelo</p>";
 				// $row = $dbh->query("INSERT INTO veiculo (placa,cnpj_empresa,marca,modelo) VALUES ($placa,$cnpj_empresa,'$marca','$modelo')")->fetch();
 				// header('Location: listafunc.php');
 
@@ -70,7 +74,7 @@
 	}
 
 		# Executa a query desejada
-		$row = $dbh->query("SELECT placa,cnpj_empresa,marca,modelo FROM veiculo WHERE placa =$placa LIMIT 1")->fetch();
+		// $row = $dbh->query("SELECT placa,cnpj_empresa,marca,modelo FROM veiculo WHERE placa =$placa LIMIT 1")->fetch();
 
 
 		$user = array('placa' => $row['placa'],
