@@ -50,43 +50,47 @@
 			$cnpj_empresa = (int)$pieces[2];
 			$marca = $pieces[3];
 			$modelo = $pieces[4];
+			$pneususo = (int)$pieces[5];
+			$pneus = (int)$pieces[6];
 
 			if ($_GET['info'] == "c") {
 				echo "cadastro";
-				echo "<p>$placa</p>";
-				echo "<p>$cnpj_empresa</p>";
-				echo "<p>$marca</p>";
-				echo "<p>$modelo</p>";
-				// $row = $dbh->query("INSERT INTO veiculo (placa,cnpj_empresa,marca,modelo) VALUES ($placa,$cnpj_empresa,'$marca','$modelo')")->fetch();
-				// header('Location: listafunc.php');
+				$row = $dbh->query("INSERT INTO veiculo (placa,cnpj_empresa,marca,modelo,pneuuso,pneus) VALUES ('$placa',$cnpj_empresa,'$marca','$modelo',0,0)")->fetch();
+				header('Location: buscaempresa.php?cnpj=' . $cnpj_empresa);
 
 			}elseif ($_GET['info'] == "u") {
 				echo "updadte";
-				// $row = $dbh->query("UPDATE veiculo SET nome = '$nome' , tipo = $tipo WHERE placa =$cpf")->fetch();
-				// header('Location: listafunc.php');
+				// $row = $dbh->query("UPDATE veiculo SET nome = '$nome' , tipo = $tipo WHERE placa ='$placa'")->fetch();
+				// header('Location: buscaempresa.php?cnpj=' . $cnpj_empresa);
 			}
 			elseif ($_GET['info'] == "d") {
 				echo "delete";
 				// $row = $dbh->query("DELETE FROM veiculo WHERE placa =$cpf")->fetch();
-				// header('Location: listafunc.php');
+				// header('Location: buscaempresa.php?cnpj=' . $cnpj_empresa);
 			}
 		}
 	}
 
 		# Executa a query desejada
 		$row = $dbh->query("SELECT placa,cnpj_empresa,marca,modelo FROM veiculo WHERE cnpj_empresa =$cnpj_empresa LIMIT 1")->fetch();
+		$row2 = $dbh->query("SELECT COUNT(cod) as pneus FROM pneu WHERE veiculo =$id")->fetch();
+		$row3 = $dbh->query("SELECT COUNT(cod) as pneususo FROM pneu WHERE veiculo =$id AND status = 1")->fetch();
 
 		if ($_GET['info'] == "u") {
 				$user = array('placa' => $row['placa'],
 					 'cnpj_empresa' => $row['cnpj_empresa'],
 					 'marca' => $row['marca'],
 					 'modelo' => $row['modelo'],
+					 'pneususo' => $row3['pneususo'],
+					 'pneus' => $row2['pneus'],
 				 );
 		}else {
 			$user = array('placa' => $placa,
 				 'cnpj_empresa' => $row['cnpj_empresa'],
 				 'marca' => $marca,
 				 'modelo' => $modelo,
+				 'pneususo' => 0,
+				 'pneus' => 0,
 			 );
 		}
 	# Exibe os registros na tela
