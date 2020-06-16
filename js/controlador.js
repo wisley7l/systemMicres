@@ -104,6 +104,33 @@ function clickcadastraempresa(){
   }
 }
 
+function clickcadastraveiculo(){
+  var placa = $("input#placa-cad")[0].value;
+  var cnpj = $("input#cnpj-cad")[0].value;
+  var marca = $("input#marca-cad")[0].value;
+  var modelo = $("input#modelo-cad")[0].value;
+  var pneususo = $("input#pneususo-cad")[0].value;
+  var pneus = $("input#pneus-cad")[0].value;
+  console.log(placa);
+  console.log(cnpj);
+  console.log(marca);
+  console.log(modelo);
+  console.log(pneususo);
+  console.log(pneus);
+  // var json = 'cnpj,'+ cnpj + ','+ nome + ',' + parseInt(nv);
+  // var v1 = MD5(json);
+  // var url = window.location.search;
+  // var s = url.split("&")[1].split("=")[1];
+  // if(cnpj.toString().length != 14){
+  // alert("Seu CNPJ não possui 14 Digitos o que imposibilita seu cadastro!");
+  // }else {
+    // console.log(json);
+    // console.log(v1);
+    // console.log(s);
+    // window.location.href = "/cadastraempresa.php?cnpj=" + cnpj + "&info=" + s + "&json=" + v1;
+  // }
+}
+
 function clickcadastrafunc(){
   console.log("OK");
   var cpf = $("input#cpf-cad")[0].value;

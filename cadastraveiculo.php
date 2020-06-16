@@ -59,8 +59,8 @@
 
 			}elseif ($_GET['info'] == "u") {
 				echo "updadte";
-				// $row = $dbh->query("UPDATE veiculo SET nome = '$nome' , tipo = $tipo WHERE placa ='$placa'")->fetch();
-				// header('Location: buscaempresa.php?cnpj=' . $cnpj_empresa);
+				$row = $dbh->query("UPDATE veiculo SET cnpj_empresa = $cnpj_empresa , marca = $marca ,modelo = $modelo,pneususo= $pneususo,pneus=$pneus  WHERE placa ='$placa'")->fetch();
+				header('Location: buscaempresa.php?cnpj=' . $cnpj_empresa);
 			}
 			elseif ($_GET['info'] == "d") {
 				echo "delete";
