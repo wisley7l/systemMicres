@@ -64,7 +64,7 @@
 				$row5 = $dbh->query("SELECT count(placa) as nveiculo FROM veiculo WHERE cnpj_empresa = $cnpj_empresa")->fetch();
 				echo $row5[0];
 				// $row6 = $dbh->query("UPDATE empresa	SET nveiculo = $row5['nveiculo'] WHERE cnpj = $cnpj_empresa")->fetch();
-				header('Location: buscaempresa.php?cnpj=' . $cnpj_empresa);
+				// header('Location: buscaempresa.php?cnpj=' . $cnpj_empresa);
 
 			}elseif ($_GET['info'] == "u") {
 				echo "updadte";
