@@ -173,12 +173,10 @@ function clickcadastrafunc(){
 }
 
 //
-alteraclickstatus(cod,status){
+function alteraclickstatus(cod,status){
   if (status=="checked") {
     console.log(cod);
   }else {
     console.log("Inverte");
   }
-
-  
 }
