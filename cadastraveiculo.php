@@ -80,7 +80,7 @@
 		if ($_GET['info'] == "u") {
 			$row1 = $dbh->query("SELECT placa,cnpj_empresa,marca,modelo,pneususo,pneus FROM veiculo WHERE placa = '$id' LIMIT 1")->fetch();
 			$row2 = $dbh->query("SELECT COUNT(cod) as pneus FROM pneu WHERE veiculo ='$id'")->fetch();
-			// $row3 = $dbh->query("SELECT COUNT(cod) as pneususo FROM pneu WHERE veiculo ='$id' AND status = 1")->fetch();
+			$row3 = $dbh->query("SELECT COUNT(cod) as pneususo FROM pneu WHERE veiculo ='$id' AND status = 1")->fetch();
 				echo $id;
 				$user = array('placa' => $row1['placa'],
 					 'cnpj_empresa' => $row1['cnpj_empresa'],
