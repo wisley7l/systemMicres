@@ -60,7 +60,7 @@
 				echo "<p>$modelo</p>";
 				echo "<p>$pneususo</p>";
 				echo "<p>$pneus</p>";
-				$row = $dbh->query("INSERT INTO veiculo (placa,cnpj_empresa,marca,modelo,pneuuso,pneus) VALUES ('$placa',$cnpj_empresa,'$marca','$modelo',0,0)")->fetch();
+				$row = $dbh->query("INSERT INTO veiculo (placa,cnpj_empresa,marca,modelo,pneususo,pneus) VALUES ('$placa',$cnpj_empresa,'$marca','$modelo',0,0)")->fetch();
 				header('Location: buscaempresa.php?cnpj=' . $cnpj_empresa);
 
 			}elseif ($_GET['info'] == "u") {
