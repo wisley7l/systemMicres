@@ -1,6 +1,16 @@
 <?php
 include('js/decode.php');
 
+# Substitua abaixo os dados, de acordo com o banco criado
+$user = "padmin";
+$password = "nJKSQj4xtAD8OyLw";
+$database = "controleMicres";
+
+# O hostname deve ser sempre localhost
+$hostname = "localhost";
+# Conecta com o servidor de banco de dados
+$dbh = new PDO('mysql:host='.$hostname .';dbname='. $database, $user, $password);
+
 if (isset($_GET['json'])){
   if ($_GET['json'] == "") {
     // echo "faz nada \n";
@@ -25,7 +35,7 @@ if (isset($_GET['json'])){
     $status = (int)$pieces[2];
     echo "<p>$cod</p>";
     echo "<p>$status</p>";
-    $row = $dbh->query("SELECT * FROM pneu p	WHERE p.cod = '$cod' LIMIT 1")->fetch();
+    $row = $dbh->query("SELECT v.placa FROM pneu p,veiculo v	WHERE p.cod = '$cod' AND v.placa = p.veiculo LIMIT 1")->fetch();
     echo "<p>$row[0]</p>";
     // $row6 = $dbh->query("UPDATE pneu	SET status = $status WHERE cod = $cod")->fetch();
     // header('Location: buscaempresa.php?cnpj=' . $cnpj_empresa);
