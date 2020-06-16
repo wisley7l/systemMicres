@@ -69,7 +69,7 @@
 						<td scope="col" align = "left"><a id ='pneu-veiculo' onclick="buscapneu({{use.cod}})" href="#">{{use.cod}}</a></td>
 						<!-- <td scope="col" align = "left">{{use.status}}</td> -->
 						<td scope="col" align = "left">{{use.pos_veic}}</td>
-						<td scope="col" align = "left" onclick="alteraclickstatus()"> <label class="switch"> <input type="checkbox" {{use.status}}>
+						<td scope="col" align = "left" onclick="alteraclickstatus({{use.cod}},'{{use.status}}')"> <label class="switch"> <input type="checkbox" {{use.status}}>
 							 <span class="slider round"></span>	</label></td>
 						<td scope="col" align = "left"><button class="btn-primary"onclick="">X</button></td>
 					</tr>
