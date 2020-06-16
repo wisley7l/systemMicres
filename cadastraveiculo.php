@@ -79,13 +79,13 @@
 
 		if ($_GET['info'] == "u") {
 				// echo $id;
-				$user = array('placa' => $'row1',
+				// $user = array('placa' => $'row1',
 					 // 'cnpj_empresa' => $row1['cnpj_empresa'],
 					 // 'marca' => $row1['marca'],
 					 // 'modelo' => $row1['modelo'],
 					 // 'pneususo' => $row3['pneususo'],
 					 // 'pneus' => $row2['pneus'],
-				 );
+				 // );
 		}else {
 			$row = $dbh->query("SELECT placa,cnpj_empresa,marca,modelo FROM veiculo WHERE cnpj_empresa = $cnpj_empresa LIMIT 1")->fetch();
 			$user = array('placa' => $placa,
