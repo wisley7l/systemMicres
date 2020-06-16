@@ -45,7 +45,7 @@
 
 			$pieces = explode(",", $outstr);
 
-			$placa = $pieces[1];
+			$placa =  strtoupper($pieces[1]);
 			$cnpj_empresa = (int)$pieces[2];
 			$marca = $pieces[3];
 			$modelo = $pieces[4];
