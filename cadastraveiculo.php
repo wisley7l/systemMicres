@@ -23,7 +23,7 @@
 	// /*
 	if (isset($_GET['placa'])){
 		$id = $_GET['placa'];
-		
+
 	}
 
 	if (isset($_GET['json'])){
@@ -72,9 +72,9 @@
 	}
 
 		# Executa a query desejada
-		$row = $dbh->query("SELECT placa,cnpj_empresa,marca,modelo FROM veiculo WHERE cnpj_empresa =$cnpj_empresa LIMIT 1")->fetch();
-		$row2 = $dbh->query("SELECT COUNT(cod) as pneus FROM pneu WHERE veiculo ='$id'")->fetch();
-		$row3 = $dbh->query("SELECT COUNT(cod) as pneususo FROM pneu WHERE veiculo ='$id' AND status = 1")->fetch();
+		$row = $dbh->query("SELECT placa,cnpj_empresa,marca,modelo FROM veiculo WHERE placa = '$id' LIMIT 1")->fetch();
+		// $row2 = $dbh->query("SELECT COUNT(cod) as pneus FROM pneu WHERE veiculo ='$id'")->fetch();
+		// $row3 = $dbh->query("SELECT COUNT(cod) as pneususo FROM pneu WHERE veiculo ='$id' AND status = 1")->fetch();
 
 		if ($_GET['info'] == "u") {
 				$user = array('placa' => $row['placa'],
