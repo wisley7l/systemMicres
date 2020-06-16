@@ -183,6 +183,6 @@ function alteraclickstatus(cod,status){
 
   var json = 'cod,'+ cod + ','+ status ;
   var v1 = MD5(json);
-  window.location.href = "/updatestatuspneu.php?cod=" + cod + "&info=u" + s + "&json=" + v1;
+  window.location.href = "/updatestatuspneu.php?cod=" + cod + "&info=u" + "&json=" + v1;
 
 }
