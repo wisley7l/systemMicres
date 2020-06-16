@@ -70,7 +70,7 @@
 	}
 
 		# Executa a query desejada
-		$row = $dbh->query("SELECT placa,cnpj_empresa,marca,modelo FROM veiculo WHERE placa =$id LIMIT 1")->fetch();
+		$row = $dbh->query("SELECT placa,cnpj_empresa,marca,modelo FROM veiculo WHERE placa =$placa LIMIT 1")->fetch();
 
 
 		$user = array('placa' => $row['placa'],
