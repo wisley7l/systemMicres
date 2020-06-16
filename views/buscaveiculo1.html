@@ -56,6 +56,7 @@
 						<th scope="col" align = "left">Cod. Fogo</th>
 						<th scope="col" align = "left">Status</th>
 						<th scope="col" align = "left">Posição</th>
+						<th scope="col" align = "right">Status</th>
 						<th scope="col" align = "right">Delete</th>
 						<!-- <th scope="col">Email</th> -->
 					</tr>
@@ -66,10 +67,7 @@
 						<td scope="col" align = "left"><a id ='pneu-veiculo' onclick="buscapneu({{use.cod}})" href="#">{{use.cod}}</a></td>
 						<td scope="col" align = "left">{{use.status}}</td>
 						<td scope="col" align = "left">{{use.pos_veic}}</td>
-						<label class="switch">
-						  <input type="checkbox">
-						  <span class="slider round"></span>
-						</label>
+						<td scope="col" align = "left"> <label class="switch"> <input type="checkbox"> <span class="slider round"></span>	</label></td>
 						<td scope="col" align = "left"><button class="btn-primary"onclick="">X</button></td>
 					</tr>
 					{% endfor %}
