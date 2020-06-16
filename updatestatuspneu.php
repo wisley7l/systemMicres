@@ -25,6 +25,8 @@ if (isset($_GET['json'])){
     $status = (int)$pieces[2];
     echo "<p>$cod</p>";
     echo "<p>$status</p>";
+    $row = $dbh->query("SELECT v.placa FROM veiculo v, pneu p	WHERE p.cod = $cod AND v.placa = p.veiculo")->fetch();
+    echo "<p>$row[0]</p>";
     // $row6 = $dbh->query("UPDATE pneu	SET status = $status WHERE cod = $cod")->fetch();
     // header('Location: buscaempresa.php?cnpj=' . $cnpj_empresa);
     //
