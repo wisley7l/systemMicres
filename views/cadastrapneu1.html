@@ -34,18 +34,18 @@
 		<!-- <a href="#" class="btn btn-primary">Get in Touche</a> -->
 		<form class="row">
 			<p> <div class="form-group col-md-6">
-				Cod: <input id="placa-cad" type="text" placeholder="{{user.cod}}" class="form-control" value="{{user.cod}}" {{user.disabled}}/>
+				Cod: <input id="placa-cad" type="text" placeholder="{{user.cod}}" class="form-control" value="{{user.cod}}" />
 			</div> </p>
 			<p> <div class="form-group col-md-6">
 				Placa do veiculo: <input id="cnpj-cad" type="text" placeholder="{{user.veiculo}}" class="form-control" value="{{user.veiculo}}" disabled/>
 			</div> </p>
 			<p> <div class="form-group col-md-6">
-				Status: <input id="marca-cad" type="text" placeholder="{{user.satus}}" class="form-control" value="{{user.satus}}"/>
+				Status: <input id="status-cad" type="text" placeholder="{{user.satus}}" class="form-control" value="1" disabled />
 			</div> </p>
 			<p> <div class="form-group col-md-6">
 				<!-- Pos: <input id="modelo-cad" type="text" placeholder="{{user.pos}}" class="form-control" value="{{user.pos}}"/> -->
 				Posição do Pneu:
-				<select name="cars" id="select-pos">
+				<select  id="select-pos">
 					{% for op in options %}
 				  <option value="{{op.value}}">{{op.nome}}</option>
 					{%endfor %}
