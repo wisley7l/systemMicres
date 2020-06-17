@@ -109,10 +109,10 @@
 				 // 'disabled' => "",
 			 );
 		}
-// 
-// 	$optionSelction =  array();
-// 	$option1 = array('value' => 'DE' ,
-// 		'nome' => 'Dianteiro Esquerdo' );
+//
+	$optionSelction =  array();
+	$option1 = array('value' => 'DE' ,
+		'nome' => 'Dianteiro Esquerdo' );
 //
 // 	$option2 = array('value' => 'DD' ,
 // 		'nome' => 'Dianteiro Direito' );
