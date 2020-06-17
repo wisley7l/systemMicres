@@ -119,18 +119,18 @@
 
 	$option3 = array('value' => '1TEE' ,
 		'nome' => '1 Eixo Traseiro Esquerdo Externo' );
-	// 
-	// $option4 = array('value' => '1TEI' ,
-	// 	'nome' => '1 Eixo Traseiro Esquerdo Interno' );
 	//
-	// $option5 = array('value' => '1TDE' ,
-	// 	'nome' => '1 Eixo Traseiro Direito Externo' );
-	//
-	// $option6 = array('value' => '1TDI' ,
-	// 	'nome' => '1 Eixo Traseiro Direito Interno' );
-	//
-	// $option7 = array('value' => '2TEE' ,
-	// 	'nome' => '2 Eixo Traseiro Esquerdo Externo' );
+	$option4 = array('value' => '1TEI' ,
+		'nome' => '1 Eixo Traseiro Esquerdo Interno' );
+
+	$option5 = array('value' => '1TDE' ,
+		'nome' => '1 Eixo Traseiro Direito Externo' );
+
+	$option6 = array('value' => '1TDI' ,
+		'nome' => '1 Eixo Traseiro Direito Interno' );
+
+	$option7 = array('value' => '2TEE' ,
+		'nome' => '2 Eixo Traseiro Esquerdo Externo' );
 	//
 	// $option8 = array('value' => '2TEI' ,
 	// 	'nome' => '2 Eixo Traseiro Esquerdo Interno' );
