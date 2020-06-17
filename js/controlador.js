@@ -185,7 +185,7 @@ function clickcadastrapneu(){
 
   var cod = $("input#cod-cad")[0].value;
   var veiculo = $("input#veiculo-cad")[0].value;
-  var select = $("select#select-pos");
+  var select = $("select#select-pos")[0].value;
   console.log(cod);
   console.log(veiculo);
   console.log(select);
