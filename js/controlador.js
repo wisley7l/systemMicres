@@ -181,7 +181,7 @@ function clickcadastrafunc(){
     window.location.href = "/cadastrafunc.php?cpf=" + cpf + "&info=" + s + "&json=" + v1;
   }
 }
-clickcadastrapneu(){
+function clickcadastrapneu(){
 
   var cod = $("input#cod-cad")[0].value;
   var veiculo = $("input#veiculo-cad")[0].value;
