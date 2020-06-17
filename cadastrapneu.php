@@ -141,7 +141,7 @@
 	$option10 = array('value' => '2TDI' ,
 		'nome' => '2 Eixo Traseiro Direito Interno' );
 
-	$option11 = array(array('value' => '3TEE' ,
+	$option11 = array('value' => '3TEE' ,
 		'nome' => '3 Eixo Traseiro Esquerdo Externo' );
 
 	$option12 = array('value' => '3TEI' ,
@@ -149,7 +149,7 @@
 
 	$option13 = array('value' => '3TDE' ,
 		'nome' => '3 Eixo Traseiro Direito Externo' );
-	
+
 	$option14 = array('value' => '3TDI' ,
 		'nome' => '3 Eixo Traseiro Direito Interno' );
 //
