@@ -46,8 +46,8 @@
 			$pieces = explode(",", $outstr);
 
 			$cod =  strtoupper($pieces[1]);
-			$veiculo= (int)$pieces[2];
-			$status = $pieces[3];
+			$veiculo= $pieces[2];
+			$status = (int)$pieces[3];
 			$pos= $pieces[4];
 			// $pneususo = (int)$pieces[5];
 			// $pneus = (int)$pieces[6];
