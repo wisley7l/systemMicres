@@ -132,26 +132,26 @@
 	$option7 = array('value' => '2TEE' ,
 		'nome' => '2 Eixo Traseiro Esquerdo Externo' );
 	//
-	// $option8 = array('value' => '2TEI' ,
-	// 	'nome' => '2 Eixo Traseiro Esquerdo Interno' );
-	//
-	// $option9 = array('value' => '2TDE' ,
-	// 	'nome' => '2 Eixo Traseiro Direito Externo' );
-	//
-	// $option10 = array('value' => '2TDI' ,
-	// 	'nome' => '2 Eixo Traseiro Direito Interno' );
-	//
-	// $option11 = array(array('value' => '3TEE' ,
-	// 	'nome' => '3 Eixo Traseiro Esquerdo Externo' );
-	//
-	// $option12 = array('value' => '3TEI' ,
-	// 	'nome' => '3 Eixo Traseiro Esquerdo Interno' );
-	//
-	// $option13 = aarray('value' => '1TDE' ,
-	// 	'nome' => '3 Eixo Traseiro Direito Externo' );
-	//
-	// $option14 = array('value' => '3TDI' ,
-	// 	'nome' => '3 Eixo Traseiro Direito Interno' );
+	$option8 = array('value' => '2TEI' ,
+		'nome' => '2 Eixo Traseiro Esquerdo Interno' );
+
+	$option9 = array('value' => '2TDE' ,
+		'nome' => '2 Eixo Traseiro Direito Externo' );
+
+	$option10 = array('value' => '2TDI' ,
+		'nome' => '2 Eixo Traseiro Direito Interno' );
+
+	$option11 = array(array('value' => '3TEE' ,
+		'nome' => '3 Eixo Traseiro Esquerdo Externo' );
+
+	$option12 = array('value' => '3TEI' ,
+		'nome' => '3 Eixo Traseiro Esquerdo Interno' );
+
+	$option13 = array('value' => '3TDE' ,
+		'nome' => '3 Eixo Traseiro Direito Externo' );
+	
+	$option14 = array('value' => '3TDI' ,
+		'nome' => '3 Eixo Traseiro Direito Interno' );
 //
 // array_push($optionSelction,$option1,$option2,$option3,$option4,$option5,$option6,
 // 	$option7,$option8,$option9,$option10,$option11,$option12,$option13,$option14);
