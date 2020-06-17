@@ -160,7 +160,7 @@ array_push($optionSelction,$option1,$option2,$option3,$option4,$option5,$option6
 	# Exibe os registros na tela
 
 	echo $twig->render('cadastrapneu1.html', array( "user" => $user,
-	'optinos' => $optionSelction,
+	'options' => $optionSelction,
 		));
 
 ?>
