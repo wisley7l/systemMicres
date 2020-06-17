@@ -30,7 +30,6 @@ aside,
 details,
 figcaption,
 figure,
-footer,
 header,
 hgroup,
 main,
@@ -39,6 +38,10 @@ nav,
 section,
 summary {
   display: block;
+}
+footer{
+  display: block;
+  background-color: #0F0
 }
 audio,
 canvas,
