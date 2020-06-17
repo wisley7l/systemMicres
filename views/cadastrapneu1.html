@@ -43,7 +43,10 @@
 				Status: <input id="marca-cad" type="text" placeholder="{{user.satus}}" class="form-control" value="{{user.satus}}"/>
 			</div> </p>
 			<p> <div class="form-group col-md-6">
-				Pos: <input id="modelo-cad" type="text" placeholder="{{user.pos}}" class="form-control" value="{{user.pos}}"/>
+				<!-- Pos: <input id="modelo-cad" type="text" placeholder="{{user.pos}}" class="form-control" value="{{user.pos}}"/> -->
+				<select name="cars" id="select-pos">
+				  <option value=""></option>
+				</select>
 			</div> </p>
 		</form>
 		<p> <button id ='cadastrar-veiculo' onclick="clickcadastraveiculo()" class="btn-primary"> Cadastrar </button> </p>
