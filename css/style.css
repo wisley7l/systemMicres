@@ -444,8 +444,8 @@ form{
 
 footer{
 	padding: 75px 0;
-	background-color: #0F0;
-  /* background: url('../img/bg2.png'); */
+	/* background-color: #0F0; */
+  background: url('../img/bg2.png');
 	color: #fff;
 }
 
