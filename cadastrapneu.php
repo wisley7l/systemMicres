@@ -99,7 +99,7 @@
 				 // 'pneus' => $row2['pneus'],
 			);
 		}else{
-			$row = $dbh->query("SELECT placa,cnpj_empresa,marca,modelo FROM veiculo WHERE cnpj_empresa = $cnpj_empresa LIMIT 1")->fetch();
+			// $row = $dbh->query("SELECT placa,cnpj_empresa,marca,modelo FROM veiculo WHERE cnpj_empresa = $cnpj_empresa LIMIT 1")->fetch();
 			$user = array('cod' => $cod,
 				 'veiculo' => $veiculo,
 				 'satus' => $status,
