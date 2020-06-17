@@ -44,9 +44,13 @@
 			</div> </p>
 			<p> <div class="form-group col-md-6">
 				<!-- Pos: <input id="modelo-cad" type="text" placeholder="{{user.pos}}" class="form-control" value="{{user.pos}}"/> -->
+
 				<select name="cars" id="select-pos">
-				  <option value=""></option>
+					{% for op in options %}
+				  <option value="{{op.value}}">{{op.nome}}</option>
+					{%end for %}
 				</select>
+
 			</div> </p>
 		</form>
 		<p> <button id ='cadastrar-veiculo' onclick="clickcadastraveiculo()" class="btn-primary"> Cadastrar </button> </p>
