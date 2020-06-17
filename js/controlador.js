@@ -181,6 +181,30 @@ function clickcadastrafunc(){
     window.location.href = "/cadastrafunc.php?cpf=" + cpf + "&info=" + s + "&json=" + v1;
   }
 }
+clickcadastrapneu(){
+
+  var cod = $("input#cod-cad")[0].value;
+  var veiculo = $("input#veiculo-cad")[0].value;
+  var select = $("input#select-cad")[0].value;
+  console.log(cod);
+  console.log(veiculo);
+  console.log(select);
+
+  var json = 'cod,'+ cod + ','+ veiculo + ',1,'+ select;
+  var v1 = MD5(json);
+  var url = window.location.search;
+  var s = url.split("&")[1].split("=")[1];
+  // console.log(s);
+  if(cpf.toString().length != 10){
+  alert("O CODIGO não possui 10 Digitos o que imposibilita seu cadastro!");
+  }else {
+    // console.log(cpf);
+    // console.log(nome);
+    // console.log(json);
+    // window.location.href = "/cadastrafunc.php?cpf=" + cpf + "&info=c&json=" + v1;
+  }
+
+}
 
 //
 function alteraclickstatus(cod,status){
