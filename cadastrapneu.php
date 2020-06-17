@@ -153,8 +153,8 @@
 	$option14 = array('value' => '3TDI' ,
 		'nome' => '3 Eixo Traseiro Direito Interno' );
 //
-// array_push($optionSelction,$option1,$option2,$option3,$option4,$option5,$option6,
-// 	$option7,$option8,$option9,$option10,$option11,$option12,$option13,$option14);
+array_push($optionSelction,$option1,$option2,$option3,$option4,$option5,$option6,
+	$option7,$option8,$option9,$option10,$option11,$option12,$option13,$option14);
 
 
 	# Exibe os registros na tela
