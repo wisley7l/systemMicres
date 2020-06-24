@@ -239,7 +239,7 @@ function clicklogin(){
   url: "login0.php",
   data: "user=" + user + "&pass=" + passcode,
   dataType: "html",
-  success: function(user){
+  success: function(data){
               console.log('dados inseridos com sucesso');
             },
   })
@@ -293,7 +293,7 @@ function cadastrasenha(){
     })
     .done(function(resposta) {
       console.log(resposta);
-      
+
     }).fail(function(jqXHR, textStatus ) {
         console.log("Request failed: " + textStatus);
 
