@@ -285,7 +285,7 @@ function cadastrasenha(){
     var jx = $.ajax({
     type: "POST",
     url: "login0.php",
-    data: "user=" + user + "&pass=" + passcode + "&function=update",
+    data: "user=" + user + "&pass=" + passcode + "&function=u",
     dataType: "html",
     success: function(user){
                 console.log('dados inseridos com sucesso');
