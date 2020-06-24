@@ -552,10 +552,12 @@ input:checked + .slider:before {
 #login{
           background-color: #fff;
           margin-bottom: 30px;
+          color: #0475b2
 
         }
         .center {
           background-color: #0475b2;
+          color: #FFF
           width: 300px;
           height: 300px;
           margin: auto;
