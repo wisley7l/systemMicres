@@ -24,9 +24,8 @@
 <body>
 	{% import 'macros.html' as macro_main %}
 	{% import 'macrosmenu.html' as macro_menu %}
-	{{macro_menu.topolistaempresa()}}
+	{{macro_menu.topolistaempresa(login)}}
 	<div class="container">
-		<h5>CPF:{{login.user_id}}:{{login.name}}</h5>
 		<button id ='cadastrar' onclick="cadastraempresa()" class="btn-primary"> Cadastrar Empresa</button>
 		<h3>Lista de Empresas</h3>
 
