@@ -232,9 +232,11 @@ function clicklogin(){
 
   $.ajax({
   type: "POST",
-  url: "login.php",
-  data: user,
+  url: "login0.php",
+  data: "user=".user."password".passcode,
+  dataType: "html",
   success: function(user){ console.log('dados inseridos com sucesso')},
   });
+
   window.location.href = "/login.php";
 }
