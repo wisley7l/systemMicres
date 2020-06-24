@@ -292,7 +292,11 @@ function cadastrasenha(){
               },
     })
     .done(function(resposta) {
-        console.log(resposta);
+        // console.log(resposta);
+        var obj = JSON.parse(resposta)
+        if (obj.login=="ok") {
+          listaempresa();
+        }
 
 
     }).fail(function(jqXHR, textStatus ) {
