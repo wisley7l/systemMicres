@@ -20,14 +20,14 @@ $hostname = "localhost";
 # Conecta com o servidor de banco de dados
 $dbh = new PDO('mysql:host='.$hostname .';dbname='. $database, $user, $password);
 
- if (!empty($_POST) AND (empty($_POST['user']) OR empty($_POST['pass']))){
+if (!empty($_POST) AND (empty($_POST['user']) OR empty($_POST['pass']))){
 	header("Location: /erro.php");
 	exit;
 }
 else {
 	$user = (int)$_POST['user'];
 	$row = $dbh->query("SELECT cpf,conf_senha,senha FROM funcionario WHERE cpf = $user LIMIT 1")->fetch();
-	echo json_encode(array("user" => $row[0], "conf" => $row[1],"senha" => $row[2]),"p" => "$_GET['function']",));
+	echo json_encode(array("user" => $row[0], "conf" => $row[1],"senha" => $row[2]));
 	// $row = $dbh->query("INSERT INTO veiculo (placa,cnpj_empresa,marca,modelo,pneususo,pneus) VALUES ('$placa',$cnpj_empresa,'$marca','$modelo',0,0)")->fetch();
 
 }
