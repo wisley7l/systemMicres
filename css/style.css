@@ -552,7 +552,7 @@ input:checked + .slider:before {
 #login{
           background-color: #fff;
           margin-bottom: 30px;
-          color: #0475b2
+          color: #0475b2;
 
         }
         .center {
