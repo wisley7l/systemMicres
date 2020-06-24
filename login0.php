@@ -5,7 +5,7 @@ function createSession($id,$email,$name,$tipo)
   session_id($id_session);
   session_start();
   // echo $credits;
-  $_SESSION['user_id'] = (int) $id;
+  $_SESSION['user_id'] = $id;
   $_SESSION['user_name'] = $email;
   $_SESSION['name'] = $name;
   $_SESSION['login'] = true;
