@@ -565,7 +565,7 @@ input:checked + .slider:before {
         }
         .bt_login {
           width: 100%;
-          background-color: #0475b2
+          background-color: #0475b2;
           border: 3px solid #0475b2;
           padding: 10px;
 
