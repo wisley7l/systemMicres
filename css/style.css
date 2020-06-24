@@ -553,5 +553,5 @@ input:checked + .slider:before {
 #login{
             width: 300px;
             height: 300px;
-            margin-left: 30px;
+            margin-left: 100px;
         }
