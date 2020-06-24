@@ -183,8 +183,8 @@ a:focus{
 .jumbotron{
 	text-align: center;
 	position: relative;
-  /* background: #00F; */
-	background: url('../img/bg2.png');
+  background: #0475b2;
+	/* background: url('../img/bg2.png'); */
 	/* background-size: 50px; */
 	color: #00f;
 }
@@ -568,5 +568,6 @@ input:checked + .slider:before {
           background-color: #0475b2;
           border: 3px solid #0475b2;
           padding: 10px;
+          text-decoration-color: #FFF
 
         }
