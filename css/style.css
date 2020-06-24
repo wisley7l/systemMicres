@@ -551,8 +551,12 @@ input:checked + .slider:before {
 
 
 #login{
-            width: 300px;
-            height: 300px;
             margin-left: 5px;
-            border: 1px solid red;
+
+        }
+        .center {
+          margin: auto;
+          width: 50%;
+          border: 3px solid green;
+          padding: 10px;
         }
