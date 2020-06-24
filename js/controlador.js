@@ -226,7 +226,7 @@ function alteraclickstatus(cod,status){
 }
 //
 function clicklogin(){
-  alert("Click")
+  // alert("Click")
 
   var user = $("input#user-login")[0].value;
   var password = $("input#senha-login")[0].value;
