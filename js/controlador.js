@@ -241,6 +241,8 @@ function clicklogin(){
   })
   .done(function(resposta) {
       console.log(resposta);
+      var obj = JSON.parse(resposta)
+      console.log(obj);
       // if (resposta == "ERRO") {
       //   window.location.href = "/erro.php";
       // }else if (resposta == "nopass") {
