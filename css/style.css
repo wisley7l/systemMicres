@@ -551,11 +551,11 @@ input:checked + .slider:before {
 
 
 #login{
-            width: 30px;
-            height: 30px;
+            width: 300px;
+            height: 300px;
             background-color: #00F;
         }
-        .posrelativa{
+        .poswis{
           background-color: green;
           width: 100px;height: 100px;
           margin-right: 10px;
