@@ -551,20 +551,15 @@ input:checked + .slider:before {
 
 
 #login{
-            width: 300px;
-            height: 300px;
+            width: 30px;
+            height: 30px;
             background-color: #00F;
         }
         .posrelativa{
-            position: relative;
-            width: 150px;
-            height: 60px;
-        }
-        .vermelho{
-            background-color: red;
-        }
-        .azul{
-            background-color: blue;
+          background-color: green;
+          width: 100px;height: 100px;
+          margin-right: 10px;
+          margin-bottom: 10px;
         }
         .top50{
             top: 50px;
