@@ -16,11 +16,11 @@
 	  // if attempt is true, destroy session values and redirect to index page
 	  session_destroy();
 	  // obs. check redirection on all pages
-	  header("Location: login.php");
+	  header("Location: /login.php");
 	  exit;
 	}
 	if ($_SESSION['login'] == false) {
-	  header("Location: erro.php");
+	  header("Location: /erro.php");
 	}
 
 	require 'vendor/autoload.php';

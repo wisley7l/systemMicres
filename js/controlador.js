@@ -9,8 +9,8 @@ function cadastramedicao(cod) {
   }
 }
 function logout(){
-  // window.location.href = "?logout";
-  console.log(window.location);
+  window.location.href = window.location.pathname + "?logout";
+
 }
 //
 function listafunc(){
