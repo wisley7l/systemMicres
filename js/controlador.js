@@ -226,9 +226,9 @@ function clicklogin(){
   var user = $("input#user-login")[0].value;
   var password = $("input#senha-login")[0].value;
   var passcode = MD5(password)
-  console.log(user);
-  console.log(password);
-  console.log(passcode);
+  // console.log(user);
+  // console.log(password);
+  // console.log(passcode);
 
   var jx = $.ajax({
   type: "POST",
@@ -237,8 +237,17 @@ function clicklogin(){
   dataType: "html",
   success: function(user){
               console.log('dados inseridos com sucesso');
-              window.location.href = "/login0.php";
+              // window.location.href = "/login.php";
             },
+  })
+  .done(function(resposta) {
+      console.log(resposta);
+
+  }).fail(function(jqXHR, textStatus ) {
+      console.log("Request failed: " + textStatus);
+
+  }).always(function() {
+      console.log("completou");
   });
 
 }
