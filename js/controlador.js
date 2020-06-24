@@ -8,6 +8,10 @@ function cadastramedicao(cod) {
     console.log("novo"); // lista peneu
   }
 }
+function logout(){
+  // window.location.href = "?logout";
+  console.log(window.location);
+}
 //
 function listafunc(){
   window.location.href = "/listafunc.php";
