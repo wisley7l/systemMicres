@@ -568,6 +568,6 @@ input:checked + .slider:before {
           background-color: #0475b2;
           border: 3px solid #0475b2;
           padding: 10px;
-          text-decoration-color: #FFF
+          color: #FFF
 
         }
