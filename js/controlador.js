@@ -236,5 +236,5 @@ function clicklogin(){
   data: user,
   success: function(user){ console.log('dados inseridos com sucesso')},
   });
-
+  window.location.href = "/login.php";
 }
