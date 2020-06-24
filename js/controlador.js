@@ -293,19 +293,13 @@ function cadastrasenha(){
     })
     .done(function(resposta) {
       console.log(resposta);
-      var obj = JSON.parse(resposta)
-      console.log(obj);  
-        // if (obj.login=="ok") {
-        //   listaempresa();
-        // }
-
-
+      
     }).fail(function(jqXHR, textStatus ) {
         console.log("Request failed: " + textStatus);
 
     }).always(function() {
         console.log("completou");
-        // window.location.href = "/login.php";
+        window.location.href = "/login.php";
     });
   }
 
