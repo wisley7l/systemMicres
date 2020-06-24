@@ -51,7 +51,7 @@ else {
 
 function createSession($id,$email,$name,$tipo)
 {
-
+	$id_session = $id;
   session_id($id_session);
   session_start();
   // echo $credits;
