@@ -249,7 +249,7 @@ function clicklogin(){
       $("input#user-login")[0].disabled = true;
       $("input#user-login")[0].backgroundColor = "#d2e8e";
       $("div#conf_senha-login")[0].style = "";
-      $("button#bt_login-login")[0].style = "display:none";
+      $("button#bt_login")[0].style = "display:none";
 
       }
       // else if (resposta == "nopass") {
