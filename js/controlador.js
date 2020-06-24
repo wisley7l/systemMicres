@@ -252,7 +252,7 @@ function clicklogin(){
       $("button#bt_login")[0].style = "display:none";
       $("div.wis")[0].style = "display:none";
       }
-      
+
   }).fail(function(jqXHR, textStatus ) {
       console.log("Request failed: " + textStatus);
 
@@ -277,8 +277,8 @@ function cadastrasenha(){
     alert("cadastro!");
     var jx = $.ajax({
     type: "POST",
-    url: "login0.php",
-    data: "user=" + user + "&pass=" + passcode + "&function=u",
+    url: "login0.php?function=u",
+    data: "user=" + user + "&pass=" + passcode,
     dataType: "html",
     success: function(user){
                 console.log('dados inseridos com sucesso');
