@@ -196,7 +196,7 @@ a:focus{
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: #FFF;
+	background: #0475b2;
 	opacity: 0;
 }
 
@@ -396,7 +396,7 @@ PORTFOLIO
 }
 
 .btn-primary{
-	background: #fa5c58;
+	background: #0475b2;
 	border-width: 2px;
 	color: #fff;
 	border-color: #fa5c58;
@@ -404,7 +404,7 @@ PORTFOLIO
 
 .btn-primary:hover,
 .btn-primary:focus{
-	background: #fff;
+	background: #0475b2;
 	color: #fa5c58;
 	border-color: #fe4a46;
 }
@@ -469,7 +469,7 @@ ul.social-icons > li > a{
 	height: 38px;
 	line-height: 38px;
 	border-radius: 100%;
-	background: #fff;
+	background: #0475b2;
 	display: block;
 	text-align: center;
 }
@@ -550,7 +550,7 @@ input:checked + .slider:before {
 
 
 #login{
-            margin-bottom: 30px;
+
             background-color: #0475b2;
 
         }
