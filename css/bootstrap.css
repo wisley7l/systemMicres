@@ -2686,6 +2686,7 @@ input[type="checkbox"].disabled,
 fieldset[disabled] input[type="radio"],
 fieldset[disabled] input[type="checkbox"] {
   cursor: not-allowed;
+  background-color: #d2e8ef /*edit Micres */
 }
 .radio-inline.disabled,
 .checkbox-inline.disabled,
