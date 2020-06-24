@@ -235,7 +235,10 @@ function clicklogin(){
   url: "login0.php",
   data: "user=" + user + "password" + passcode,
   dataType: "html",
-  success: function(user){ console.log('dados inseridos com sucesso');},
+  success: function(user){
+              console.log('dados inseridos com sucesso');
+              window.location.href = "/login0.php";
+            },
   });
 
 }
