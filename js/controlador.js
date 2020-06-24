@@ -282,6 +282,26 @@ function cadastrasenha(){
     alert("Senhas diferentes!");
   }else {
     alert("cadastro!");
+    var jx = $.ajax({
+    type: "POST",
+    url: "login0.php",
+    data: "user=" + user + "&pass=" + passcode + "&function=updade",
+    dataType: "html",
+    success: function(user){
+                console.log('dados inseridos com sucesso');
+              },
+    })
+    .done(function(resposta) {
+        console.log(resposta);
+
+
+    }).fail(function(jqXHR, textStatus ) {
+        console.log("Request failed: " + textStatus);
+
+    }).always(function() {
+        console.log("completou");
+        // window.location.href = "/login.php";
+    });
   }
 
 }
