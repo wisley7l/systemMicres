@@ -242,13 +242,10 @@ function clicklogin(){
   .done(function(resposta) {
       console.log(resposta);
       var obj = JSON.parse(resposta)
-
-      if (obj.conf == 0) {
-      // alert("senha não cadastrada");
       console.log(obj.conf);
-      // $("input#user-login")[0].disabled = true;
-      }
-      // else if (resposta == "nopass") {
+      // if (obj.conf == 0) {
+      //   window.location.href = "/erro.php";
+      // }else if (resposta == "nopass") {
       //
       // }else if (resposta == "loginfaill") {
       //
