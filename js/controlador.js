@@ -232,7 +232,7 @@ function clicklogin(){
 
   var jx = $.ajax({
   type: "POST",
-  url: "login0.php",
+  url: "login.php",
   data: "user=" + user + "&pass=" + passcode,
   dataType: "html",
   success: function(user){
