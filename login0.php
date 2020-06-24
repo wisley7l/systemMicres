@@ -9,11 +9,6 @@ $loader = new Twig_Loader_Filesystem('views');
 $twig = new Twig_Environment($loader);
 // Carregando a pasta views
 
-if (!empty($_POST) AND (empty($_POST['user']) OR empty($_POST['pass']))){
-  header("Location: /erro.php");
-  exit;
-}
-
 # Substitua abaixo os dados, de acordo com o banco criado
 # Substitua abaixo os dados, de acordo com o banco criado
 $user = "padmin";
@@ -32,7 +27,7 @@ if (!empty($_POST) AND (empty($_POST['user']) OR empty($_POST['pass']))){
 else {
 	$user = (int)$_POST['user'];
 	$row = $dbh->query("SELECT cpf,conf_senha,senha FROM funcionario WHERE cpf = $user LIMIT 1")->fetch();
-	echo json_encode(array("user" => $row[0], "conf" => $row[1]),);
+	echo json_encode(array("user" => $row[0], "conf" => $row[1]));
 	// $row = $dbh->query("INSERT INTO veiculo (placa,cnpj_empresa,marca,modelo,pneususo,pneus) VALUES ('$placa',$cnpj_empresa,'$marca','$modelo',0,0)")->fetch();
 }
 
