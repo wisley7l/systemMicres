@@ -247,8 +247,9 @@ function clicklogin(){
       if (obj.conf == 0) {
       alert("senha não cadastrada");
       $("input#user-login")[0].disabled = true;
-      $("input#user-login")[0].backgroundColor = "#d2e8e"f;
+      $("input#user-login")[0].backgroundColor = "#d2e8e";
       $("div#conf_senha-login")[0].style = "";
+      $("button#bt_login-login")[0].style = "display:none";
 
       }
       // else if (resposta == "nopass") {
