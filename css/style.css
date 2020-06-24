@@ -551,6 +551,7 @@ input:checked + .slider:before {
 
 #login{
           background-color: #fff;
+          margin-bottom: 30px;
 
         }
         .center {
@@ -565,7 +566,7 @@ input:checked + .slider:before {
           margin-top:5px;
           width: 100%;
           background-color: #0475b2;
-          border: 3px solid #0475b2;
+          border: 3px solid #fff;
           padding: 10px;
           color: #FFF
 
