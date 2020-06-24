@@ -252,6 +252,9 @@ function clicklogin(){
       $("button#bt_login")[0].style = "display:none";
       $("div.wis")[0].style = "display:none";
       }
+      if (obj.login=="ok") {
+        listaempresa();
+      }
 
   }).fail(function(jqXHR, textStatus ) {
       console.log("Request failed: " + textStatus);

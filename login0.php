@@ -12,10 +12,10 @@ function createSession($id,$email,$name,$tipo)
   $_SESSION['tipo'] = $tipo;
   if (!is_writable(session_save_path())) {
   //echo 'Session path "'.session_save_path().'" is not writable for PHP!';
+	echo json_encode(array("login" => "erro"));
   }
   else {
-    header("Location: listaempresa.php");
-    exit();
+    echo json_encode(array("login" => "ok"));
   }
 }
 
@@ -60,7 +60,6 @@ function login0()
 				echo json_encode(array("user" => $row[0], "conf" => $row[1],"senha" => $row[2],"func"=> $f));
 			}else {
 				if ($row[2] == $pass) {
-					echo json_encode(array("login" => "ok"));
 					createSession($row[0],"no_e-mail",$row[3],$row[4]);
 				}
 			}
