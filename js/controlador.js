@@ -230,6 +230,16 @@ function clicklogin(){
   console.log(password);
   console.log(passcode);
 
-  var jqxhr = $.post( "login.php", { user: user, password: passcode } );
+  var jqxhr = $.post( "login.php", { user: user, password: passcode } )
+  .done(function() {
+    alert( "second success" );
+  })
+  .fail(function() {
+    alert( "error" );
+  })
+  .always(function() {
+    alert( "finished" );
+  });
+  console.log(jqxhr);
 
 }
