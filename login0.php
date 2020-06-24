@@ -41,7 +41,7 @@ function login0()
 			}else {
 				if ($row[2] == $pass) {
 					echo json_encode(array("login" => "ok"));
-					createSession($row[0],"no_e-mail",$row[3],$row[4]);
+					// createSession($row[0],"no_e-mail",$row[3],$row[4]);
 				}
 			}
 
@@ -53,26 +53,5 @@ function login0()
 }
 login0();
 
-function createSession($id,$email,$name,$tipo)
-{
-	$id_session = $id;
-  session_id($id_session);
-  session_start();
-  // echo $credits;
-  $_SESSION['user_id'] = (int) $id;
-  $_SESSION['user_name'] = $email;
-  $_SESSION['name'] = $name;
-  $_SESSION['login'] = true;
-  $_SESSION['tipo'] = $tipo;
-  if (!is_writable(session_save_path())) {
-  //echo 'Session path "'.session_save_path().'" is not writable for PHP!';
-  }
-  else {
-    header("Location: listaempresa.php");
-    exit();
-  }
-}
-
-}
 
 ?>
