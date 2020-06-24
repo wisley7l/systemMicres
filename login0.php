@@ -23,7 +23,8 @@ function login0()
 	$hostname = "localhost";
 	# Conecta com o servidor de banco de dados
 	$dbh = new PDO('mysql:host='.$hostname .';dbname='. $database, $user, $password);
-
+	$row = $dbh->query("SELECT cpf,conf_senha,senha,nome,tipo FROM funcionario WHERE cpf = $user LIMIT 1")->fetch();
+	
 	if (!empty($_POST) AND (empty($_POST['user']) OR empty($_POST['pass']))){
 		header("Location: /erro.php");
 		exit;
@@ -32,7 +33,7 @@ function login0()
 		$f = $_GET['function'];
 		$user = (int)$_POST['user'];
 		$pass = $_POST['pass'];
-		$row = $dbh->query("SELECT cpf,conf_senha,senha,nome,tipo FROM funcionario WHERE cpf = $user LIMIT 1")->fetch();
+
 		if ($f == 'u' AND $row[1] == 0) {
 			$row1 = $dbh->query("UPDATE funcionario SET conf_senha = 1, senha = '$pass'  WHERE cpf = $user")->fetch();
 			var_dump($row1);
