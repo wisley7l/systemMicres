@@ -16,11 +16,11 @@
 	  // if attempt is true, destroy session values and redirect to index page
 	  session_destroy();
 	  // obs. check redirection on all pages
-	  header("Location: index");
+	  header("Location: login.php");
 	  exit;
 	}
 	if ($_SESSION['login'] == false) {
-	  header("Location: error-page");
+	  header("Location: erro.php");
 	}
 
 	require 'vendor/autoload.php';
@@ -65,7 +65,7 @@
 	# Exibe os registros na tela
 	// while ($row = mysql_fetch_array( $result_query )) { print " -- " . $row[medida] . " -- " . $row[km]."\n"; }
 
-	echo $twig->render('listaempresa1.html', array( "user" => $userAll,
+	echo $twig->render('listaempresa1.html', array( "user" => $userAll, "login" => $user_login,
 		));
 	// Chamando a página "hello.html" que está em views
 
