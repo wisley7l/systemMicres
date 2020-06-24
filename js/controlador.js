@@ -225,9 +225,9 @@ function clicklogin(){
 
   var user = $("input#user-login")[0].value;
   var password = $("input#senha-login")[0].value;
-
-  console.log(cod);
-  console.log(veiculo);
-  console.log(select);
+  var passcode = MD5(password)
+  console.log(user);
+  console.log(password);
+  console.log(passcode);
 
 }
