@@ -251,12 +251,7 @@ function clicklogin(){
       $("div#conf_senha-login")[0].style = "";
       $("button#bt_login")[0].style = "display:none";
       $("div.wis")[0].style = "display:none";
-    }else {
-      if (obj.senha == passcode) {
-        console.log("Sim");
       }
-
-    }
 
   }).fail(function(jqXHR, textStatus ) {
       console.log("Request failed: " + textStatus);
