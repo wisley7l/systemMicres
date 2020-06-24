@@ -256,7 +256,7 @@ function clicklogin(){
 
   }).always(function() {
       console.log("completou");
-      window.location.href = "/login.php";
+      // window.location.href = "/login.php";
   });
 
 }
