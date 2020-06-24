@@ -33,13 +33,7 @@ else {
 		$row1 = $dbh->query("UPDATE funcionario SET conf_senha = 1, senha = '$pass'  WHERE cpf = $user")->fetch();
 		var_dump($row1);
 		// echo "string";
-	}elseif ($row[1] == 1) {
-		if ($pass == $row[2]) {
-			echo "Senha igual";
-		}else {
-			echo "erro de senha";
-		}
-	} else
+	}else {
 		echo json_encode(array("user" => $row[0], "conf" => $row[1],"senha" => $row[2],"func"=> $f));
 		// $row = $dbh->query("INSERT INTO veiculo (placa,cnpj_empresa,marca,modelo,pneususo,pneus) VALUES ('$placa',$cnpj_empresa,'$marca','$modelo',0,0)")->fetch();
 	}
