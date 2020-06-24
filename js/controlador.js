@@ -225,10 +225,10 @@ function clicklogin(){
 
   var user = $("input#user-login")[0].value;
   var password = $("input#senha-login")[0].value;
-  var passcode = MD5(password)
+  var passcode = MD5(password).replace("=","");
   // console.log(user);
   // console.log(password);
-  // console.log(passcode);
+  console.log(passcode);
 
   var jx = $.ajax({
   type: "POST",
@@ -250,7 +250,6 @@ function clicklogin(){
       $("input#user-login")[0].backgroundColor = "#d2e8e";
       $("div#conf_senha-login")[0].style = "";
       $("button#bt_login")[0].style = "display:none";
-
       }
       // else if (resposta == "nopass") {
       //
@@ -267,5 +266,21 @@ function clicklogin(){
       console.log("completou");
       // window.location.href = "/login.php";
   });
+
+}
+
+
+function cadastrasenha(){
+  var user = $("input#user-login")[0].value;
+  var password = $("input#senha-login")[0].value;
+  var passcode = MD5(password).replace("=","");
+  var confpassword = $("input#confsenha-login")[0].value;
+  var passcodeconf = MD5(password).replace("=","");
+
+  if (passcode != passcodeconf) {
+    alert("Senhas diferentes!");
+  }else {
+    alert("cadastro!");
+  }
 
 }
