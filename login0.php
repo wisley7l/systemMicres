@@ -61,7 +61,7 @@ function login0()
 			}else {
 				if ($row[2] == $pass) {
 					echo json_encode(array("login" => "ok"));
-					// createSession($row[0],"no_e-mail",$row[3],$row[4]);
+					createSession($row[0],"no_e-mail",$row[3],$row[4]);
 				}
 			}
 
