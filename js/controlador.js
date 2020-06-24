@@ -245,7 +245,8 @@ function clicklogin(){
       console.log(obj.conf);
       if (obj.conf == 0) {
       alert("senha não cadastrada");
-      // $("input#user-login")[0].disabled = true;
+      $("input#user-login")[0].disabled = true;
+      console.log($("input#conf_senha-login")[0].style);
       }
       // else if (resposta == "nopass") {
       //
