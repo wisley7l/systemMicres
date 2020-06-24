@@ -1,4 +1,26 @@
 <?php
+	session_write_close();
+	session_start();
+	if (isset($_SESSION)) {
+	  //modify the value of the login variable, by the value saved in the session
+	  //var_dump($_SESSION);
+	  // set values for user, with the values saved in the session
+	  // array used to set user panel parameters
+	  $user_login = getUserLogin();
+	  // query the user in db for more information to update
+	  // ex: about user, website, email
+	}
+	// check if logout attempt
+	if (isset($_GET['logout'])){
+	  // if attempt is true, destroy session values and redirect to index page
+	  session_destroy();
+	  // obs. check redirection on all pages
+	  header("Location: index");
+	  exit;
+	}
+	if ($_SESSION['login'] == false) {
+	  header("Location: error-page");
+	}
 
 	require 'vendor/autoload.php';
 	// Pegando o arquivo autoload da pasta vendor, para que possa utilizar o Twig
