@@ -250,6 +250,7 @@ function clicklogin(){
       $("input#user-login")[0].backgroundColor = "#d2e8e";
       $("div#conf_senha-login")[0].style = "";
       $("button#bt_login")[0].style = "display:none";
+      $("div.wis")[0].style = "display:none";
       }
       // else if (resposta == "nopass") {
       //
