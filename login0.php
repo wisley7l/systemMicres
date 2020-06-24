@@ -21,8 +21,7 @@ $hostname = "localhost";
 $dbh = new PDO('mysql:host='.$hostname .';dbname='. $database, $user, $password);
 if (!empty($_POST) AND (empty($_POST['function']) ) {
 	echo "string";
-}
-if (!empty($_POST) AND (empty($_POST['user']) OR empty($_POST['pass']))){
+}else if (!empty($_POST) AND (empty($_POST['user']) OR empty($_POST['pass']))){
 	header("Location: /erro.php");
 	exit;
 }
