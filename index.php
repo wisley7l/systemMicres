@@ -53,6 +53,6 @@
 		));
 	// Chamando a página "hello.html" que está em views
 	//*/
-	header('Location: listafunc.php');
+	header('Location: login.php');
 
 ?>
