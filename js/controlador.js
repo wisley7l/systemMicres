@@ -243,11 +243,12 @@ function clicklogin(){
       console.log(resposta);
       var obj = JSON.parse(resposta)
       console.log(obj.conf);
-      console.log($("div#conf_senha-login")[0]);
+      console.log($("div#conf_senha-login")[0].style);
       if (obj.conf == 0) {
       alert("senha não cadastrada");
       $("input#user-login")[0].disabled = true;
-      console.log($("div#conf_senha-login")[0]);
+      $("div#conf_senha-login")[0].style = "";
+      console.log($("div#conf_senha-login")[0].style);
       }
       // else if (resposta == "nopass") {
       //
