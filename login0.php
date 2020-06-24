@@ -34,7 +34,14 @@ else {
 		var_dump($row1);
 		// echo "string";
 	}else {
-		echo json_encode(array("user" => $row[0], "conf" => $row[1],"senha" => $row[2],"func"=> $f));
+		if ($row[1] == 0) {
+			echo json_encode(array("user" => $row[0], "conf" => $row[1],"senha" => $row[2],"func"=> $f));
+		}else {
+			if ($row[2] == $pass) {
+				echo "SIM";
+			}
+		}
+
 		// $row = $dbh->query("INSERT INTO veiculo (placa,cnpj_empresa,marca,modelo,pneususo,pneus) VALUES ('$placa',$cnpj_empresa,'$marca','$modelo',0,0)")->fetch();
 	}
 
