@@ -27,9 +27,12 @@ if (!empty($_POST) AND (empty($_POST['user']) OR empty($_POST['pass']))){
 else {
 	$f = $_GET['function'];
 	$user = (int)$_POST['user'];
+	$pass = $_POST['pass']
 	$row = $dbh->query("SELECT cpf,conf_senha,senha FROM funcionario WHERE cpf = $user LIMIT 1")->fetch();
 	if ($f == 'u' AND $row[1] == 0) {
-		echo "string";
+
+		$row = $dbh->query("UPDATE funcionario SET (conf_senha = 1, senha = '$pass')  WHERE cpf = $user")->fetch();
+		var_dump($row);
 
 	}else {
 		echo json_encode(array("user" => $row[0], "conf" => $row[1],"senha" => $row[2],"func"=> $f));
