@@ -1,4 +1,5 @@
 <?php
+	include('js/functions.php');
 	session_write_close();
 	session_start();
 	if (isset($_SESSION)) {
@@ -6,7 +7,7 @@
 	  //var_dump($_SESSION);
 	  // set values for user, with the values saved in the session
 	  // array used to set user panel parameters
-	  // $user_login = getUserLogin();
+	  $user_login = getUserLogin();
 	  // query the user in db for more information to update
 	  // ex: about user, website, email
 	}
