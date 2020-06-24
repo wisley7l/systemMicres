@@ -20,11 +20,16 @@
 	# Conecta com o servidor de banco de dados
 	$dbh = new PDO('mysql:host='.$hostname .';dbname='. $database, $user, $password);
 
-  if (isset($_POST['user'])){
-    $id = (int) $_POST['user'];
-    echo $id;
+  if (!empty($_POST) AND (empty($_POST['user']) OR empty($_POST['pass']))){
+    header("Location: /erro.php");
+    exit;
   }
-echo "string";
+  else {
+    $user = (int)$_POST['user'];
+    $row = $dbh->query("SELECT cpf,conf_senha,senha FROM funcionario WHERE cpf = $user LIMIT 1")->fetch();
+    echo json_encode(array("user" => $row[0], "conf" => $row[1]));
+    // $row = $dbh->query("INSERT INTO veiculo (placa,cnpj_empresa,marca,modelo,pneususo,pneus) VALUES ('$placa',$cnpj_empresa,'$marca','$modelo',0,0)")->fetch();
+  }
 	# Exibe os registros na tela
 
 	echo $twig->render('login.html', array( "user" => $user,

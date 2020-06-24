@@ -237,17 +237,26 @@ function clicklogin(){
   dataType: "html",
   success: function(user){
               console.log('dados inseridos com sucesso');
-              // window.location.href = "/login.php";
             },
   })
   .done(function(resposta) {
       console.log(resposta);
+      // if (resposta == "ERRO") {
+      //   window.location.href = "/erro.php";
+      // }else if (resposta == "nopass") {
+      //
+      // }else if (resposta == "loginfaill") {
+      //
+      // }else if (resposta == "ok") {
+      //
+      // }
 
   }).fail(function(jqXHR, textStatus ) {
       console.log("Request failed: " + textStatus);
 
   }).always(function() {
       console.log("completou");
+      window.location.href = "/login.php";
   });
 
 }
