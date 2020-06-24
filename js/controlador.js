@@ -238,5 +238,4 @@ function clicklogin(){
   success: function(user){ console.log('dados inseridos com sucesso')},
   });
 
-  window.location.href = "/login.php";
 }
