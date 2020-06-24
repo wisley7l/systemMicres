@@ -7,5 +7,6 @@ function getUserLogin()
     'name' => $_SESSION['name'],
     'tipo' => $_SESSION['tipo'],
   );
+}
 
  ?>
