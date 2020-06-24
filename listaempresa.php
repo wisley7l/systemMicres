@@ -1,5 +1,5 @@
 <?php
-	include('js/functions.php');
+	// include('js/functions.php');
 	session_write_close();
 	session_start();
 	if (isset($_SESSION)) {
