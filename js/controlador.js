@@ -220,3 +220,14 @@ function alteraclickstatus(cod,status){
   window.location.href = "/updatestatuspneu.php?cod=" + cod + "&info=u" + "&json=" + v1;
 
 }
+//
+function clicklogin(){
+
+  var user = $("input#user-login")[0].value;
+  var password = $("input#senha-login")[0].value;
+
+  console.log(cod);
+  console.log(veiculo);
+  console.log(select);
+
+}
