@@ -252,14 +252,7 @@ function clicklogin(){
       $("button#bt_login")[0].style = "display:none";
       $("div.wis")[0].style = "display:none";
       }
-      // else if (resposta == "nopass") {
-      //
-      // }else if (resposta == "loginfaill") {
-      //
-      // }else if (resposta == "ok") {
-      //
-      // }
-
+      
   }).fail(function(jqXHR, textStatus ) {
       console.log("Request failed: " + textStatus);
 
