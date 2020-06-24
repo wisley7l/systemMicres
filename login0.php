@@ -38,7 +38,7 @@ else {
 			echo json_encode(array("user" => $row[0], "conf" => $row[1],"senha" => $row[2],"func"=> $f));
 		}else {
 			if ($row[2] == $pass) {
-				echo "SIM";
+				echo json_encode(array("conf" => $row[1]));
 			}
 		}
 
