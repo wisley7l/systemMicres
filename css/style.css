@@ -555,12 +555,4 @@ input:checked + .slider:before {
             height: 300px;
             background-color: #00F;
         }
-        .poswis{
-          background-color: green;
-          width: 100px;height: 100px;
-          margin-right: 10px;
-          margin-bottom: 10px;
-        }
-        .top50{
-            top: 50px;
-        }
+        
