@@ -21,7 +21,7 @@
 	$dbh = new PDO('mysql:host='.$hostname .';dbname='. $database, $user, $password);
 
   if (isset($_POST['user'])){
-    $id = (int) $_GET['user'];
+    $id = (int) $_POST['user'];
     echo $id;
   }
 

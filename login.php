@@ -24,7 +24,7 @@
     $id = (int) $_POST['user'];
     echo $id;
   }
-
+echo "string";
 	# Exibe os registros na tela
 
 	echo $twig->render('login.html', array( "user" => $user,
