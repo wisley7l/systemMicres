@@ -20,6 +20,10 @@
 	# Conecta com o servidor de banco de dados
 	$dbh = new PDO('mysql:host='.$hostname .';dbname='. $database, $user, $password);
 
+  if (isset($_POST['user'])){
+    $id = (int) $_GET['user'];
+    echo $id;
+  }
 
 	# Exibe os registros na tela
 
