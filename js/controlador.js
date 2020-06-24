@@ -230,12 +230,12 @@ function clicklogin(){
   console.log(password);
   console.log(passcode);
 
-  $.ajax({
+  var jx = $.ajax({
   type: "POST",
   url: "login0.php",
   data: "user=".user."password".passcode,
   dataType: "html",
-  success: function(user){ console.log('dados inseridos com sucesso')},
+  success: function(user){ console.log('dados inseridos com sucesso');},
   });
 
 }
