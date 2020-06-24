@@ -23,8 +23,6 @@ $dbh = new PDO('mysql:host='.$hostname .';dbname='. $database, $user, $password)
 if (!empty($_POST) AND (empty($_POST['user']) OR empty($_POST['pass']))){
 	header("Location: /erro.php");
 	exit;
-}elseif ($_POST['function'] == "u") {
-	echo "ok"
 }
 else {
 	$user = (int)$_POST['user'];
