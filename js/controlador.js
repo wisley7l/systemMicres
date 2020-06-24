@@ -258,6 +258,9 @@ function clicklogin(){
       }
       if (obj.login=="ok") {
         listaempresa();
+      }else if (obj.login=="ok") {
+        alert("Senha Invalida!");
+
       }
 
   }).fail(function(jqXHR, textStatus ) {
